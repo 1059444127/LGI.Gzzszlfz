@@ -43,7 +43,7 @@ namespace WsForErDaiCeXu
             sqlWhere += $" and convert(datetime,f_sdrq+':00') <=  convert(datetime,'{endRegTime}')";
             sqlWhere += " ) ";
             sqlWhere += $" and f_blk='二代测序' ";
-            sqlWhere += $" and f_bgzt='已登记' ";
+            sqlWhere += $" and f_bgzt<>'已审核' ";
 
             var lstJcxx = (new T_JCXX_DAL()).GetBySqlWhere(sqlWhere);
 
