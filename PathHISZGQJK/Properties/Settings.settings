@@ -1,0 +1,162 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PathHISZGQJK.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PathHISJK_Webstzxyy_clsWcfInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc</Value>
+    </Setting>
+    <Setting Name="PathHISJK_lzfbws_FuJianJieKouForBCao" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.110:9997/crds3/webservice/fujianforbcao.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISJK_whtjweb_PathologySysService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.12.68:58080/csp/tongji/Tongji.COMM.SoapService.PathologySysService.cls</Value>
+    </Setting>
+    <Setting Name="PathHISJK_WebCAwhtj_HealthWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.12.82:8080/HealthWebservice.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISJK_WebXYCX_WSGeneral" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://132.147.254.44:57772/csp/supcon/WebApp.WSGeneral.cls</Value>
+    </Setting>
+    <Setting Name="PathHISJK_WebXYUP_ExamFillerWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://132.147.254.44:57772/csp/supcon/BS.WS.ExamFillerWS.cls</Value>
+    </Setting>
+    <Setting Name="PathHISJK_whtjweb_sqd_Upload_HtemrBaseInfoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.12.58:9080/TJYYWebS/services/Upload_HtemrBaseInfo</Value>
+    </Setting>
+    <Setting Name="PathHISJK_nbblrmyyWebReference_PisServiceLJ" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.48.45.107/ktpis/PisServiceLJ.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISJK_SZSZYY_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.0.100.53:8080/Service.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISJK_xmzyjcptWebservices_WSPacs" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.90.241/ZyhipWebService/WebServices/WSPacs.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISJK_nbyzrmyyWeb_PisServiceLJ" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.100.64:8082/PisServiceLJ.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISJK_whxhyyWeb_WebRisService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.60.39:57772/csp/i-risservice/DHC.RIS.BS.WebRisService.cls</Value>
+    </Setting>
+    <Setting Name="PathHISJK_nbyzd2yyWEB_PisServiceLJ" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.52.100:8081/PisServiceLJ.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISJK_cszxyyWeb_NYwclService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.3.15:8080/Services/NYwclService</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_cszxyyWeb_NYwclService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.3.15:8080/Services/NYwclService</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_xmzyjcptWebservices_WSPacs" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.71.179.20:1506/services/WSInterface.WSInterfaceHttpSoap12Endpoint</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_lzfbws_FuJianJieKouForBCao" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.110:9997/crds3/webservice/fujianforbcao.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_nbblrmyyWebReference_PisServiceLJ" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.48.45.107/ktpis/PisServiceLJ.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_nbyzd2yyWEB_PisServiceLJ" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.52.100:8081/PisServiceLJ.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_SZSZYY_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.0.100.53:8080/Service.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_WebCAwhtj_HealthWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.12.82:8080/HealthWebservice.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_Webstzxyy_clsWcfInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_WebXYCX_WSGeneral" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://132.147.254.44:57772/csp/supcon/WebApp.WSGeneral.cls</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_WebXYUP_ExamFillerWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://132.147.254.44:57772/csp/supcon/BS.WS.ExamFillerWS.cls</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_whtjweb_PathologySysService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.12.68:58080/csp/tongji/Tongji.COMM.SoapService.PathologySysService.cls</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_whtjweb_sqd_Upload_HtemrBaseInfoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.12.58:9080/TJYYWebS/services/Upload_HtemrBaseInfo</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_whxhyyWeb_WebRisService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.60.39:57772/csp/i-risservice/DHC.RIS.BS.WebRisService.cls</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_cdyyWeb_ICalculateService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.80.166:8088/founderWebs/services/ICalculateService</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_wys_pacs_web_CISService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.141.9/KCIS/CISService.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_xm1yWeb_WSInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.0.1.146:1506/services/WSInterface.WSInterfaceHttpSoap12Endpoint</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_gdsrmyyWeb_EventBusSvc" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://svrdebug.test.com/CoreService/EventBus.svc</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_SXYDDEYYWeb_MatrixService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://168.192.8.10:8080/WebService/services/MatrixService</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_fjsfybjyWeb_WSInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://198.100.100.8:1506/services/WSInterface.WSInterfaceHttpSoap12Endpoint</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_fjsfybjyWebCX_WSInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.1.71:1508/services/WSInterface_cdr.WSInterface_cdrHttpSoap11Endpoint</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_shsjdqzyyyweb_FGPLService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.158:1405/services/FGPLService.FGPLServiceHttpSoap12Endpoint</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_xmyyweb_SendMessage" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.0.19.148:1506/services/WSInterface.WSInterfaceHttpSoap11Endpoint</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_sh7yWeb_webserviceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://155.165.13.14:8085/ExamResultService/services/ExamResultInput</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_cszxyyweb2_NYwclService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.3.19:8080/Services/NYwclService</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_ayd2fyweb_WSInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://223.220.200.45:1506/services/WSInterface.WSInterfaceHttpSoap12Endpoint</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_EHSBMQWeb_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://100.100.42.107/GetEHMQ/EHSBMQService.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_gddhyyweb_WSServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://120.197.142.53:9180/hdepc/services/hisWebService</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_ZszlWeb_ZGQ_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:2089/ZSZL_MQService2010/MQService.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_cdrmyymq_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:3654/cdrmyyWebService/IBMMQService.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_gdszyyMzHisWeb_HisForInspectItemService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.9.199.12:8003/HisForInspectItemService.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_BL2FZMQWeb_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:5199/BL2MQWebService/FZMQService.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_xy2yweb_XYEPACS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.200.119:57772/csp/xyepacs/PACS.BS.Service.cls</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_xyfyWeb1_DHC_Pis_XiangYaOne" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.2.116:57772/csp/dhcens/DHC.Pis.XiangYaOne.BS.Web.cls</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_BLToFZMQWS_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.168.35.249/BLToMQWebSrv/FZMQService.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_gds2websvr_PacsWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.3.174/csp/jhip/JHIP.PACS.BS.PacsWS.cls</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_sdwhslyyWeb_MZWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.101.2.170:9008/MZWebService.asmx</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_XJZLYYWEB_WSInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.20.128.62:1506/services/WSInterface.WSInterfaceHttpSoap11Endpoint</Value>
+    </Setting>
+    <Setting Name="PathHISZGQJK_GzzszlyyFzLis_PDAService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.95.189:8081/PDAService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

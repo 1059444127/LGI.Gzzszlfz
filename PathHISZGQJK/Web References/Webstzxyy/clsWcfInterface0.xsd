@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" />
+  <xs:element name="Verify">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EHRInterface">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Information" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EHRInterfaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EHRInterfaceResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EHRInterfaceBL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="information" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="hsImage" nillable="true" type="q1:ArrayOfKeyValueOfanyTypeanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EHRInterfaceBLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EHRInterfaceBLResult" type="xs:int" />
+        <xs:element minOccurs="0" name="p_intResult" type="xs:int" />
+        <xs:element minOccurs="0" name="p_blnSpecified" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_GetRefOrdercontent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="registerid_int" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_GetRefOrdercontentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_GetRefOrdercontentResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_GetRefLisResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientipno_vchr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="iptimes_int" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_GetRefLisResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_GetRefLisResultResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_GetRefPeResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientipno_vchr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="iptimes_int" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_GetRefPeResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_GetRefPeResultResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetLisApplyInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strPatientNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strIpTimes" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetLisApplyInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetLisApplyInfoResult" type="xs:int" />
+        <xs:element minOccurs="0" name="p_bytResultArr" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageChangeToString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objImage" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageChangeToStringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImageChangeToStringResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetPACSInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strBrID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intIpTimes" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetPACSInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetPACSInfoResult" type="xs:int" />
+        <xs:element minOccurs="0" name="p_bytPACSInfoArr" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetPACSReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strLsh" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetPACSReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetPACSReportResult" type="xs:int" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" minOccurs="0" name="p_objPACSInfo" nillable="true" type="q2:clsDCPACSInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetOrderInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intRegisterID" type="xs:int" />
+        <xs:element minOccurs="0" name="p_intType" type="xs:int" />
+        <xs:element minOccurs="0" name="p_strParam26" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetOrderInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetOrderInfoResult" type="xs:int" />
+        <xs:element minOccurs="0" name="p_bytOrderContentArr" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetNumberForOutRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strBrID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intIpTimes" type="xs:int" />
+        <xs:element minOccurs="0" name="p_intRegisterID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetNumberForOutRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetNumberForOutRecordResult" type="xs:int" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" minOccurs="0" name="p_objNumberInfo" nillable="true" type="q3:clsDCNumberInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetBLInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strZyh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intZycs" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetBLInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetBLInfoResult" type="xs:int" />
+        <xs:element minOccurs="0" name="p_bytBLInfoArr" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetBLReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intLsh" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetBLReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetBLReportResult" type="xs:int" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" minOccurs="0" name="p_objBLInfo" nillable="true" type="q4:clsDCBLReport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetECGInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strBrID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intIpTimes" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetECGInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetECGInfoResult" type="xs:int" />
+        <xs:element minOccurs="0" name="p_bytECGInfoArr" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetECGReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strLsh" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetECGReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetECGReportResult" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" minOccurs="0" name="p_objECGInfo" nillable="true" type="q5:clsDCECGInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intSaveKeepRecordToHIS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_intRegisterID" type="xs:int" />
+        <xs:element minOccurs="0" name="p_intType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intSaveKeepRecordToHISResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intSaveKeepRecordToHISResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetRecipeInfoFromOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strPatientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intDiagTimes" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetRecipeInfoFromOPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetRecipeInfoFromOPResult" type="xs:int" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" minOccurs="0" name="p_objEntityRecipeArr" nillable="true" type="q6:ArrayOfclsEntityRecipe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetCheckResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strPatientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intDiagTimes" type="xs:int" />
+        <xs:element minOccurs="0" name="p_dtmDiagDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetCheckResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetCheckResultResult" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" minOccurs="0" name="p_objCheckResultArr" nillable="true" type="q7:ArrayOfclsCheckResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetZSPACSReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strPatientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_strHisUID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetZSPACSReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetZSPACSReportResult" type="xs:int" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" minOccurs="0" name="p_objPacsReportArr" nillable="true" type="q8:ArrayOfclsPacsReport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetAllLisApplyInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="p_lstRegisterID" nillable="true" type="q9:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetAllLisApplyInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetAllLisApplyInfoResult" type="xs:int" />
+        <xs:element minOccurs="0" name="p_bytResultArr" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetAllBLInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="p_lstRegisterID" nillable="true" type="q10:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetAllBLInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetAllBLInfoResult" type="xs:int" />
+        <xs:element minOccurs="0" name="p_bytResultArr" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetAllPACSInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="p_lstRegisterID" nillable="true" type="q11:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetAllPACSInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetAllPACSInfoResult" type="xs:int" />
+        <xs:element minOccurs="0" name="p_bytResultArr" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetAllECGInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strDbKey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="p_lstRegisterID" nillable="true" type="q12:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetAllECGInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetAllECGInfoResult" type="xs:int" />
+        <xs:element minOccurs="0" name="p_bytResultArr" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetOPPateintInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" minOccurs="0" name="p_lstQP" nillable="true" type="q13:ArrayOfclsDCQueryParameters" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetOPPateintInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetOPPateintInfoResult" type="xs:int" />
+        <xs:element minOccurs="0" name="bytOPPatInfo" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetOPPatientList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strPatientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_dtmBegin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="p_dtmEnd" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetOPPatientListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetOPPatientListResult" type="xs:int" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" minOccurs="0" name="p_objOPPatientArr" nillable="true" type="q14:ArrayOfclsEntityOPPatient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intSynchronousInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strPatientIpNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intIpTimes" type="xs:int" />
+        <xs:element minOccurs="0" name="p_intType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intSynchronousInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intSynchronousInfoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intSynchronousInfo1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strPatientIpNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intIpTimes" type="xs:int" />
+        <xs:element minOccurs="0" name="p_intRegisterID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intSynchronousInfo1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intSynchronousInfo1Result" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intSynchronousInfo2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strPatientIpNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intIpTimes" type="xs:int" />
+        <xs:element minOccurs="0" name="p_intDoctID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intSynchronousInfo2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intSynchronousInfo2Result" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_dtGetPatient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_intType" type="xs:int" />
+        <xs:element minOccurs="0" name="p_strCondition" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_dtGetPatientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_dtGetPatientResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_dtGetEhrPatient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_intType" type="xs:int" />
+        <xs:element minOccurs="0" name="p_strCondition" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_dtGetEhrPatientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_dtGetEhrPatientResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetZYPatientInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_strPatientIpNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_intIpTimes" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="m_intGetZYPatientInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_intGetZYPatientInfoResult" type="xs:int" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" minOccurs="0" name="p_objZYPatientInfo" nillable="true" type="q15:clsZYPatientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

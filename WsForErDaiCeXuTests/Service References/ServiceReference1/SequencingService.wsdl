@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetPatientsForSequence">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="startRegTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endRegTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientsForSequenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientsForSequenceResult" type="tns:ArrayOfSequenceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSequenceRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SequenceRequest" nillable="true" type="tns:SequenceRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SequenceRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PatientId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RegTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TestItemName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PathNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UploadSequenceReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="report" type="tns:SequenceReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SequenceReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PatientId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RegTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TestItemName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PathNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReportPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReportName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReportDocBase64String" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SendDept" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Diag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PdfBase64" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UploadSequenceReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadSequenceReportResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportBySendDept">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startReportTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endReportTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportBySendDeptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReportBySendDeptResult" type="tns:ArrayOfSequenceReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSequenceReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SequenceReport" nillable="true" type="tns:SequenceReport" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetReporyWithPdfByPathNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pathNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReporyWithPdfByPathNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReporyWithPdfByPathNoResult" type="tns:SequenceReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPatientsForSequenceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientsForSequence" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientsForSequenceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientsForSequenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadSequenceReportSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadSequenceReport" />
+  </wsdl:message>
+  <wsdl:message name="UploadSequenceReportSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadSequenceReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReportBySendDeptSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportBySendDept" />
+  </wsdl:message>
+  <wsdl:message name="GetReportBySendDeptSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportBySendDeptResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReporyWithPdfByPathNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReporyWithPdfByPathNo" />
+  </wsdl:message>
+  <wsdl:message name="GetReporyWithPdfByPathNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReporyWithPdfByPathNoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SequencingServiceSoap">
+    <wsdl:operation name="GetPatientsForSequence">
+      <wsdl:input message="tns:GetPatientsForSequenceSoapIn" />
+      <wsdl:output message="tns:GetPatientsForSequenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadSequenceReport">
+      <wsdl:input message="tns:UploadSequenceReportSoapIn" />
+      <wsdl:output message="tns:UploadSequenceReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportBySendDept">
+      <wsdl:input message="tns:GetReportBySendDeptSoapIn" />
+      <wsdl:output message="tns:GetReportBySendDeptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReporyWithPdfByPathNo">
+      <wsdl:input message="tns:GetReporyWithPdfByPathNoSoapIn" />
+      <wsdl:output message="tns:GetReporyWithPdfByPathNoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SequencingServiceSoap" type="tns:SequencingServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPatientsForSequence">
+      <soap:operation soapAction="http://tempuri.org/GetPatientsForSequence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadSequenceReport">
+      <soap:operation soapAction="http://tempuri.org/UploadSequenceReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportBySendDept">
+      <soap:operation soapAction="http://tempuri.org/GetReportBySendDept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReporyWithPdfByPathNo">
+      <soap:operation soapAction="http://tempuri.org/GetReporyWithPdfByPathNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SequencingServiceSoap12" type="tns:SequencingServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPatientsForSequence">
+      <soap12:operation soapAction="http://tempuri.org/GetPatientsForSequence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadSequenceReport">
+      <soap12:operation soapAction="http://tempuri.org/UploadSequenceReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportBySendDept">
+      <soap12:operation soapAction="http://tempuri.org/GetReportBySendDept" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReporyWithPdfByPathNo">
+      <soap12:operation soapAction="http://tempuri.org/GetReporyWithPdfByPathNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SequencingService">
+    <wsdl:port name="SequencingServiceSoap" binding="tns:SequencingServiceSoap">
+      <soap:address location="http://localhost:27863/SequencingService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SequencingServiceSoap12" binding="tns:SequencingServiceSoap12">
+      <soap12:address location="http://localhost:27863/SequencingService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

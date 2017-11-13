@@ -1,0 +1,1732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SetCertTrustList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CTLAltName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CTLContent" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CTLContentLen" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCertTrustListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetCertTrustListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JSCASoapHeader" type="tns:JSCASoapHeader" />
+      <s:complexType name="JSCASoapHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="QueryCertTrustListAltNames">
+        <s:complexType />
+      </s:element>
+      <s:element name="QueryCertTrustListAltNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryCertTrustListAltNamesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCertTrustList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CTLAltName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCertTrustListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryCertTrustListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelCertTrustList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CTLAltName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelCertTrustListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DelCertTrustListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetWebAppName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WebAppName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetWebAppNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetWebAppNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSignMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="signMethod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSignMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSignMethodResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSignMethod">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSignMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSignMethodResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEncryptMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EncryptMethod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEncryptMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetEncryptMethodResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEncryptMethod">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEncryptMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEncryptMethodResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServerCertificate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CertUsage" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServerCertificateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServerCertificateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenRandom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="len" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenRandomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenRandomResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCertInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Base64EncodeCert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCertInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCertInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCertInfoByOid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Base64EncodeCert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCertInfoByOidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCertInfoByOidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateCert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Base64EncodeCert" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateCertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateCertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifySignedData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Base64EncodeCert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SignValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifySignedDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifySignedDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fs" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifySignedFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Base64EncodeCert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fs" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SignValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifySignedFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifySignedFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecryptData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecryptDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DecryptDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fs" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecryptFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fs" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecryptFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DecryptFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PubKeyEncrypt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Base64EncodeCert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PubKeyEncryptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PubKeyEncryptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PriKeyDecrypt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PriKeyDecryptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PriKeyDecryptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignDataByP7">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignDataByP7Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignDataByP7Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifySignedDataByP7">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pkcs7SignData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifySignedDataByP7Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifySignedDataByP7Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetP7SignDataInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pkcs7SignData" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetP7SignDataInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetP7SignDataInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignDataXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignDataXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignDataXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifySignedDataXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifySignedDataXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifySignedDataXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetXMLSignatureInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XMLSignedData" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetXMLSignatureInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetXMLSignatureInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTimeStampRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTimeStampRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTimeStampRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTimeStampResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sReq" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTimeStampResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTimeStampResponseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyTimeStamp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="scontent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sResponse" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyTimeStampResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyTimeStampResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTimeStampInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tsResponseData" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTimeStampInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTimeStampInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SetCertTrustListSoapIn">
+    <wsdl:part name="parameters" element="tns:SetCertTrustList" />
+  </wsdl:message>
+  <wsdl:message name="SetCertTrustListSoapOut">
+    <wsdl:part name="parameters" element="tns:SetCertTrustListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetCertTrustListJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="QueryCertTrustListAltNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryCertTrustListAltNames" />
+  </wsdl:message>
+  <wsdl:message name="QueryCertTrustListAltNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryCertTrustListAltNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryCertTrustListAltNamesJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="QueryCertTrustListSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryCertTrustList" />
+  </wsdl:message>
+  <wsdl:message name="QueryCertTrustListSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryCertTrustListResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryCertTrustListJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="DelCertTrustListSoapIn">
+    <wsdl:part name="parameters" element="tns:DelCertTrustList" />
+  </wsdl:message>
+  <wsdl:message name="DelCertTrustListSoapOut">
+    <wsdl:part name="parameters" element="tns:DelCertTrustListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelCertTrustListJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SetWebAppNameSoapIn">
+    <wsdl:part name="parameters" element="tns:SetWebAppName" />
+  </wsdl:message>
+  <wsdl:message name="SetWebAppNameSoapOut">
+    <wsdl:part name="parameters" element="tns:SetWebAppNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetWebAppNameJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SetSignMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSignMethod" />
+  </wsdl:message>
+  <wsdl:message name="SetSignMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSignMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSignMethodJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetSignMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSignMethod" />
+  </wsdl:message>
+  <wsdl:message name="GetSignMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSignMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSignMethodJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SetEncryptMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:SetEncryptMethod" />
+  </wsdl:message>
+  <wsdl:message name="SetEncryptMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:SetEncryptMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetEncryptMethodJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetEncryptMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEncryptMethod" />
+  </wsdl:message>
+  <wsdl:message name="GetEncryptMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEncryptMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEncryptMethodJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetServerCertificateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerCertificate" />
+  </wsdl:message>
+  <wsdl:message name="GetServerCertificateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerCertificateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServerCertificateJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GenRandomSoapIn">
+    <wsdl:part name="parameters" element="tns:GenRandom" />
+  </wsdl:message>
+  <wsdl:message name="GenRandomSoapOut">
+    <wsdl:part name="parameters" element="tns:GenRandomResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenRandomJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetCertInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCertInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCertInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCertInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCertInfoJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetCertInfoByOidSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCertInfoByOid" />
+  </wsdl:message>
+  <wsdl:message name="GetCertInfoByOidSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCertInfoByOidResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCertInfoByOidJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCertSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateCert" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCertSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateCertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCertJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SignDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SignData" />
+  </wsdl:message>
+  <wsdl:message name="SignDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SignDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SignDataJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedDataSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifySignedData" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedDataSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifySignedDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedDataJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SignFileSoapIn">
+    <wsdl:part name="parameters" element="tns:SignFile" />
+  </wsdl:message>
+  <wsdl:message name="SignFileSoapOut">
+    <wsdl:part name="parameters" element="tns:SignFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SignFileJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedFileSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifySignedFile" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedFileSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifySignedFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedFileJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFile" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFile" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="EncryptDataSoapIn">
+    <wsdl:part name="parameters" element="tns:EncryptData" />
+  </wsdl:message>
+  <wsdl:message name="EncryptDataSoapOut">
+    <wsdl:part name="parameters" element="tns:EncryptDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncryptDataJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="DecryptDataSoapIn">
+    <wsdl:part name="parameters" element="tns:DecryptData" />
+  </wsdl:message>
+  <wsdl:message name="DecryptDataSoapOut">
+    <wsdl:part name="parameters" element="tns:DecryptDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DecryptDataJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="EncryptFileSoapIn">
+    <wsdl:part name="parameters" element="tns:EncryptFile" />
+  </wsdl:message>
+  <wsdl:message name="EncryptFileSoapOut">
+    <wsdl:part name="parameters" element="tns:EncryptFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncryptFileJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="DecryptFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DecryptFile" />
+  </wsdl:message>
+  <wsdl:message name="DecryptFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DecryptFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DecryptFileJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="PubKeyEncryptSoapIn">
+    <wsdl:part name="parameters" element="tns:PubKeyEncrypt" />
+  </wsdl:message>
+  <wsdl:message name="PubKeyEncryptSoapOut">
+    <wsdl:part name="parameters" element="tns:PubKeyEncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="PubKeyEncryptJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="PriKeyDecryptSoapIn">
+    <wsdl:part name="parameters" element="tns:PriKeyDecrypt" />
+  </wsdl:message>
+  <wsdl:message name="PriKeyDecryptSoapOut">
+    <wsdl:part name="parameters" element="tns:PriKeyDecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="PriKeyDecryptJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SignDataByP7SoapIn">
+    <wsdl:part name="parameters" element="tns:SignDataByP7" />
+  </wsdl:message>
+  <wsdl:message name="SignDataByP7SoapOut">
+    <wsdl:part name="parameters" element="tns:SignDataByP7Response" />
+  </wsdl:message>
+  <wsdl:message name="SignDataByP7JSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedDataByP7SoapIn">
+    <wsdl:part name="parameters" element="tns:VerifySignedDataByP7" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedDataByP7SoapOut">
+    <wsdl:part name="parameters" element="tns:VerifySignedDataByP7Response" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedDataByP7JSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetP7SignDataInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetP7SignDataInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetP7SignDataInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetP7SignDataInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetP7SignDataInfoJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SignDataXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:SignDataXML" />
+  </wsdl:message>
+  <wsdl:message name="SignDataXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:SignDataXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="SignDataXMLJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedDataXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifySignedDataXML" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedDataXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifySignedDataXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifySignedDataXMLJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetXMLSignatureInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetXMLSignatureInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetXMLSignatureInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetXMLSignatureInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetXMLSignatureInfoJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="CreateTimeStampRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTimeStampRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateTimeStampRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTimeStampRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTimeStampRequestJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="CreateTimeStampResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTimeStampResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTimeStampResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTimeStampResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTimeStampResponseJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTimeStampSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyTimeStamp" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTimeStampSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyTimeStampResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTimeStampJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetTimeStampInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTimeStampInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetTimeStampInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTimeStampInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTimeStampInfoJSCASoapHeader">
+    <wsdl:part name="JSCASoapHeader" element="tns:JSCASoapHeader" />
+  </wsdl:message>
+  <wsdl:portType name="HealthWebServiceSoap">
+    <wsdl:operation name="SetCertTrustList">
+      <wsdl:input message="tns:SetCertTrustListSoapIn" />
+      <wsdl:output message="tns:SetCertTrustListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCertTrustListAltNames">
+      <wsdl:input message="tns:QueryCertTrustListAltNamesSoapIn" />
+      <wsdl:output message="tns:QueryCertTrustListAltNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCertTrustList">
+      <wsdl:input message="tns:QueryCertTrustListSoapIn" />
+      <wsdl:output message="tns:QueryCertTrustListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCertTrustList">
+      <wsdl:input message="tns:DelCertTrustListSoapIn" />
+      <wsdl:output message="tns:DelCertTrustListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWebAppName">
+      <wsdl:input message="tns:SetWebAppNameSoapIn" />
+      <wsdl:output message="tns:SetWebAppNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSignMethod">
+      <wsdl:input message="tns:SetSignMethodSoapIn" />
+      <wsdl:output message="tns:SetSignMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSignMethod">
+      <wsdl:input message="tns:GetSignMethodSoapIn" />
+      <wsdl:output message="tns:GetSignMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEncryptMethod">
+      <wsdl:input message="tns:SetEncryptMethodSoapIn" />
+      <wsdl:output message="tns:SetEncryptMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEncryptMethod">
+      <wsdl:input message="tns:GetEncryptMethodSoapIn" />
+      <wsdl:output message="tns:GetEncryptMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerCertificate">
+      <wsdl:input message="tns:GetServerCertificateSoapIn" />
+      <wsdl:output message="tns:GetServerCertificateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenRandom">
+      <wsdl:input message="tns:GenRandomSoapIn" />
+      <wsdl:output message="tns:GenRandomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCertInfo">
+      <wsdl:input message="tns:GetCertInfoSoapIn" />
+      <wsdl:output message="tns:GetCertInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCertInfoByOid">
+      <wsdl:input message="tns:GetCertInfoByOidSoapIn" />
+      <wsdl:output message="tns:GetCertInfoByOidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCert">
+      <wsdl:input message="tns:ValidateCertSoapIn" />
+      <wsdl:output message="tns:ValidateCertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SignData">
+      <wsdl:input message="tns:SignDataSoapIn" />
+      <wsdl:output message="tns:SignDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedData">
+      <wsdl:input message="tns:VerifySignedDataSoapIn" />
+      <wsdl:output message="tns:VerifySignedDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SignFile">
+      <wsdl:input message="tns:SignFileSoapIn" />
+      <wsdl:output message="tns:SignFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedFile">
+      <wsdl:input message="tns:VerifySignedFileSoapIn" />
+      <wsdl:output message="tns:VerifySignedFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:input message="tns:DeleteFileSoapIn" />
+      <wsdl:output message="tns:DeleteFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <wsdl:input message="tns:GetFileSoapIn" />
+      <wsdl:output message="tns:GetFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptData">
+      <wsdl:input message="tns:EncryptDataSoapIn" />
+      <wsdl:output message="tns:EncryptDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptData">
+      <wsdl:input message="tns:DecryptDataSoapIn" />
+      <wsdl:output message="tns:DecryptDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptFile">
+      <wsdl:input message="tns:EncryptFileSoapIn" />
+      <wsdl:output message="tns:EncryptFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptFile">
+      <wsdl:input message="tns:DecryptFileSoapIn" />
+      <wsdl:output message="tns:DecryptFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PubKeyEncrypt">
+      <wsdl:input message="tns:PubKeyEncryptSoapIn" />
+      <wsdl:output message="tns:PubKeyEncryptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PriKeyDecrypt">
+      <wsdl:input message="tns:PriKeyDecryptSoapIn" />
+      <wsdl:output message="tns:PriKeyDecryptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SignDataByP7">
+      <wsdl:input message="tns:SignDataByP7SoapIn" />
+      <wsdl:output message="tns:SignDataByP7SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedDataByP7">
+      <wsdl:input message="tns:VerifySignedDataByP7SoapIn" />
+      <wsdl:output message="tns:VerifySignedDataByP7SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetP7SignDataInfo">
+      <wsdl:input message="tns:GetP7SignDataInfoSoapIn" />
+      <wsdl:output message="tns:GetP7SignDataInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SignDataXML">
+      <wsdl:input message="tns:SignDataXMLSoapIn" />
+      <wsdl:output message="tns:SignDataXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedDataXML">
+      <wsdl:input message="tns:VerifySignedDataXMLSoapIn" />
+      <wsdl:output message="tns:VerifySignedDataXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXMLSignatureInfo">
+      <wsdl:input message="tns:GetXMLSignatureInfoSoapIn" />
+      <wsdl:output message="tns:GetXMLSignatureInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTimeStampRequest">
+      <wsdl:input message="tns:CreateTimeStampRequestSoapIn" />
+      <wsdl:output message="tns:CreateTimeStampRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTimeStampResponse">
+      <wsdl:input message="tns:CreateTimeStampResponseSoapIn" />
+      <wsdl:output message="tns:CreateTimeStampResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTimeStamp">
+      <wsdl:input message="tns:VerifyTimeStampSoapIn" />
+      <wsdl:output message="tns:VerifyTimeStampSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeStampInfo">
+      <wsdl:input message="tns:GetTimeStampInfoSoapIn" />
+      <wsdl:output message="tns:GetTimeStampInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HealthWebServiceSoap" type="tns:HealthWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetCertTrustList">
+      <soap:operation soapAction="http://tempuri.org/SetCertTrustList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetCertTrustListJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCertTrustListAltNames">
+      <soap:operation soapAction="http://tempuri.org/QueryCertTrustListAltNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:QueryCertTrustListAltNamesJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCertTrustList">
+      <soap:operation soapAction="http://tempuri.org/QueryCertTrustList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:QueryCertTrustListJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCertTrustList">
+      <soap:operation soapAction="http://tempuri.org/DelCertTrustList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DelCertTrustListJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetWebAppName">
+      <soap:operation soapAction="http://tempuri.org/SetWebAppName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetWebAppNameJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSignMethod">
+      <soap:operation soapAction="http://tempuri.org/SetSignMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetSignMethodJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignMethod">
+      <soap:operation soapAction="http://tempuri.org/GetSignMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetSignMethodJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEncryptMethod">
+      <soap:operation soapAction="http://tempuri.org/SetEncryptMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetEncryptMethodJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEncryptMethod">
+      <soap:operation soapAction="http://tempuri.org/GetEncryptMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetEncryptMethodJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerCertificate">
+      <soap:operation soapAction="http://tempuri.org/GetServerCertificate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetServerCertificateJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenRandom">
+      <soap:operation soapAction="http://tempuri.org/GenRandom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GenRandomJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCertInfo">
+      <soap:operation soapAction="http://tempuri.org/GetCertInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCertInfoJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCertInfoByOid">
+      <soap:operation soapAction="http://tempuri.org/GetCertInfoByOid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCertInfoByOidJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCert">
+      <soap:operation soapAction="http://tempuri.org/ValidateCert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ValidateCertJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignData">
+      <soap:operation soapAction="http://tempuri.org/SignData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SignDataJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedData">
+      <soap:operation soapAction="http://tempuri.org/VerifySignedData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VerifySignedDataJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignFile">
+      <soap:operation soapAction="http://tempuri.org/SignFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SignFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedFile">
+      <soap:operation soapAction="http://tempuri.org/VerifySignedFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VerifySignedFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap:operation soapAction="http://tempuri.org/DeleteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap:operation soapAction="http://tempuri.org/GetFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptData">
+      <soap:operation soapAction="http://tempuri.org/EncryptData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:EncryptDataJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptData">
+      <soap:operation soapAction="http://tempuri.org/DecryptData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DecryptDataJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptFile">
+      <soap:operation soapAction="http://tempuri.org/EncryptFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:EncryptFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptFile">
+      <soap:operation soapAction="http://tempuri.org/DecryptFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DecryptFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PubKeyEncrypt">
+      <soap:operation soapAction="http://tempuri.org/PubKeyEncrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PubKeyEncryptJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PriKeyDecrypt">
+      <soap:operation soapAction="http://tempuri.org/PriKeyDecrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PriKeyDecryptJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignDataByP7">
+      <soap:operation soapAction="http://tempuri.org/SignDataByP7" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SignDataByP7JSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedDataByP7">
+      <soap:operation soapAction="http://tempuri.org/VerifySignedDataByP7" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VerifySignedDataByP7JSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetP7SignDataInfo">
+      <soap:operation soapAction="http://tempuri.org/GetP7SignDataInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetP7SignDataInfoJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignDataXML">
+      <soap:operation soapAction="http://tempuri.org/SignDataXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SignDataXMLJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedDataXML">
+      <soap:operation soapAction="http://tempuri.org/VerifySignedDataXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VerifySignedDataXMLJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXMLSignatureInfo">
+      <soap:operation soapAction="http://tempuri.org/GetXMLSignatureInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetXMLSignatureInfoJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTimeStampRequest">
+      <soap:operation soapAction="http://tempuri.org/CreateTimeStampRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreateTimeStampRequestJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTimeStampResponse">
+      <soap:operation soapAction="http://tempuri.org/CreateTimeStampResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreateTimeStampResponseJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTimeStamp">
+      <soap:operation soapAction="http://tempuri.org/VerifyTimeStamp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:VerifyTimeStampJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeStampInfo">
+      <soap:operation soapAction="http://tempuri.org/GetTimeStampInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetTimeStampInfoJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HealthWebServiceSoap12" type="tns:HealthWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetCertTrustList">
+      <soap12:operation soapAction="http://tempuri.org/SetCertTrustList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetCertTrustListJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCertTrustListAltNames">
+      <soap12:operation soapAction="http://tempuri.org/QueryCertTrustListAltNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:QueryCertTrustListAltNamesJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCertTrustList">
+      <soap12:operation soapAction="http://tempuri.org/QueryCertTrustList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:QueryCertTrustListJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCertTrustList">
+      <soap12:operation soapAction="http://tempuri.org/DelCertTrustList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DelCertTrustListJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetWebAppName">
+      <soap12:operation soapAction="http://tempuri.org/SetWebAppName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetWebAppNameJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSignMethod">
+      <soap12:operation soapAction="http://tempuri.org/SetSignMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetSignMethodJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignMethod">
+      <soap12:operation soapAction="http://tempuri.org/GetSignMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetSignMethodJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEncryptMethod">
+      <soap12:operation soapAction="http://tempuri.org/SetEncryptMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetEncryptMethodJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEncryptMethod">
+      <soap12:operation soapAction="http://tempuri.org/GetEncryptMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetEncryptMethodJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerCertificate">
+      <soap12:operation soapAction="http://tempuri.org/GetServerCertificate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetServerCertificateJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenRandom">
+      <soap12:operation soapAction="http://tempuri.org/GenRandom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GenRandomJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCertInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetCertInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCertInfoJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCertInfoByOid">
+      <soap12:operation soapAction="http://tempuri.org/GetCertInfoByOid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCertInfoByOidJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCert">
+      <soap12:operation soapAction="http://tempuri.org/ValidateCert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ValidateCertJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignData">
+      <soap12:operation soapAction="http://tempuri.org/SignData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SignDataJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedData">
+      <soap12:operation soapAction="http://tempuri.org/VerifySignedData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:VerifySignedDataJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignFile">
+      <soap12:operation soapAction="http://tempuri.org/SignFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SignFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedFile">
+      <soap12:operation soapAction="http://tempuri.org/VerifySignedFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:VerifySignedFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap12:operation soapAction="http://tempuri.org/DeleteFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap12:operation soapAction="http://tempuri.org/GetFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptData">
+      <soap12:operation soapAction="http://tempuri.org/EncryptData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:EncryptDataJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptData">
+      <soap12:operation soapAction="http://tempuri.org/DecryptData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DecryptDataJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptFile">
+      <soap12:operation soapAction="http://tempuri.org/EncryptFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:EncryptFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptFile">
+      <soap12:operation soapAction="http://tempuri.org/DecryptFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DecryptFileJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PubKeyEncrypt">
+      <soap12:operation soapAction="http://tempuri.org/PubKeyEncrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PubKeyEncryptJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PriKeyDecrypt">
+      <soap12:operation soapAction="http://tempuri.org/PriKeyDecrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PriKeyDecryptJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignDataByP7">
+      <soap12:operation soapAction="http://tempuri.org/SignDataByP7" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SignDataByP7JSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedDataByP7">
+      <soap12:operation soapAction="http://tempuri.org/VerifySignedDataByP7" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:VerifySignedDataByP7JSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetP7SignDataInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetP7SignDataInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetP7SignDataInfoJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignDataXML">
+      <soap12:operation soapAction="http://tempuri.org/SignDataXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SignDataXMLJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifySignedDataXML">
+      <soap12:operation soapAction="http://tempuri.org/VerifySignedDataXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:VerifySignedDataXMLJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXMLSignatureInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetXMLSignatureInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetXMLSignatureInfoJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTimeStampRequest">
+      <soap12:operation soapAction="http://tempuri.org/CreateTimeStampRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CreateTimeStampRequestJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTimeStampResponse">
+      <soap12:operation soapAction="http://tempuri.org/CreateTimeStampResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CreateTimeStampResponseJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTimeStamp">
+      <soap12:operation soapAction="http://tempuri.org/VerifyTimeStamp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:VerifyTimeStampJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeStampInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetTimeStampInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetTimeStampInfoJSCASoapHeader" part="JSCASoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HealthWebService">
+    <wsdl:port name="HealthWebServiceSoap" binding="tns:HealthWebServiceSoap">
+      <soap:address location="http://192.168.12.82:8080/HealthWebservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HealthWebServiceSoap12" binding="tns:HealthWebServiceSoap12">
+      <soap12:address location="http://192.168.12.82:8080/HealthWebservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

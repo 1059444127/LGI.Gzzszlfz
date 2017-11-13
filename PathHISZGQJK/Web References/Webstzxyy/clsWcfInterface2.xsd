@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/com.HopeBridge.common" />
+  <xs:complexType name="clsDCPACSInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/com.HopeBridge.common" base="q1:clsBaseDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bytBgtpArr" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="dtmRptDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="intRegisterID" type="xs:int" />
+          <xs:element minOccurs="0" name="strLsh" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strYxjl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strYxsj" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsDCPACSInfo" nillable="true" type="tns:clsDCPACSInfo" />
+  <xs:complexType name="clsDCNumberInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/com.HopeBridge.common" base="q2:clsBaseDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="strCTNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strHeartElectricity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strPathologyNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strXRayNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsDCNumberInfo" nillable="true" type="tns:clsDCNumberInfo" />
+  <xs:complexType name="clsDCBLReport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/com.HopeBridge.common" base="q3:clsBaseDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bytBgtpArr" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="decDjlsh" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="decLsh" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="decZycs" type="xs:decimal" />
+          <xs:element minOccurs="0" name="dtmBgsj" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="dtmScsj" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="intRegisterID" type="xs:int" />
+          <xs:element minOccurs="0" name="strBgys" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCh" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strJcbw" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strJcmc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strJqxh" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strNl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strScks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strScys" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strSqdh" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strXb" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strXm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strYxh" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strYxjl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strYxsj" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strZyh" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsDCBLReport" nillable="true" type="tns:clsDCBLReport" />
+  <xs:complexType name="clsDCECGInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/com.HopeBridge.common" base="q4:clsBaseDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bytBgtpArr" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="dtmRptDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="intRegisterID" type="xs:int" />
+          <xs:element minOccurs="0" name="strLsh" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strYxjl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strYxsj" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsDCECGInfo" nillable="true" type="tns:clsDCECGInfo" />
+  <xs:complexType name="ArrayOfclsEntityRecipe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsEntityRecipe" nillable="true" type="tns:clsEntityRecipe" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsEntityRecipe" nillable="true" type="tns:ArrayOfclsEntityRecipe" />
+  <xs:complexType name="clsEntityRecipe">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/com.HopeBridge.common" base="q5:clsBaseDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dtmRecipeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="fltDosage" type="xs:float" />
+          <xs:element minOccurs="0" name="fltPrice" type="xs:float" />
+          <xs:element minOccurs="0" name="fltTotal" type="xs:float" />
+          <xs:element minOccurs="0" name="fltTotalPrice" type="xs:float" />
+          <xs:element minOccurs="0" name="fltWholeDosage" type="xs:float" />
+          <xs:element minOccurs="0" name="intDiagTimes" type="xs:int" />
+          <xs:element minOccurs="0" name="intGroupNo" type="xs:int" />
+          <xs:element minOccurs="0" name="intSortNo" type="xs:int" />
+          <xs:element minOccurs="0" name="strDoctName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strFrequency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strItemCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strItemName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strPatientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strRecipeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strStandard" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strUsage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strWholeUsage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsEntityRecipe" nillable="true" type="tns:clsEntityRecipe" />
+  <xs:complexType name="ArrayOfclsCheckResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsCheckResult" nillable="true" type="tns:clsCheckResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsCheckResult" nillable="true" type="tns:ArrayOfclsCheckResult" />
+  <xs:complexType name="clsCheckResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/com.HopeBridge.common" base="q6:clsBaseDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="strGroupCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strGroupName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strItemCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strItemName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strRefExp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strRefHint" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strResUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strResValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsCheckResult" nillable="true" type="tns:clsCheckResult" />
+  <xs:complexType name="ArrayOfclsPacsReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsPacsReport" nillable="true" type="tns:clsPacsReport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsPacsReport" nillable="true" type="tns:ArrayOfclsPacsReport" />
+  <xs:complexType name="clsPacsReport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/com.HopeBridge.common" base="q7:clsBaseDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="strAuditingDoctor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCheckDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strCheckItem" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strDiagnosis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strIMGID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strPatientAge" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strPatientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strPatientName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strSendDept" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strSendDoctor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsPacsReport" nillable="true" type="tns:clsPacsReport" />
+  <xs:complexType name="ArrayOfclsDCQueryParameters">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsDCQueryParameters" nillable="true" type="tns:clsDCQueryParameters" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsDCQueryParameters" nillable="true" type="tns:ArrayOfclsDCQueryParameters" />
+  <xs:complexType name="clsDCQueryParameters">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/com.HopeBridge.common" base="q8:clsBaseDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="strKeyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsDCQueryParameters" nillable="true" type="tns:clsDCQueryParameters" />
+  <xs:complexType name="ArrayOfclsEntityOPPatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsEntityOPPatient" nillable="true" type="tns:clsEntityOPPatient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsEntityOPPatient" nillable="true" type="tns:ArrayOfclsEntityOPPatient" />
+  <xs:complexType name="clsEntityOPPatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IntCaseprtnums" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IntDeptid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IntDiagstatus" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IntDoctid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IntID" type="xs:int" />
+      <xs:element minOccurs="0" name="IntMarriage" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IntMoreflag" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IntRegid" type="xs:int" />
+      <xs:element minOccurs="0" name="IntSerno" type="xs:int" />
+      <xs:element minOccurs="0" name="Intdiagtimes" type="xs:int" />
+      <xs:element minOccurs="0" name="StrBirthPlace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCardno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCardtypeid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrCitizenship" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrContactTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrContactname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrDeptName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrEducation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrGuardAdr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrGuardRelation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrGuardian" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrGuardiantel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrHomeAdr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrHometel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrHomezip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrIDCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrNative" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrOcupation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrOperid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrPatientID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrSex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrStature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrWeight" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrWorktel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StrWorkunit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Strdoctname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="datRegDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dtBirthday" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dtOPrdate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dtRecdate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="intGetDrugTimes" type="xs:int" />
+      <xs:element minOccurs="0" name="strAllergies" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strBlood" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strContactaddr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strContactrelation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strDetailPatientID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strHouseholdregaddr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strWorkzip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsEntityOPPatient" nillable="true" type="tns:clsEntityOPPatient" />
+  <xs:complexType name="clsZYPatientInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/com.HopeBridge.common" base="q9:clsBaseDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dtmBirthday" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="dtmIndate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="intIpTimes" type="xs:int" />
+          <xs:element minOccurs="0" name="intType" type="xs:int" />
+          <xs:element minOccurs="0" name="strBedNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strPatientName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strPatientNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="strSex" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsZYPatientInfo" nillable="true" type="tns:clsZYPatientInfo" />
+</xs:schema>

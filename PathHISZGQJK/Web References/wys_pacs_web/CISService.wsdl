@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.landwind.com.cn/cis" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.landwind.com.cn/cis" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.landwind.com.cn/cis">
+      <s:element name="GetServerTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServerTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportTag" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PrepareReportResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SyncStatusResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CredentialSoapHeader" type="tns:CredentialSoapHeader" />
+      <s:complexType name="CredentialSoapHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LineIdentity" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mac" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="UserLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserLoginResult" type="tns:T_USER" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="T_USER">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserIdentity" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DepartmentIdentity" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserPassword" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GroupIdentity" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserRight1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserRight2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserRight3" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserRight4" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserRight5" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserRight6" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserBirthday" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserDuty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserTel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserStoped" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserStopedMemo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strWhere" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrintList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strWhere" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrintListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrintListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSearchList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PatientID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PatientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyWord" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSearchListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSearchListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MergeStudy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PatientIdentity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VisitIdentity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StudyIdentity" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MergeStudyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MergeStudyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStudyUIDS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Identity" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="iType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStudyUIDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStudyUIDSResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Ping">
+        <s:complexType />
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PingResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserIdentity" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangePasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewPack">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VisionNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PackLevel" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewPackResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewPackResult" type="tns:T_PACK" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="T_PACK">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PackIdentity" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisionNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PackType" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PackLevel" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackDescript" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vision" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AllURL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Upload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StudyInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetReportPrintStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportIdentity" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Printed" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetReportPrintStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetReportPrintStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListByTableName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strWhere" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListByTableNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListByTableNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListBySql">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListBySqlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListBySqlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecSQLResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServerTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerTime" />
+  </wsdl:message>
+  <wsdl:message name="GetServerTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrepareReportSoapIn">
+    <wsdl:part name="parameters" element="tns:PrepareReport" />
+  </wsdl:message>
+  <wsdl:message name="PrepareReportSoapOut">
+    <wsdl:part name="parameters" element="tns:PrepareReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:SyncStatus" />
+  </wsdl:message>
+  <wsdl:message name="SyncStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:SyncStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncStatusCredentialSoapHeader">
+    <wsdl:part name="CredentialSoapHeader" element="tns:CredentialSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="UserLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:UserLogin" />
+  </wsdl:message>
+  <wsdl:message name="UserLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:UserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserLoginCredentialSoapHeader">
+    <wsdl:part name="CredentialSoapHeader" element="tns:CredentialSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetList" />
+  </wsdl:message>
+  <wsdl:message name="GetListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrintListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrintList" />
+  </wsdl:message>
+  <wsdl:message name="GetPrintListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrintListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSearchList" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSearchListResponse" />
+  </wsdl:message>
+  <wsdl:message name="MergeStudySoapIn">
+    <wsdl:part name="parameters" element="tns:MergeStudy" />
+  </wsdl:message>
+  <wsdl:message name="MergeStudySoapOut">
+    <wsdl:part name="parameters" element="tns:MergeStudyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStudyUIDSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStudyUIDS" />
+  </wsdl:message>
+  <wsdl:message name="GetStudyUIDSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStudyUIDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewPackSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewPack" />
+  </wsdl:message>
+  <wsdl:message name="GetNewPackSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload" />
+  </wsdl:message>
+  <wsdl:message name="UploadSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFile" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetReportPrintStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:SetReportPrintStatus" />
+  </wsdl:message>
+  <wsdl:message name="SetReportPrintStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:SetReportPrintStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListByTableNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListByTableName" />
+  </wsdl:message>
+  <wsdl:message name="GetListByTableNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListByTableNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListBySqlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListBySql" />
+  </wsdl:message>
+  <wsdl:message name="GetListBySqlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListBySqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecSQL" />
+  </wsdl:message>
+  <wsdl:message name="ExecSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecSQLResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CISServiceSoap">
+    <wsdl:operation name="GetServerTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取得服务器时间。</wsdl:documentation>
+      <wsdl:input message="tns:GetServerTimeSoapIn" />
+      <wsdl:output message="tns:GetServerTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">初始化报告生成组件。</wsdl:documentation>
+      <wsdl:input message="tns:PrepareReportSoapIn" />
+      <wsdl:output message="tns:PrepareReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">同步。</wsdl:documentation>
+      <wsdl:input message="tns:SyncStatusSoapIn" />
+      <wsdl:output message="tns:SyncStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">系统用户登录。</wsdl:documentation>
+      <wsdl:input message="tns:UserLoginSoapIn" />
+      <wsdl:output message="tns:UserLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据过滤条件取得检查列表。</wsdl:documentation>
+      <wsdl:input message="tns:GetListSoapIn" />
+      <wsdl:output message="tns:GetListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrintList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据过滤条件取得打印列表。</wsdl:documentation>
+      <wsdl:input message="tns:GetPrintListSoapIn" />
+      <wsdl:output message="tns:GetPrintListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据过滤条件取得数据检索列表。</wsdl:documentation>
+      <wsdl:input message="tns:GetSearchListSoapIn" />
+      <wsdl:output message="tns:GetSearchListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MergeStudy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">合并检查。</wsdl:documentation>
+      <wsdl:input message="tns:MergeStudySoapIn" />
+      <wsdl:output message="tns:MergeStudySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyUIDS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取得检查或是病人的所有STUDYUID。</wsdl:documentation>
+      <wsdl:input message="tns:GetStudyUIDSSoapIn" />
+      <wsdl:output message="tns:GetStudyUIDSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">测试是否能连接到服务器。</wsdl:documentation>
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改用户密码。</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewPack">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取升级或安装包信息。</wsdl:documentation>
+      <wsdl:input message="tns:GetNewPackSoapIn" />
+      <wsdl:output message="tns:GetNewPackSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upload">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">上传检查数据,返回文件保存路径。</wsdl:documentation>
+      <wsdl:input message="tns:UploadSoapIn" />
+      <wsdl:output message="tns:UploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下载指定的文件</wsdl:documentation>
+      <wsdl:input message="tns:GetFileSoapIn" />
+      <wsdl:output message="tns:GetFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetReportPrintStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">设置打印状态。</wsdl:documentation>
+      <wsdl:input message="tns:SetReportPrintStatusSoapIn" />
+      <wsdl:output message="tns:SetReportPrintStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListByTableName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据表名取得数据列表。</wsdl:documentation>
+      <wsdl:input message="tns:GetListByTableNameSoapIn" />
+      <wsdl:output message="tns:GetListByTableNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListBySql">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据SQL语句进行查询及取得结果。</wsdl:documentation>
+      <wsdl:input message="tns:GetListBySqlSoapIn" />
+      <wsdl:output message="tns:GetListBySqlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecSQL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">执行传入的SQL语句。</wsdl:documentation>
+      <wsdl:input message="tns:ExecSQLSoapIn" />
+      <wsdl:output message="tns:ExecSQLSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CISServiceSoap" type="tns:CISServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerTime">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/GetServerTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareReport">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/PrepareReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncStatus">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/SyncStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SyncStatusCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/UserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UserLoginCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrintList">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/GetPrintList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchList">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/GetSearchList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MergeStudy">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/MergeStudy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyUIDS">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/GetStudyUIDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewPack">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/GetNewPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/Upload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/GetFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetReportPrintStatus">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/SetReportPrintStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListByTableName">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/GetListByTableName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListBySql">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/GetListBySql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecSQL">
+      <soap:operation soapAction="http://www.landwind.com.cn/cis/ExecSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CISServiceSoap12" type="tns:CISServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerTime">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/GetServerTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareReport">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/PrepareReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncStatus">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/SyncStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SyncStatusCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/UserLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UserLoginCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/GetList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrintList">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/GetPrintList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchList">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/GetSearchList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MergeStudy">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/MergeStudy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudyUIDS">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/GetStudyUIDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewPack">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/GetNewPack" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/Upload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/GetFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetReportPrintStatus">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/SetReportPrintStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListByTableName">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/GetListByTableName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListBySql">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/GetListBySql" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecSQL">
+      <soap12:operation soapAction="http://www.landwind.com.cn/cis/ExecSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CISService">
+    <wsdl:port name="CISServiceSoap" binding="tns:CISServiceSoap">
+      <soap:address location="http://192.168.141.9/KCIS/CISService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CISServiceSoap12" binding="tns:CISServiceSoap12">
+      <soap12:address location="http://192.168.141.9/KCIS/CISService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

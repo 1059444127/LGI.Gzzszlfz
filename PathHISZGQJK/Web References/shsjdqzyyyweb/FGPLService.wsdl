@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://tempuri.org/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>复高ESB平台与PACS系统接口</wsdl:documentation>
+  <wsp:Policy wsu:Id="servicePolicy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsam:Addressing wsp:Optional="true" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+          <wsp:Policy>
+            <wsam:AnonymousResponses />
+          </wsp:Policy>
+        </wsam:Addressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <xs:element name="GetApplyBill">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="PACS" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetApplyBillResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetApplyBillFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateApplyBillState">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="PACS" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateApplyBillStateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateApplyBillStateFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SendReport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="PACS" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SendReportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SendReportFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetApplyBillRequest">
+    <wsdl:part name="parameters" element="ns0:GetApplyBill" />
+  </wsdl:message>
+  <wsdl:message name="SendReportResponse">
+    <wsdl:part name="parameters" element="ns0:SendReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApplyBillResponse">
+    <wsdl:part name="parameters" element="ns0:GetApplyBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendReportRequest">
+    <wsdl:part name="parameters" element="ns0:SendReport" />
+  </wsdl:message>
+  <wsdl:message name="UpdateApplyBillStateFault">
+    <wsdl:part name="parameters" element="ns0:UpdateApplyBillStateFault" />
+  </wsdl:message>
+  <wsdl:message name="UpdateApplyBillStateResponse">
+    <wsdl:part name="parameters" element="ns0:UpdateApplyBillStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApplyBillFault">
+    <wsdl:part name="parameters" element="ns0:GetApplyBillFault" />
+  </wsdl:message>
+  <wsdl:message name="SendReportFault">
+    <wsdl:part name="parameters" element="ns0:SendReportFault" />
+  </wsdl:message>
+  <wsdl:message name="UpdateApplyBillStateRequest">
+    <wsdl:part name="parameters" element="ns0:UpdateApplyBillState" />
+  </wsdl:message>
+  <wsdl:portType wsp:PolicyURIs="#servicePolicy" name="FGPLServicePortType">
+    <wsdl:operation name="UpdateApplyBillState">
+      <wsdl:documentation>更新申请单状态(登记/取消登记/完成)</wsdl:documentation>
+      <wsdl:input wsaw:Action="urn:UpdateApplyBillState" message="ns0:UpdateApplyBillStateRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org//FGPLServicePortType/UpdateApplyBillStateResponse" message="ns0:UpdateApplyBillStateResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org//FGPLServicePortType/UpdateApplyBillStateFault" name="UpdateApplyBillStateFault" message="ns0:UpdateApplyBillStateFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplyBill">
+      <wsdl:documentation>获取检查申请单
+门诊:3个月内所有收费但是没有产生报告的申请单
+住院:未登记的所有申请单</wsdl:documentation>
+      <wsdl:input wsaw:Action="urn:GetApplyBill" message="ns0:GetApplyBillRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org//FGPLServicePortType/GetApplyBillResponse" message="ns0:GetApplyBillResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org//FGPLServicePortType/GetApplyBillFault" name="GetApplyBillFault" message="ns0:GetApplyBillFault" />
+    </wsdl:operation>
+    <wsdl:operation name="SendReport">
+      <wsdl:documentation>发送检查报告(审核或者修改)</wsdl:documentation>
+      <wsdl:input wsaw:Action="urn:SendReport" message="ns0:SendReportRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org//FGPLServicePortType/SendReportResponse" message="ns0:SendReportResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org//FGPLServicePortType/SendReportFault" name="SendReportFault" message="ns0:SendReportFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FGPLServiceSoap11Binding" type="ns0:FGPLServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsdl:operation name="UpdateApplyBillState">
+      <soap:operation soapAction="urn:UpdateApplyBillState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UpdateApplyBillStateFault">
+        <soap:fault use="literal" name="UpdateApplyBillStateFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplyBill">
+      <soap:operation soapAction="urn:GetApplyBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetApplyBillFault">
+        <soap:fault use="literal" name="GetApplyBillFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendReport">
+      <soap:operation soapAction="urn:SendReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SendReportFault">
+        <soap:fault use="literal" name="SendReportFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FGPLServiceSoap12Binding" type="ns0:FGPLServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsdl:operation name="UpdateApplyBillState">
+      <soap12:operation soapAction="urn:UpdateApplyBillState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UpdateApplyBillStateFault">
+        <soap12:fault use="literal" name="UpdateApplyBillStateFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplyBill">
+      <soap12:operation soapAction="urn:GetApplyBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetApplyBillFault">
+        <soap12:fault use="literal" name="GetApplyBillFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendReport">
+      <soap12:operation soapAction="urn:SendReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SendReportFault">
+        <soap12:fault use="literal" name="SendReportFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FGPLService">
+    <wsdl:port name="FGPLServiceHttpSoap12Endpoint" binding="ns0:FGPLServiceSoap12Binding">
+      <soap12:address location="http://192.168.1.158:1405/services/FGPLService.FGPLServiceHttpSoap12Endpoint" />
+    </wsdl:port>
+    <wsdl:port name="FGPLServiceHttpSoap11Endpoint" binding="ns0:FGPLServiceSoap11Binding">
+      <soap:address location="http://192.168.1.158:1405/services/FGPLService.FGPLServiceHttpSoap11Endpoint" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

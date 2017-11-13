@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns1="http://exception.haitaiinc.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://business.htemr.haitaiinc.com" xmlns:impl="http://business.htemr.haitaiinc.com" targetNamespace="http://business.htemr.haitaiinc.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://business.htemr.haitaiinc.com">
+      <xsd:import namespace="http://exception.haitaiinc.com" />
+      <xsd:element name="netWorkTest">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="netWorkTestResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="netWorkTestReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loginForOperatorInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loginForOperatorInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="loginForOperatorInfoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadInPatientInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadInPatientInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="downloadInPatientInfoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadAdviceInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadAdviceInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="downloadAdviceInfoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadAdviceInfoForArea">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadAdviceInfoForAreaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="downloadAdviceInfoForAreaReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="uploadAdviceInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="uploadAdviceInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uploadAdviceInfoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="uploadTemperature">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="uploadTemperatureResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uploadTemperatureReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadTemperature">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+            <xsd:element name="in2" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadTemperatureResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="downloadTemperatureReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadInFirstPageInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadInFirstPageInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="downloadInFirstPageInfoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadNewInFirstPageInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadNewInFirstPageInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="downloadNewInFirstPageInfoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="manageXyAdt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="manageXyAdtResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="manageXyAdtReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="manageXyInAdvice">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="manageXyInAdviceResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="manageXyInAdviceReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="manageMobileInAdvice">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="manageMobileInAdviceResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="manageMobileInAdviceReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sysBasedData">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sysBasedDataResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sysBasedDataReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="manageMobileInAdviceList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="manageMobileInAdviceListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="manageMobileInAdviceListReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadInFectInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadInFectInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="downloadInFectInfoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="fault" type="tns1:HTException" />
+      <xsd:element name="downloadInFectInfoForCond">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadInFectInfoForCondResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="downloadInFectInfoForCondReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadOtherInfect">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadOtherInfectResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="downloadOtherInfectReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://exception.haitaiinc.com">
+      <xsd:complexType name="HTException">
+        <xsd:sequence>
+          <xsd:element name="errCode" nillable="true" type="xsd:string" />
+          <xsd:element name="errType" nillable="true" type="xsd:string" />
+          <xsd:element name="message" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="downloadInPatientInfoRequest">
+    <wsdl:part name="parameters" element="impl:downloadInPatientInfo" />
+  </wsdl:message>
+  <wsdl:message name="manageXyInAdviceRequest">
+    <wsdl:part name="parameters" element="impl:manageXyInAdvice" />
+  </wsdl:message>
+  <wsdl:message name="downloadAdviceInfoForAreaRequest">
+    <wsdl:part name="parameters" element="impl:downloadAdviceInfoForArea" />
+  </wsdl:message>
+  <wsdl:message name="uploadTemperatureRequest">
+    <wsdl:part name="parameters" element="impl:uploadTemperature" />
+  </wsdl:message>
+  <wsdl:message name="uploadAdviceInfoResponse">
+    <wsdl:part name="parameters" element="impl:uploadAdviceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="netWorkTestRequest">
+    <wsdl:part name="parameters" element="impl:netWorkTest" />
+  </wsdl:message>
+  <wsdl:message name="loginForOperatorInfoResponse">
+    <wsdl:part name="parameters" element="impl:loginForOperatorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadInFirstPageInfoResponse">
+    <wsdl:part name="parameters" element="impl:downloadInFirstPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="manageXyAdtRequest">
+    <wsdl:part name="parameters" element="impl:manageXyAdt" />
+  </wsdl:message>
+  <wsdl:message name="downloadInFectInfoForCondRequest">
+    <wsdl:part name="parameters" element="impl:downloadInFectInfoForCond" />
+  </wsdl:message>
+  <wsdl:message name="HTException">
+    <wsdl:part name="fault" element="impl:fault" />
+  </wsdl:message>
+  <wsdl:message name="netWorkTestResponse">
+    <wsdl:part name="parameters" element="impl:netWorkTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="manageMobileInAdviceResponse">
+    <wsdl:part name="parameters" element="impl:manageMobileInAdviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadNewInFirstPageInfoRequest">
+    <wsdl:part name="parameters" element="impl:downloadNewInFirstPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="downloadAdviceInfoForAreaResponse">
+    <wsdl:part name="parameters" element="impl:downloadAdviceInfoForAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadAdviceInfoRequest">
+    <wsdl:part name="parameters" element="impl:downloadAdviceInfo" />
+  </wsdl:message>
+  <wsdl:message name="downloadOtherInfectRequest">
+    <wsdl:part name="parameters" element="impl:downloadOtherInfect" />
+  </wsdl:message>
+  <wsdl:message name="manageMobileInAdviceRequest">
+    <wsdl:part name="parameters" element="impl:manageMobileInAdvice" />
+  </wsdl:message>
+  <wsdl:message name="downloadInFirstPageInfoRequest">
+    <wsdl:part name="parameters" element="impl:downloadInFirstPageInfo" />
+  </wsdl:message>
+  <wsdl:message name="downloadInFectInfoRequest">
+    <wsdl:part name="parameters" element="impl:downloadInFectInfo" />
+  </wsdl:message>
+  <wsdl:message name="manageMobileInAdviceListResponse">
+    <wsdl:part name="parameters" element="impl:manageMobileInAdviceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadInFectInfoResponse">
+    <wsdl:part name="parameters" element="impl:downloadInFectInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadAdviceInfoResponse">
+    <wsdl:part name="parameters" element="impl:downloadAdviceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="manageMobileInAdviceListRequest">
+    <wsdl:part name="parameters" element="impl:manageMobileInAdviceList" />
+  </wsdl:message>
+  <wsdl:message name="downloadTemperatureResponse">
+    <wsdl:part name="parameters" element="impl:downloadTemperatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadOtherInfectResponse">
+    <wsdl:part name="parameters" element="impl:downloadOtherInfectResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadAdviceInfoRequest">
+    <wsdl:part name="parameters" element="impl:uploadAdviceInfo" />
+  </wsdl:message>
+  <wsdl:message name="sysBasedDataResponse">
+    <wsdl:part name="parameters" element="impl:sysBasedDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="sysBasedDataRequest">
+    <wsdl:part name="parameters" element="impl:sysBasedData" />
+  </wsdl:message>
+  <wsdl:message name="loginForOperatorInfoRequest">
+    <wsdl:part name="parameters" element="impl:loginForOperatorInfo" />
+  </wsdl:message>
+  <wsdl:message name="downloadTemperatureRequest">
+    <wsdl:part name="parameters" element="impl:downloadTemperature" />
+  </wsdl:message>
+  <wsdl:message name="downloadNewInFirstPageInfoResponse">
+    <wsdl:part name="parameters" element="impl:downloadNewInFirstPageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadInFectInfoForCondResponse">
+    <wsdl:part name="parameters" element="impl:downloadInFectInfoForCondResponse" />
+  </wsdl:message>
+  <wsdl:message name="manageXyInAdviceResponse">
+    <wsdl:part name="parameters" element="impl:manageXyInAdviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadTemperatureResponse">
+    <wsdl:part name="parameters" element="impl:uploadTemperatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="downloadInPatientInfoResponse">
+    <wsdl:part name="parameters" element="impl:downloadInPatientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="manageXyAdtResponse">
+    <wsdl:part name="parameters" element="impl:manageXyAdtResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Upload_HtemrBaseInfo">
+    <wsdl:operation name="netWorkTest">
+      <wsdl:input name="netWorkTestRequest" message="impl:netWorkTestRequest" />
+      <wsdl:output name="netWorkTestResponse" message="impl:netWorkTestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="loginForOperatorInfo">
+      <wsdl:input name="loginForOperatorInfoRequest" message="impl:loginForOperatorInfoRequest" />
+      <wsdl:output name="loginForOperatorInfoResponse" message="impl:loginForOperatorInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadInPatientInfo">
+      <wsdl:input name="downloadInPatientInfoRequest" message="impl:downloadInPatientInfoRequest" />
+      <wsdl:output name="downloadInPatientInfoResponse" message="impl:downloadInPatientInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadAdviceInfo">
+      <wsdl:input name="downloadAdviceInfoRequest" message="impl:downloadAdviceInfoRequest" />
+      <wsdl:output name="downloadAdviceInfoResponse" message="impl:downloadAdviceInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadAdviceInfoForArea">
+      <wsdl:input name="downloadAdviceInfoForAreaRequest" message="impl:downloadAdviceInfoForAreaRequest" />
+      <wsdl:output name="downloadAdviceInfoForAreaResponse" message="impl:downloadAdviceInfoForAreaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadAdviceInfo">
+      <wsdl:input name="uploadAdviceInfoRequest" message="impl:uploadAdviceInfoRequest" />
+      <wsdl:output name="uploadAdviceInfoResponse" message="impl:uploadAdviceInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadTemperature">
+      <wsdl:input name="uploadTemperatureRequest" message="impl:uploadTemperatureRequest" />
+      <wsdl:output name="uploadTemperatureResponse" message="impl:uploadTemperatureResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadTemperature">
+      <wsdl:input name="downloadTemperatureRequest" message="impl:downloadTemperatureRequest" />
+      <wsdl:output name="downloadTemperatureResponse" message="impl:downloadTemperatureResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadInFirstPageInfo">
+      <wsdl:input name="downloadInFirstPageInfoRequest" message="impl:downloadInFirstPageInfoRequest" />
+      <wsdl:output name="downloadInFirstPageInfoResponse" message="impl:downloadInFirstPageInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadNewInFirstPageInfo">
+      <wsdl:input name="downloadNewInFirstPageInfoRequest" message="impl:downloadNewInFirstPageInfoRequest" />
+      <wsdl:output name="downloadNewInFirstPageInfoResponse" message="impl:downloadNewInFirstPageInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="manageXyAdt">
+      <wsdl:input name="manageXyAdtRequest" message="impl:manageXyAdtRequest" />
+      <wsdl:output name="manageXyAdtResponse" message="impl:manageXyAdtResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="manageXyInAdvice">
+      <wsdl:input name="manageXyInAdviceRequest" message="impl:manageXyInAdviceRequest" />
+      <wsdl:output name="manageXyInAdviceResponse" message="impl:manageXyInAdviceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="manageMobileInAdvice">
+      <wsdl:input name="manageMobileInAdviceRequest" message="impl:manageMobileInAdviceRequest" />
+      <wsdl:output name="manageMobileInAdviceResponse" message="impl:manageMobileInAdviceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sysBasedData">
+      <wsdl:input name="sysBasedDataRequest" message="impl:sysBasedDataRequest" />
+      <wsdl:output name="sysBasedDataResponse" message="impl:sysBasedDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="manageMobileInAdviceList">
+      <wsdl:input name="manageMobileInAdviceListRequest" message="impl:manageMobileInAdviceListRequest" />
+      <wsdl:output name="manageMobileInAdviceListResponse" message="impl:manageMobileInAdviceListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadInFectInfo">
+      <wsdl:input name="downloadInFectInfoRequest" message="impl:downloadInFectInfoRequest" />
+      <wsdl:output name="downloadInFectInfoResponse" message="impl:downloadInFectInfoResponse" />
+      <wsdl:fault name="HTException" message="impl:HTException" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadInFectInfoForCond">
+      <wsdl:input name="downloadInFectInfoForCondRequest" message="impl:downloadInFectInfoForCondRequest" />
+      <wsdl:output name="downloadInFectInfoForCondResponse" message="impl:downloadInFectInfoForCondResponse" />
+      <wsdl:fault name="HTException" message="impl:HTException" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadOtherInfect">
+      <wsdl:input name="downloadOtherInfectRequest" message="impl:downloadOtherInfectRequest" />
+      <wsdl:output name="downloadOtherInfectResponse" message="impl:downloadOtherInfectResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Upload_HtemrBaseInfoSoapBinding" type="impl:Upload_HtemrBaseInfo">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="netWorkTest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="netWorkTestRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="netWorkTestResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginForOperatorInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="loginForOperatorInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loginForOperatorInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadInPatientInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadInPatientInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="downloadInPatientInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadAdviceInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadAdviceInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="downloadAdviceInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadAdviceInfoForArea">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadAdviceInfoForAreaRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="downloadAdviceInfoForAreaResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadAdviceInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="uploadAdviceInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="uploadAdviceInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadTemperature">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="uploadTemperatureRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="uploadTemperatureResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadTemperature">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadTemperatureRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="downloadTemperatureResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadInFirstPageInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadInFirstPageInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="downloadInFirstPageInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadNewInFirstPageInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadNewInFirstPageInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="downloadNewInFirstPageInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manageXyAdt">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="manageXyAdtRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="manageXyAdtResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manageXyInAdvice">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="manageXyInAdviceRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="manageXyInAdviceResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manageMobileInAdvice">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="manageMobileInAdviceRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="manageMobileInAdviceResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sysBasedData">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sysBasedDataRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sysBasedDataResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manageMobileInAdviceList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="manageMobileInAdviceListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="manageMobileInAdviceListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadInFectInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadInFectInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="downloadInFectInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="HTException">
+        <wsdlsoap:fault use="literal" name="HTException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="downloadInFectInfoForCond">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadInFectInfoForCondRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="downloadInFectInfoForCondResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="HTException">
+        <wsdlsoap:fault use="literal" name="HTException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="downloadOtherInfect">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadOtherInfectRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="downloadOtherInfectResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Upload_HtemrBaseInfoService">
+    <wsdl:port name="Upload_HtemrBaseInfo" binding="impl:Upload_HtemrBaseInfoSoapBinding">
+      <wsdlsoap:address location="http://192.168.12.58:9080/TJYYWebS/services/Upload_HtemrBaseInfo" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://ihis.pub.ws" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NYwclService" targetNamespace="http://ihis.pub.ws" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ihis.pub.ws" version="1.0">
+      <xs:element name="Exception" type="tns:Exception" />
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xsd:schema>
+  </types>
+  <message name="NYwcl_GtwodcodeResponse">
+    <part name="return" type="xsd:base64Binary" />
+  </message>
+  <message name="NYwcl_funSysEmailResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_bselect">
+    <part name="arg0" type="xsd:int" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+  </message>
+  <message name="NYwcl_exterselectResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_getPic">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+  </message>
+  <message name="NYwcl_emrSave">
+    <part name="arg0" type="xsd:int" />
+    <part name="arg1" type="xsd:base64Binary" />
+    <part name="arg2" type="xsd:int" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+    <part name="arg5" type="xsd:string" />
+  </message>
+  <message name="NYwcl_emrSaveResponse">
+    <part name="return" type="xsd:boolean" />
+  </message>
+  <message name="NYwcl_uploadWithByte">
+    <part name="arg0" type="xsd:base64Binary" />
+    <part name="arg1" type="xsd:string" />
+  </message>
+  <message name="NYwcl_SetJcjg">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+    <part name="arg5" type="xsd:string" />
+    <part name="arg6" type="xsd:string" />
+  </message>
+  <message name="NYwcl_SetJcjgb">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+    <part name="arg5" type="xsd:string" />
+    <part name="arg6" type="xsd:string" />
+    <part name="arg7" type="xsd:string" />
+  </message>
+  <message name="NYwcl_StaticSelectResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_Zlogin">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+  </message>
+  <message name="NYwcl_gettyPicResponse">
+    <part name="return" type="xsd:base64Binary" />
+  </message>
+  <message name="NYwcl_getxtglbmResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_getTxm">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:int" />
+  </message>
+  <message name="Exception">
+    <part name="Exception" element="tns:Exception" />
+  </message>
+  <message name="NYwcl_SetJcjgResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_downFileResponse">
+    <part name="return" type="xsd:base64Binary" />
+  </message>
+  <message name="NYwcl_singleSelect">
+    <part name="arg0" type="xsd:int" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+  </message>
+  <message name="NYwcl_funSysEmail">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+  </message>
+  <message name="NYwcl_pselectResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_SayHelloResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_gettyPic">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+  </message>
+  <message name="NYwcl_bselectWithTimeResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_uploadWithByteResponse">
+    <part name="return" type="xsd:boolean" />
+  </message>
+  <message name="NYwcl_ZloginResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_GetxmlResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_exterselect">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+  </message>
+  <message name="NYwcl_sbusi">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+    <part name="arg5" type="xsd:string" />
+    <part name="arg6" type="xsd:string" />
+  </message>
+  <message name="NYwcl_businessResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_loginoutResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_uploadGrqm">
+    <part name="arg0" type="xsd:base64Binary" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+  </message>
+  <message name="NYwcl_uploadGrqmResponse">
+    <part name="return" type="xsd:boolean" />
+  </message>
+  <message name="NYwcl_bselectWithTime">
+    <part name="arg0" type="xsd:int" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+    <part name="arg5" type="xsd:int" />
+  </message>
+  <message name="NYwcl_getTxmResponse">
+    <part name="return" type="xsd:base64Binary" />
+  </message>
+  <message name="NYwcl_Getxml">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+  </message>
+  <message name="NYwcl_getToday" />
+  <message name="NYwcl_getglbm">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+  </message>
+  <message name="NYwcl_sbusiResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_bsselect">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+  </message>
+  <message name="NYwcl_business">
+    <part name="arg0" type="xsd:int" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+    <part name="arg5" type="xsd:int" />
+    <part name="arg6" type="xsd:string" />
+  </message>
+  <message name="NYwcl_pselect">
+    <part name="arg0" type="xsd:int" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+  </message>
+  <message name="NYwcl_emrGetBs">
+    <part name="arg0" type="xsd:int" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+  </message>
+  <message name="NYwcl_login">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+  </message>
+  <message name="NYwcl_getxtglbm">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+  </message>
+  <message name="NYwcl_loginResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_loginout">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+  </message>
+  <message name="NYwcl_downFile">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+  </message>
+  <message name="NYwcl_SetJcjgbResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_SayHello">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+  </message>
+  <message name="NYwcl_Gtwodcode">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:int" />
+  </message>
+  <message name="NYwcl_StaticSelect">
+    <part name="arg0" type="xsd:int" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+    <part name="arg5" type="xsd:int" />
+  </message>
+  <message name="NYwcl_sqlselect">
+    <part name="arg0" type="xsd:int" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+    <part name="arg4" type="xsd:string" />
+  </message>
+  <message name="NYwcl_bsselectResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_emrGetBsResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_getPicResponse">
+    <part name="return" type="xsd:base64Binary" />
+  </message>
+  <message name="NYwcl_getglbmResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_sqlselectResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_getTodayResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_singleSelectResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="NYwcl_bselectResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <portType name="NYwcl">
+    <operation name="Getxml" parameterOrder="arg0 arg1 arg2 arg3 arg4">
+      <input message="tns:NYwcl_Getxml" />
+      <output message="tns:NYwcl_GetxmlResponse" />
+    </operation>
+    <operation name="Gtwodcode" parameterOrder="arg0 arg1 arg2">
+      <input message="tns:NYwcl_Gtwodcode" />
+      <output message="tns:NYwcl_GtwodcodeResponse" />
+    </operation>
+    <operation name="SayHello" parameterOrder="arg0 arg1">
+      <input message="tns:NYwcl_SayHello" />
+      <output message="tns:NYwcl_SayHelloResponse" />
+    </operation>
+    <operation name="SetJcjg" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5 arg6">
+      <input message="tns:NYwcl_SetJcjg" />
+      <output message="tns:NYwcl_SetJcjgResponse" />
+    </operation>
+    <operation name="SetJcjgb" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5 arg6 arg7">
+      <input message="tns:NYwcl_SetJcjgb" />
+      <output message="tns:NYwcl_SetJcjgbResponse" />
+    </operation>
+    <operation name="StaticSelect" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5">
+      <input message="tns:NYwcl_StaticSelect" />
+      <output message="tns:NYwcl_StaticSelectResponse" />
+    </operation>
+    <operation name="Zlogin" parameterOrder="arg0 arg1 arg2 arg3">
+      <input message="tns:NYwcl_Zlogin" />
+      <output message="tns:NYwcl_ZloginResponse" />
+    </operation>
+    <operation name="bselect" parameterOrder="arg0 arg1 arg2 arg3 arg4">
+      <input message="tns:NYwcl_bselect" />
+      <output message="tns:NYwcl_bselectResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="bselectWithTime" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5">
+      <input message="tns:NYwcl_bselectWithTime" />
+      <output message="tns:NYwcl_bselectWithTimeResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="bsselect" parameterOrder="arg0 arg1">
+      <input message="tns:NYwcl_bsselect" />
+      <output message="tns:NYwcl_bsselectResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="business" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5 arg6">
+      <input message="tns:NYwcl_business" />
+      <output message="tns:NYwcl_businessResponse" />
+    </operation>
+    <operation name="downFile" parameterOrder="arg0 arg1">
+      <input message="tns:NYwcl_downFile" />
+      <output message="tns:NYwcl_downFileResponse" />
+    </operation>
+    <operation name="emrGetBs" parameterOrder="arg0 arg1 arg2">
+      <input message="tns:NYwcl_emrGetBs" />
+      <output message="tns:NYwcl_emrGetBsResponse" />
+    </operation>
+    <operation name="emrSave" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5">
+      <input message="tns:NYwcl_emrSave" />
+      <output message="tns:NYwcl_emrSaveResponse" />
+    </operation>
+    <operation name="exterselect" parameterOrder="arg0 arg1">
+      <input message="tns:NYwcl_exterselect" />
+      <output message="tns:NYwcl_exterselectResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="funSysEmail" parameterOrder="arg0 arg1">
+      <input message="tns:NYwcl_funSysEmail" />
+      <output message="tns:NYwcl_funSysEmailResponse" />
+    </operation>
+    <operation name="getPic" parameterOrder="arg0 arg1 arg2">
+      <input message="tns:NYwcl_getPic" />
+      <output message="tns:NYwcl_getPicResponse" />
+    </operation>
+    <operation name="getToday">
+      <input message="tns:NYwcl_getToday" />
+      <output message="tns:NYwcl_getTodayResponse" />
+    </operation>
+    <operation name="getTxm" parameterOrder="arg0 arg1">
+      <input message="tns:NYwcl_getTxm" />
+      <output message="tns:NYwcl_getTxmResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getglbm" parameterOrder="arg0 arg1">
+      <input message="tns:NYwcl_getglbm" />
+      <output message="tns:NYwcl_getglbmResponse" />
+    </operation>
+    <operation name="gettyPic" parameterOrder="arg0 arg1">
+      <input message="tns:NYwcl_gettyPic" />
+      <output message="tns:NYwcl_gettyPicResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getxtglbm" parameterOrder="arg0 arg1 arg2">
+      <input message="tns:NYwcl_getxtglbm" />
+      <output message="tns:NYwcl_getxtglbmResponse" />
+    </operation>
+    <operation name="login" parameterOrder="arg0 arg1 arg2 arg3 arg4">
+      <input message="tns:NYwcl_login" />
+      <output message="tns:NYwcl_loginResponse" />
+    </operation>
+    <operation name="loginout" parameterOrder="arg0 arg1">
+      <input message="tns:NYwcl_loginout" />
+      <output message="tns:NYwcl_loginoutResponse" />
+    </operation>
+    <operation name="pselect" parameterOrder="arg0 arg1 arg2 arg3 arg4">
+      <input message="tns:NYwcl_pselect" />
+      <output message="tns:NYwcl_pselectResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="sbusi" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5 arg6">
+      <input message="tns:NYwcl_sbusi" />
+      <output message="tns:NYwcl_sbusiResponse" />
+    </operation>
+    <operation name="singleSelect" parameterOrder="arg0 arg1 arg2 arg3 arg4">
+      <input message="tns:NYwcl_singleSelect" />
+      <output message="tns:NYwcl_singleSelectResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="sqlselect" parameterOrder="arg0 arg1 arg2 arg3 arg4">
+      <input message="tns:NYwcl_sqlselect" />
+      <output message="tns:NYwcl_sqlselectResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="uploadGrqm" parameterOrder="arg0 arg1 arg2 arg3">
+      <input message="tns:NYwcl_uploadGrqm" />
+      <output message="tns:NYwcl_uploadGrqmResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="uploadWithByte" parameterOrder="arg0 arg1">
+      <input message="tns:NYwcl_uploadWithByte" />
+      <output message="tns:NYwcl_uploadWithByteResponse" />
+    </operation>
+  </portType>
+  <binding name="NYwclBinding" type="tns:NYwcl">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="Getxml">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="Gtwodcode">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="SayHello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="SetJcjg">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="SetJcjgb">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="StaticSelect">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="Zlogin">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="bselect">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="bselectWithTime">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="bsselect">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="business">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="downFile">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="emrGetBs">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="emrSave">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="exterselect">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="funSysEmail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="getPic">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="getToday">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="getTxm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getglbm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="gettyPic">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getxtglbm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="loginout">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="pselect">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="sbusi">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+    <operation name="singleSelect">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="sqlselect">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="uploadGrqm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="uploadWithByte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NYwclService">
+    <port name="NYwclPort" binding="tns:NYwclBinding">
+      <soap:address location="http://192.168.3.15:8080/Services/NYwclService" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Service">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YDHLGetLISJianchaInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YDHLGetLISJianchaInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YDHLGetLISJianchaInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YDHLGetLISJianchaResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YDHLGetLISJianchaResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YDHLGetLISJianchaResultResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YDHLGetZhuyuanFuzhujiancha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YDHLGetZhuyuanFuzhujianchaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YDHLGetZhuyuanFuzhujianchaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultByItmcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultByItmcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResultByItmcodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientsInfoByBarCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientsInfoByBarCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientsInfoByBarCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReturnResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReturnResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReturnResultResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteResultResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBCCnameByBarCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBCCnameByBarCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBCCnameByBarCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:Service" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="YDHLGetLISJianchaInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:YDHLGetLISJianchaInfo" />
+  </wsdl:message>
+  <wsdl:message name="YDHLGetLISJianchaInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:YDHLGetLISJianchaInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="YDHLGetLISJianchaResultSoapIn">
+    <wsdl:part name="parameters" element="tns:YDHLGetLISJianchaResult" />
+  </wsdl:message>
+  <wsdl:message name="YDHLGetLISJianchaResultSoapOut">
+    <wsdl:part name="parameters" element="tns:YDHLGetLISJianchaResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="YDHLGetZhuyuanFuzhujianchaSoapIn">
+    <wsdl:part name="parameters" element="tns:YDHLGetZhuyuanFuzhujiancha" />
+  </wsdl:message>
+  <wsdl:message name="YDHLGetZhuyuanFuzhujianchaSoapOut">
+    <wsdl:part name="parameters" element="tns:YDHLGetZhuyuanFuzhujianchaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResultByItmcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResultByItmcode" />
+  </wsdl:message>
+  <wsdl:message name="GetResultByItmcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResultByItmcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientsInfoByBarCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientsInfoByBarCode" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientsInfoByBarCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientsInfoByBarCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReturnResultSoapIn">
+    <wsdl:part name="parameters" element="tns:ReturnResult" />
+  </wsdl:message>
+  <wsdl:message name="ReturnResultSoapOut">
+    <wsdl:part name="parameters" element="tns:ReturnResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResultSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteResult" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResultSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBCCnameByBarCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBCCnameByBarCode" />
+  </wsdl:message>
+  <wsdl:message name="GetBCCnameByBarCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBCCnameByBarCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PDAServiceSoap">
+    <wsdl:operation name="Service">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PDA接口</wsdl:documentation>
+      <wsdl:input message="tns:ServiceSoapIn" />
+      <wsdl:output message="tns:ServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YDHLGetLISJianchaInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取LIS检查信息</wsdl:documentation>
+      <wsdl:input message="tns:YDHLGetLISJianchaInfoSoapIn" />
+      <wsdl:output message="tns:YDHLGetLISJianchaInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YDHLGetLISJianchaResult">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">LIS检查结果信息</wsdl:documentation>
+      <wsdl:input message="tns:YDHLGetLISJianchaResultSoapIn" />
+      <wsdl:output message="tns:YDHLGetLISJianchaResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YDHLGetZhuyuanFuzhujiancha">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取LIS患者住院检查信息</wsdl:documentation>
+      <wsdl:input message="tns:YDHLGetZhuyuanFuzhujianchaSoapIn" />
+      <wsdl:output message="tns:YDHLGetZhuyuanFuzhujianchaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultByItmcode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取最新检验结果</wsdl:documentation>
+      <wsdl:input message="tns:GetResultByItmcodeSoapIn" />
+      <wsdl:output message="tns:GetResultByItmcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientsInfoByBarCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientsInfoByBarCodeSoapIn" />
+      <wsdl:output message="tns:GetPatientsInfoByBarCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnResult">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">回传检验结果</wsdl:documentation>
+      <wsdl:input message="tns:ReturnResultSoapIn" />
+      <wsdl:output message="tns:ReturnResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResult">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">反审时删除检验结果</wsdl:documentation>
+      <wsdl:input message="tns:DeleteResultSoapIn" />
+      <wsdl:output message="tns:DeleteResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBCCnameByBarCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据条码号获取医嘱id信息</wsdl:documentation>
+      <wsdl:input message="tns:GetBCCnameByBarCodeSoapIn" />
+      <wsdl:output message="tns:GetBCCnameByBarCodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PDAServiceSoap" type="tns:PDAServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Service">
+      <soap:operation soapAction="http://tempuri.org/Service" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YDHLGetLISJianchaInfo">
+      <soap:operation soapAction="http://tempuri.org/YDHLGetLISJianchaInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YDHLGetLISJianchaResult">
+      <soap:operation soapAction="http://tempuri.org/YDHLGetLISJianchaResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YDHLGetZhuyuanFuzhujiancha">
+      <soap:operation soapAction="http://tempuri.org/YDHLGetZhuyuanFuzhujiancha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultByItmcode">
+      <soap:operation soapAction="http://tempuri.org/GetResultByItmcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientsInfoByBarCode">
+      <soap:operation soapAction="http://tempuri.org/GetPatientsInfoByBarCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnResult">
+      <soap:operation soapAction="http://tempuri.org/ReturnResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResult">
+      <soap:operation soapAction="http://tempuri.org/DeleteResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBCCnameByBarCode">
+      <soap:operation soapAction="http://tempuri.org/GetBCCnameByBarCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PDAServiceSoap12" type="tns:PDAServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Service">
+      <soap12:operation soapAction="http://tempuri.org/Service" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YDHLGetLISJianchaInfo">
+      <soap12:operation soapAction="http://tempuri.org/YDHLGetLISJianchaInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YDHLGetLISJianchaResult">
+      <soap12:operation soapAction="http://tempuri.org/YDHLGetLISJianchaResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YDHLGetZhuyuanFuzhujiancha">
+      <soap12:operation soapAction="http://tempuri.org/YDHLGetZhuyuanFuzhujiancha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultByItmcode">
+      <soap12:operation soapAction="http://tempuri.org/GetResultByItmcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientsInfoByBarCode">
+      <soap12:operation soapAction="http://tempuri.org/GetPatientsInfoByBarCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnResult">
+      <soap12:operation soapAction="http://tempuri.org/ReturnResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResult">
+      <soap12:operation soapAction="http://tempuri.org/DeleteResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBCCnameByBarCode">
+      <soap12:operation soapAction="http://tempuri.org/GetBCCnameByBarCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PDAService">
+    <wsdl:port name="PDAServiceSoap" binding="tns:PDAServiceSoap">
+      <soap:address location="http://172.16.95.189:8081/PDAService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PDAServiceSoap12" binding="tns:PDAServiceSoap12">
+      <soap12:address location="http://172.16.95.189:8081/PDAService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

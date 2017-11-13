@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://tongji.org" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tongji.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tongji.org">
+      <s:element name="GetInpCharge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="pInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInpChargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetInpChargeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OutpExamApplyQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="pInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OutpExamApplyQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="OutpExamApplyQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetInpCharge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="pInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetInpChargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="SetInpChargeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="manageXyInAdvice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="type" type="s:string" />
+            <s:element minOccurs="0" name="xmlStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="manageXyInAdviceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="manageXyInAdviceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetInpChargeSoapIn">
+    <wsdl:part name="parameters" element="s0:GetInpCharge" />
+  </wsdl:message>
+  <wsdl:message name="GetInpChargeSoapOut">
+    <wsdl:part name="parameters" element="s0:GetInpChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="OutpExamApplyQuerySoapIn">
+    <wsdl:part name="parameters" element="s0:OutpExamApplyQuery" />
+  </wsdl:message>
+  <wsdl:message name="OutpExamApplyQuerySoapOut">
+    <wsdl:part name="parameters" element="s0:OutpExamApplyQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetInpChargeSoapIn">
+    <wsdl:part name="parameters" element="s0:SetInpCharge" />
+  </wsdl:message>
+  <wsdl:message name="SetInpChargeSoapOut">
+    <wsdl:part name="parameters" element="s0:SetInpChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="manageXyInAdviceSoapIn">
+    <wsdl:part name="parameters" element="s0:manageXyInAdvice" />
+  </wsdl:message>
+  <wsdl:message name="manageXyInAdviceSoapOut">
+    <wsdl:part name="parameters" element="s0:manageXyInAdviceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PathologySysServiceSoap">
+    <wsdl:operation name="GetInpCharge">
+      <wsdl:input message="s0:GetInpChargeSoapIn" />
+      <wsdl:output message="s0:GetInpChargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OutpExamApplyQuery">
+      <wsdl:input message="s0:OutpExamApplyQuerySoapIn" />
+      <wsdl:output message="s0:OutpExamApplyQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetInpCharge">
+      <wsdl:input message="s0:SetInpChargeSoapIn" />
+      <wsdl:output message="s0:SetInpChargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="manageXyInAdvice">
+      <wsdl:input message="s0:manageXyInAdviceSoapIn" />
+      <wsdl:output message="s0:manageXyInAdviceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PathologySysServiceSoap" type="s0:PathologySysServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInpCharge">
+      <soap:operation soapAction="http://tongji.org/Tongji.COMM.SoapService.PathologySysService.GetInpCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OutpExamApplyQuery">
+      <soap:operation soapAction="http://tongji.org/Tongji.COMM.SoapService.PathologySysService.OutpExamApplyQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetInpCharge">
+      <soap:operation soapAction="http://tongji.org/Tongji.COMM.SoapService.PathologySysService.SetInpCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manageXyInAdvice">
+      <soap:operation soapAction="http://tongji.org/Tongji.COMM.SoapService.PathologySysService.manageXyInAdvice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PathologySysServiceSoap12" type="s0:PathologySysServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInpCharge">
+      <soap12:operation soapAction="http://tongji.org/Tongji.COMM.SoapService.PathologySysService.GetInpCharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OutpExamApplyQuery">
+      <soap12:operation soapAction="http://tongji.org/Tongji.COMM.SoapService.PathologySysService.OutpExamApplyQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetInpCharge">
+      <soap12:operation soapAction="http://tongji.org/Tongji.COMM.SoapService.PathologySysService.SetInpCharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manageXyInAdvice">
+      <soap12:operation soapAction="http://tongji.org/Tongji.COMM.SoapService.PathologySysService.manageXyInAdvice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PathologySysService">
+    <wsdl:port name="PathologySysServiceSoap" binding="s0:PathologySysServiceSoap">
+      <soap:address location="http://192.168.12.68:58080/csp/tongji/Tongji.COMM.SoapService.PathologySysService.cls" />
+    </wsdl:port>
+    <wsdl:port name="PathologySysServiceSoap12" binding="s0:PathologySysServiceSoap12">
+      <soap12:address location="http://192.168.12.68:58080/csp/tongji/Tongji.COMM.SoapService.PathologySysService.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

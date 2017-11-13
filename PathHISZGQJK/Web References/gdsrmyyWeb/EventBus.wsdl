@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="JetSun.ServiceBus" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="JetSun.ServiceBus" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="JetSun.ServiceBus/Imports">
+      <xsd:import schemaLocation="http://svrdebug.test.com/CoreService/EventBus.svc?xsd=xsd0" namespace="JetSun.ServiceBus" />
+      <xsd:import schemaLocation="http://svrdebug.test.com/CoreService/EventBus.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://svrdebug.test.com/CoreService/EventBus.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JetSun.Core.ServiceModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="EventBusSvc_Publish_InputMessage">
+    <wsdl:part name="parameters" element="tns:Publish" />
+  </wsdl:message>
+  <wsdl:message name="EventBusSvc_Publish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishResponse" />
+  </wsdl:message>
+  <wsdl:message name="EventBusSvc_XmlPublish_InputMessage">
+    <wsdl:part name="parameters" element="tns:XmlPublish" />
+  </wsdl:message>
+  <wsdl:message name="EventBusSvc_XmlPublish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XmlPublishResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EventBusSvc">
+    <wsdl:operation name="Publish">
+      <wsdl:input wsaw:Action="JetSun.ServiceBus/EventBusSvc/Publish" message="tns:EventBusSvc_Publish_InputMessage" />
+      <wsdl:output wsaw:Action="JetSun.ServiceBus/EventBusSvc/PublishResponse" message="tns:EventBusSvc_Publish_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XmlPublish">
+      <wsdl:input wsaw:Action="JetSun.ServiceBus/EventBusSvc/XmlPublish" message="tns:EventBusSvc_XmlPublish_InputMessage" />
+      <wsdl:output wsaw:Action="JetSun.ServiceBus/EventBusSvc/XmlPublishResponse" message="tns:EventBusSvc_XmlPublish_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

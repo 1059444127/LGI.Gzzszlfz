@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://service.bd.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WSServiceService" targetNamespace="http://service.bd.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://service.bd.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="bdService" type="tns:bdService" />
+      <xs:element name="bdServiceResponse" type="tns:bdServiceResponse" />
+      <xs:element name="requestWS" type="tns:requestWS" />
+      <xs:element name="requestWS2" type="tns:requestWS2" />
+      <xs:element name="requestWS2Response" type="tns:requestWS2Response" />
+      <xs:element name="requestWSResponse" type="tns:requestWSResponse" />
+      <xs:element name="testWS" type="tns:testWS" />
+      <xs:element name="testWSResponse" type="tns:testWSResponse" />
+      <xs:element name="testWebService" type="tns:testWebService" />
+      <xs:element name="testWebServiceResponse" type="tns:testWebServiceResponse" />
+      <xs:complexType name="requestWS2">
+        <xs:sequence>
+          <xs:element minOccurs="0" form="qualified" name="request2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestWS2Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="bdService">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="param" type="xs:string" />
+          <xs:element minOccurs="0" name="data" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="bdServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="testWS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="data" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="testWSResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestWS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestWSResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="testWebService">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="testWebServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="requestWS">
+    <wsdl:part name="parameters" element="tns:requestWS" />
+  </wsdl:message>
+  <wsdl:message name="bdService">
+    <wsdl:part name="parameters" element="tns:bdService" />
+  </wsdl:message>
+  <wsdl:message name="requestWS2Response">
+    <wsdl:part name="parameters" element="tns:requestWS2Response" />
+  </wsdl:message>
+  <wsdl:message name="testWS">
+    <wsdl:part name="parameters" element="tns:testWS" />
+  </wsdl:message>
+  <wsdl:message name="testWebServiceResponse">
+    <wsdl:part name="parameters" element="tns:testWebServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="requestWS2">
+    <wsdl:part name="parameters" element="tns:requestWS2" />
+  </wsdl:message>
+  <wsdl:message name="testWebService">
+    <wsdl:part name="parameters" element="tns:testWebService" />
+  </wsdl:message>
+  <wsdl:message name="bdServiceResponse">
+    <wsdl:part name="parameters" element="tns:bdServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="testWSResponse">
+    <wsdl:part name="parameters" element="tns:testWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="requestWSResponse">
+    <wsdl:part name="parameters" element="tns:requestWSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSService">
+    <wsdl:operation name="requestWS2">
+      <wsdl:input name="requestWS2" message="tns:requestWS2" />
+      <wsdl:output name="requestWS2Response" message="tns:requestWS2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="bdService">
+      <wsdl:input name="bdService" message="tns:bdService" />
+      <wsdl:output name="bdServiceResponse" message="tns:bdServiceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testWS">
+      <wsdl:input name="testWS" message="tns:testWS" />
+      <wsdl:output name="testWSResponse" message="tns:testWSResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="requestWS">
+      <wsdl:input name="requestWS" message="tns:requestWS" />
+      <wsdl:output name="requestWSResponse" message="tns:requestWSResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testWebService">
+      <wsdl:input name="testWebService" message="tns:testWebService" />
+      <wsdl:output name="testWebServiceResponse" message="tns:testWebServiceResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSServiceServiceSoapBinding" type="tns:WSService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="requestWS2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="requestWS2">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="requestWS2Response">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bdService">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="bdService">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="bdServiceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testWS">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="testWS">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testWSResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="requestWS">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="requestWS">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="requestWSResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testWebService">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="testWebService">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testWebServiceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSServiceService">
+    <wsdl:port name="WSServicePort" binding="tns:WSServiceServiceSoapBinding">
+      <soap:address location="http://120.197.142.53:9180/hdepc/services/hisWebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.hongyangsoft.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.hongyangsoft.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.hongyangsoft.com/">
+      <s:element name="BLiShenQing">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="huakuaxinxi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="laiYuan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BLiShenQingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BLiShenQingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReadBingRenDangAn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="huakuaxinxi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="laiYuan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReadBingRenDangAnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReadBingRenDangAnResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BLiBaoGao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlBaoGao" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BLiBaoGaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BLiBaoGaoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JianChaQueRen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fuJianID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="keShiID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="yongHuID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="yongHuMing" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="leiXing" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JianChaQueRenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="JianChaQueRenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FuJianJianChaAndGenXinFeiYong">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fujianid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zhixingkeshi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zhixingyonghuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zhixingyonghuming" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="laiyuan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FuJianJianChaAndGenXinFeiYongResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FuJianJianChaAndGenXinFeiYongResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FuJianQuXiaoJianCha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fujianid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="laiyuan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FuJianQuXiaoJianChaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FuJianQuXiaoJianChaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BLiShenQingSoapIn">
+    <wsdl:part name="parameters" element="tns:BLiShenQing" />
+  </wsdl:message>
+  <wsdl:message name="BLiShenQingSoapOut">
+    <wsdl:part name="parameters" element="tns:BLiShenQingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReadBingRenDangAnSoapIn">
+    <wsdl:part name="parameters" element="tns:ReadBingRenDangAn" />
+  </wsdl:message>
+  <wsdl:message name="ReadBingRenDangAnSoapOut">
+    <wsdl:part name="parameters" element="tns:ReadBingRenDangAnResponse" />
+  </wsdl:message>
+  <wsdl:message name="BLiBaoGaoSoapIn">
+    <wsdl:part name="parameters" element="tns:BLiBaoGao" />
+  </wsdl:message>
+  <wsdl:message name="BLiBaoGaoSoapOut">
+    <wsdl:part name="parameters" element="tns:BLiBaoGaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="JianChaQueRenSoapIn">
+    <wsdl:part name="parameters" element="tns:JianChaQueRen" />
+  </wsdl:message>
+  <wsdl:message name="JianChaQueRenSoapOut">
+    <wsdl:part name="parameters" element="tns:JianChaQueRenResponse" />
+  </wsdl:message>
+  <wsdl:message name="FuJianJianChaAndGenXinFeiYongSoapIn">
+    <wsdl:part name="parameters" element="tns:FuJianJianChaAndGenXinFeiYong" />
+  </wsdl:message>
+  <wsdl:message name="FuJianJianChaAndGenXinFeiYongSoapOut">
+    <wsdl:part name="parameters" element="tns:FuJianJianChaAndGenXinFeiYongResponse" />
+  </wsdl:message>
+  <wsdl:message name="FuJianQuXiaoJianChaSoapIn">
+    <wsdl:part name="parameters" element="tns:FuJianQuXiaoJianCha" />
+  </wsdl:message>
+  <wsdl:message name="FuJianQuXiaoJianChaSoapOut">
+    <wsdl:part name="parameters" element="tns:FuJianQuXiaoJianChaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FuJianJieKouForBCaoSoap">
+    <wsdl:operation name="BLiShenQing">
+      <wsdl:input message="tns:BLiShenQingSoapIn" />
+      <wsdl:output message="tns:BLiShenQingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadBingRenDangAn">
+      <wsdl:input message="tns:ReadBingRenDangAnSoapIn" />
+      <wsdl:output message="tns:ReadBingRenDangAnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BLiBaoGao">
+      <wsdl:input message="tns:BLiBaoGaoSoapIn" />
+      <wsdl:output message="tns:BLiBaoGaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JianChaQueRen">
+      <wsdl:input message="tns:JianChaQueRenSoapIn" />
+      <wsdl:output message="tns:JianChaQueRenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FuJianJianChaAndGenXinFeiYong">
+      <wsdl:input message="tns:FuJianJianChaAndGenXinFeiYongSoapIn" />
+      <wsdl:output message="tns:FuJianJianChaAndGenXinFeiYongSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FuJianQuXiaoJianCha">
+      <wsdl:input message="tns:FuJianQuXiaoJianChaSoapIn" />
+      <wsdl:output message="tns:FuJianQuXiaoJianChaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FuJianJieKouForBCaoSoap" type="tns:FuJianJieKouForBCaoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BLiShenQing">
+      <soap:operation soapAction="http://www.hongyangsoft.com/BLiShenQing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadBingRenDangAn">
+      <soap:operation soapAction="http://www.hongyangsoft.com/ReadBingRenDangAn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BLiBaoGao">
+      <soap:operation soapAction="http://www.hongyangsoft.com/BLiBaoGao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JianChaQueRen">
+      <soap:operation soapAction="http://www.hongyangsoft.com/JianChaQueRen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuJianJianChaAndGenXinFeiYong">
+      <soap:operation soapAction="http://www.hongyangsoft.com/FuJianJianChaAndGenXinFeiYong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuJianQuXiaoJianCha">
+      <soap:operation soapAction="http://www.hongyangsoft.com/FuJianQuXiaoJianCha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FuJianJieKouForBCaoSoap12" type="tns:FuJianJieKouForBCaoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BLiShenQing">
+      <soap12:operation soapAction="http://www.hongyangsoft.com/BLiShenQing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadBingRenDangAn">
+      <soap12:operation soapAction="http://www.hongyangsoft.com/ReadBingRenDangAn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BLiBaoGao">
+      <soap12:operation soapAction="http://www.hongyangsoft.com/BLiBaoGao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JianChaQueRen">
+      <soap12:operation soapAction="http://www.hongyangsoft.com/JianChaQueRen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuJianJianChaAndGenXinFeiYong">
+      <soap12:operation soapAction="http://www.hongyangsoft.com/FuJianJianChaAndGenXinFeiYong" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuJianQuXiaoJianCha">
+      <soap12:operation soapAction="http://www.hongyangsoft.com/FuJianQuXiaoJianCha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FuJianJieKouForBCao">
+    <wsdl:port name="FuJianJieKouForBCaoSoap" binding="tns:FuJianJieKouForBCaoSoap">
+      <soap:address location="http://192.168.1.110:9997/crds3/webservice/fujianforbcao.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FuJianJieKouForBCaoSoap12" binding="tns:FuJianJieKouForBCaoSoap12">
+      <soap12:address location="http://192.168.1.110:9997/crds3/webservice/fujianforbcao.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

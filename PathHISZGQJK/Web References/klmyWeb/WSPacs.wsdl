@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.zysoft.com.cn" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.zysoft.com.cn" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.zysoft.com.cn">
+      <s:element name="GetPacsReportList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="certificate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="patientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="visitNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="visitType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reportOperator" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPacsReportListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPacsReportListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPacsReportChangeRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="certificate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pacsBillNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reportOperator" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPacsReportChangeRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPacsReportChangeRecordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSickPacsReportByXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="certificate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pacsBillNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reportOperator" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSickPacsReportByXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSickPacsReportByXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSickPacsReportByHtml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="certificate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pacsBillNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reportOperator" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSickPacsReportByHtmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSickPacsReportByHtmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSickPacsReportImageUrlList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="certificate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pacsBillNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reportOperator" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSickPacsReportImageUrlListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSickPacsReportImageUrlListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArchivePacsReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pacsBillNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reportContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="certificate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArchivePacsReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ArchivePacsReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePacsReportStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pacsBillNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hisApplyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reportStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="changeOperator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="changeTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="certificate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePacsReportStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangePacsReportStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPacsReportListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPacsReportList" />
+  </wsdl:message>
+  <wsdl:message name="GetPacsReportListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPacsReportListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPacsReportChangeRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPacsReportChangeRecord" />
+  </wsdl:message>
+  <wsdl:message name="GetPacsReportChangeRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPacsReportChangeRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSickPacsReportByXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSickPacsReportByXml" />
+  </wsdl:message>
+  <wsdl:message name="GetSickPacsReportByXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSickPacsReportByXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSickPacsReportByHtmlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSickPacsReportByHtml" />
+  </wsdl:message>
+  <wsdl:message name="GetSickPacsReportByHtmlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSickPacsReportByHtmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSickPacsReportImageUrlListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSickPacsReportImageUrlList" />
+  </wsdl:message>
+  <wsdl:message name="GetSickPacsReportImageUrlListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSickPacsReportImageUrlListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArchivePacsReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ArchivePacsReport" />
+  </wsdl:message>
+  <wsdl:message name="ArchivePacsReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ArchivePacsReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePacsReportStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePacsReportStatus" />
+  </wsdl:message>
+  <wsdl:message name="ChangePacsReportStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePacsReportStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSPacsSoap">
+    <wsdl:operation name="GetPacsReportList">
+      <wsdl:input message="tns:GetPacsReportListSoapIn" />
+      <wsdl:output message="tns:GetPacsReportListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPacsReportChangeRecord">
+      <wsdl:input message="tns:GetPacsReportChangeRecordSoapIn" />
+      <wsdl:output message="tns:GetPacsReportChangeRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSickPacsReportByXml">
+      <wsdl:input message="tns:GetSickPacsReportByXmlSoapIn" />
+      <wsdl:output message="tns:GetSickPacsReportByXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSickPacsReportByHtml">
+      <wsdl:input message="tns:GetSickPacsReportByHtmlSoapIn" />
+      <wsdl:output message="tns:GetSickPacsReportByHtmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSickPacsReportImageUrlList">
+      <wsdl:input message="tns:GetSickPacsReportImageUrlListSoapIn" />
+      <wsdl:output message="tns:GetSickPacsReportImageUrlListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArchivePacsReport">
+      <wsdl:input message="tns:ArchivePacsReportSoapIn" />
+      <wsdl:output message="tns:ArchivePacsReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePacsReportStatus">
+      <wsdl:input message="tns:ChangePacsReportStatusSoapIn" />
+      <wsdl:output message="tns:ChangePacsReportStatusSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSPacsSoap" type="tns:WSPacsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPacsReportList">
+      <soap:operation soapAction="http://www.zysoft.com.cn/GetPacsReportList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacsReportChangeRecord">
+      <soap:operation soapAction="http://www.zysoft.com.cn/GetPacsReportChangeRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSickPacsReportByXml">
+      <soap:operation soapAction="http://www.zysoft.com.cn/GetSickPacsReportByXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSickPacsReportByHtml">
+      <soap:operation soapAction="http://www.zysoft.com.cn/GetSickPacsReportByHtml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSickPacsReportImageUrlList">
+      <soap:operation soapAction="http://www.zysoft.com.cn/GetSickPacsReportImageUrlList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArchivePacsReport">
+      <soap:operation soapAction="http://www.zysoft.com.cn/ArchivePacsReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePacsReportStatus">
+      <soap:operation soapAction="http://www.zysoft.com.cn/ChangePacsReportStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSPacsSoap12" type="tns:WSPacsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPacsReportList">
+      <soap12:operation soapAction="http://www.zysoft.com.cn/GetPacsReportList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacsReportChangeRecord">
+      <soap12:operation soapAction="http://www.zysoft.com.cn/GetPacsReportChangeRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSickPacsReportByXml">
+      <soap12:operation soapAction="http://www.zysoft.com.cn/GetSickPacsReportByXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSickPacsReportByHtml">
+      <soap12:operation soapAction="http://www.zysoft.com.cn/GetSickPacsReportByHtml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSickPacsReportImageUrlList">
+      <soap12:operation soapAction="http://www.zysoft.com.cn/GetSickPacsReportImageUrlList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArchivePacsReport">
+      <soap12:operation soapAction="http://www.zysoft.com.cn/ArchivePacsReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePacsReportStatus">
+      <soap12:operation soapAction="http://www.zysoft.com.cn/ChangePacsReportStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSPacs">
+    <wsdl:port name="WSPacsSoap" binding="tns:WSPacsSoap">
+      <soap:address location="http://192.168.90.241/ZyhipWebService/WebServices/WSPacs.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSPacsSoap12" binding="tns:WSPacsSoap12">
+      <soap12:address location="http://192.168.90.241/ZyhipWebService/WebServices/WSPacs.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

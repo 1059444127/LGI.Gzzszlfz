@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://tempuri.org" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org">
+      <s:element name="PacsApplyService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="pInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PacsApplyServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="PacsApplyServiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PacsReportBack">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="pInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PacsReportBackResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="PacsReportBackResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PacsApplyServiceSoapIn">
+    <wsdl:part name="parameters" element="s0:PacsApplyService" />
+  </wsdl:message>
+  <wsdl:message name="PacsApplyServiceSoapOut">
+    <wsdl:part name="parameters" element="s0:PacsApplyServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="PacsReportBackSoapIn">
+    <wsdl:part name="parameters" element="s0:PacsReportBack" />
+  </wsdl:message>
+  <wsdl:message name="PacsReportBackSoapOut">
+    <wsdl:part name="parameters" element="s0:PacsReportBackResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PacsWSSoap">
+    <wsdl:operation name="PacsApplyService">
+      <wsdl:input message="s0:PacsApplyServiceSoapIn" />
+      <wsdl:output message="s0:PacsApplyServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PacsReportBack">
+      <wsdl:input message="s0:PacsReportBackSoapIn" />
+      <wsdl:output message="s0:PacsReportBackSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PacsWSSoap" type="s0:PacsWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PacsApplyService">
+      <soap:operation soapAction="http://tempuri.org/JHIP.PACS.BS.PacsWS.PacsApplyService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PacsReportBack">
+      <soap:operation soapAction="http://tempuri.org/JHIP.PACS.BS.PacsWS.PacsReportBack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PacsWS">
+    <wsdl:port name="PacsWSSoap" binding="s0:PacsWSSoap">
+      <soap:address location="http://192.168.3.174/csp/jhip/JHIP.PACS.BS.PacsWS.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

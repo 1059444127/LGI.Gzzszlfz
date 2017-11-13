@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://tempuri.org" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org">
+      <s:element name="GetAppForm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppFormResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetAppFormResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBookedInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBookedInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetBookedInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCancelBookedInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCancelBookedInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetCancelBookedInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCancelFeeApp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCancelFeeAppResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetCancelFeeAppResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCancelReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCancelReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetCancelReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCheckComplete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCheckCompleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetCheckCompleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDictInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDictInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetDictInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatInfoToRIS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatInfoToRISResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetPatInfoToRISResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatOrdList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatOrdListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetPatOrdListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetRegInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnReports">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnReportsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetReturnReportsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPatOrdListToRis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPatOrdListToRisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="SendPatOrdListToRisResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAppFormSoapIn">
+    <wsdl:part name="parameters" element="s0:GetAppForm" />
+  </wsdl:message>
+  <wsdl:message name="GetAppFormSoapOut">
+    <wsdl:part name="parameters" element="s0:GetAppFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBookedInfoSoapIn">
+    <wsdl:part name="parameters" element="s0:GetBookedInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetBookedInfoSoapOut">
+    <wsdl:part name="parameters" element="s0:GetBookedInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCancelBookedInfoSoapIn">
+    <wsdl:part name="parameters" element="s0:GetCancelBookedInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCancelBookedInfoSoapOut">
+    <wsdl:part name="parameters" element="s0:GetCancelBookedInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCancelFeeAppSoapIn">
+    <wsdl:part name="parameters" element="s0:GetCancelFeeApp" />
+  </wsdl:message>
+  <wsdl:message name="GetCancelFeeAppSoapOut">
+    <wsdl:part name="parameters" element="s0:GetCancelFeeAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCancelReportSoapIn">
+    <wsdl:part name="parameters" element="s0:GetCancelReport" />
+  </wsdl:message>
+  <wsdl:message name="GetCancelReportSoapOut">
+    <wsdl:part name="parameters" element="s0:GetCancelReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckCompleteSoapIn">
+    <wsdl:part name="parameters" element="s0:GetCheckComplete" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckCompleteSoapOut">
+    <wsdl:part name="parameters" element="s0:GetCheckCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDictInfoSoapIn">
+    <wsdl:part name="parameters" element="s0:GetDictInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDictInfoSoapOut">
+    <wsdl:part name="parameters" element="s0:GetDictInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatInfoToRISSoapIn">
+    <wsdl:part name="parameters" element="s0:GetPatInfoToRIS" />
+  </wsdl:message>
+  <wsdl:message name="GetPatInfoToRISSoapOut">
+    <wsdl:part name="parameters" element="s0:GetPatInfoToRISResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatOrdListSoapIn">
+    <wsdl:part name="parameters" element="s0:GetPatOrdList" />
+  </wsdl:message>
+  <wsdl:message name="GetPatOrdListSoapOut">
+    <wsdl:part name="parameters" element="s0:GetPatOrdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegInfoSoapIn">
+    <wsdl:part name="parameters" element="s0:GetRegInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetRegInfoSoapOut">
+    <wsdl:part name="parameters" element="s0:GetRegInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnReportsSoapIn">
+    <wsdl:part name="parameters" element="s0:GetReturnReports" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnReportsSoapOut">
+    <wsdl:part name="parameters" element="s0:GetReturnReportsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPatOrdListToRisSoapIn">
+    <wsdl:part name="parameters" element="s0:SendPatOrdListToRis" />
+  </wsdl:message>
+  <wsdl:message name="SendPatOrdListToRisSoapOut">
+    <wsdl:part name="parameters" element="s0:SendPatOrdListToRisResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebRisServiceSoap">
+    <wsdl:operation name="GetAppForm">
+      <wsdl:input message="s0:GetAppFormSoapIn" />
+      <wsdl:output message="s0:GetAppFormSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookedInfo">
+      <wsdl:input message="s0:GetBookedInfoSoapIn" />
+      <wsdl:output message="s0:GetBookedInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCancelBookedInfo">
+      <wsdl:input message="s0:GetCancelBookedInfoSoapIn" />
+      <wsdl:output message="s0:GetCancelBookedInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCancelFeeApp">
+      <wsdl:input message="s0:GetCancelFeeAppSoapIn" />
+      <wsdl:output message="s0:GetCancelFeeAppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCancelReport">
+      <wsdl:input message="s0:GetCancelReportSoapIn" />
+      <wsdl:output message="s0:GetCancelReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckComplete">
+      <wsdl:input message="s0:GetCheckCompleteSoapIn" />
+      <wsdl:output message="s0:GetCheckCompleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDictInfo">
+      <wsdl:input message="s0:GetDictInfoSoapIn" />
+      <wsdl:output message="s0:GetDictInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatInfoToRIS">
+      <wsdl:input message="s0:GetPatInfoToRISSoapIn" />
+      <wsdl:output message="s0:GetPatInfoToRISSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatOrdList">
+      <wsdl:input message="s0:GetPatOrdListSoapIn" />
+      <wsdl:output message="s0:GetPatOrdListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegInfo">
+      <wsdl:input message="s0:GetRegInfoSoapIn" />
+      <wsdl:output message="s0:GetRegInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnReports">
+      <wsdl:input message="s0:GetReturnReportsSoapIn" />
+      <wsdl:output message="s0:GetReturnReportsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPatOrdListToRis">
+      <wsdl:input message="s0:SendPatOrdListToRisSoapIn" />
+      <wsdl:output message="s0:SendPatOrdListToRisSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebRisServiceSoap" type="s0:WebRisServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAppForm">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.GetAppForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookedInfo">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.GetBookedInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCancelBookedInfo">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.GetCancelBookedInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCancelFeeApp">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.GetCancelFeeApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCancelReport">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.GetCancelReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckComplete">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.GetCheckComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDictInfo">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.GetDictInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatInfoToRIS">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.GetPatInfoToRIS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatOrdList">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.GetPatOrdList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegInfo">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.GetRegInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnReports">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.GetReturnReports" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPatOrdListToRis">
+      <soap:operation soapAction="http://tempuri.org/DHC.RIS.BS.WebRisService.SendPatOrdListToRis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebRisService">
+    <wsdl:port name="WebRisServiceSoap" binding="s0:WebRisServiceSoap">
+      <soap:address location="http://192.168.60.39:57772/csp/i-risservice/DHC.RIS.BS.WebRisService.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

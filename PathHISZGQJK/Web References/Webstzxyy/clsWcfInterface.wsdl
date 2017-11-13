@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="clsWcfInterface" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/com.HopeBridge.ehr.wcf.datacontracts" />
+      <xsd:import schemaLocation="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/com.HopeBridge.common" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISvcInterface_Verify_InputMessage">
+    <wsdl:part name="parameters" element="tns:Verify" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_Verify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_EHRInterface_InputMessage">
+    <wsdl:part name="parameters" element="tns:EHRInterface" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_EHRInterface_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EHRInterfaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_EHRInterfaceBL_InputMessage">
+    <wsdl:part name="parameters" element="tns:EHRInterfaceBL" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_EHRInterfaceBL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EHRInterfaceBLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_GetRefOrdercontent_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_GetRefOrdercontent" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_GetRefOrdercontent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_GetRefOrdercontentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_GetRefLisResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_GetRefLisResult" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_GetRefLisResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_GetRefLisResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_GetRefPeResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_GetRefPeResult" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_GetRefPeResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_GetRefPeResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetLisApplyInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetLisApplyInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetLisApplyInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetLisApplyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_ImageChangeToString_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImageChangeToString" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_ImageChangeToString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImageChangeToStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetPACSInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetPACSInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetPACSInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetPACSInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetPACSReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetPACSReport" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetPACSReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetPACSReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetOrderInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetOrderInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetNumberForOutRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetNumberForOutRecord" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetNumberForOutRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetNumberForOutRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetBLInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetBLInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetBLInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetBLInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetBLReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetBLReport" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetBLReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetBLReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetECGInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetECGInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetECGInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetECGInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetECGReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetECGReport" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetECGReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetECGReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intSaveKeepRecordToHIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intSaveKeepRecordToHIS" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intSaveKeepRecordToHIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intSaveKeepRecordToHISResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetRecipeInfoFromOP_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetRecipeInfoFromOP" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetRecipeInfoFromOP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetRecipeInfoFromOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetCheckResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetCheckResult" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetCheckResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetCheckResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetZSPACSReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetZSPACSReport" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetZSPACSReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetZSPACSReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetAllLisApplyInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetAllLisApplyInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetAllLisApplyInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetAllLisApplyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetAllBLInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetAllBLInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetAllBLInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetAllBLInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetAllPACSInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetAllPACSInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetAllPACSInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetAllPACSInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetAllECGInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetAllECGInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetAllECGInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetAllECGInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetOPPateintInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetOPPateintInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetOPPateintInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetOPPateintInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetOPPatientList_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetOPPatientList" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetOPPatientList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetOPPatientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intSynchronousInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intSynchronousInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intSynchronousInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intSynchronousInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intSynchronousInfo1_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intSynchronousInfo1" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intSynchronousInfo1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intSynchronousInfo1Response" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intSynchronousInfo2_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intSynchronousInfo2" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intSynchronousInfo2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intSynchronousInfo2Response" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_dtGetPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_dtGetPatient" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_dtGetPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_dtGetPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_dtGetEhrPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_dtGetEhrPatient" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_dtGetEhrPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_dtGetEhrPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetZYPatientInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetZYPatientInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISvcInterface_m_intGetZYPatientInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:m_intGetZYPatientInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISvcInterface">
+    <wsdl:operation name="Verify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseServiceContract/Verify" message="tns:ISvcInterface_Verify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseServiceContract/VerifyResponse" message="tns:ISvcInterface_Verify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EHRInterface">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/EHRInterface" message="tns:ISvcInterface_EHRInterface_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/EHRInterfaceResponse" message="tns:ISvcInterface_EHRInterface_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EHRInterfaceBL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/EHRInterfaceBL" message="tns:ISvcInterface_EHRInterfaceBL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/EHRInterfaceBLResponse" message="tns:ISvcInterface_EHRInterfaceBL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_GetRefOrdercontent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_GetRefOrdercontent" message="tns:ISvcInterface_m_GetRefOrdercontent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_GetRefOrdercontentResponse" message="tns:ISvcInterface_m_GetRefOrdercontent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_GetRefLisResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_GetRefLisResult" message="tns:ISvcInterface_m_GetRefLisResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_GetRefLisResultResponse" message="tns:ISvcInterface_m_GetRefLisResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_GetRefPeResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_GetRefPeResult" message="tns:ISvcInterface_m_GetRefPeResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_GetRefPeResultResponse" message="tns:ISvcInterface_m_GetRefPeResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetLisApplyInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetLisApplyInfo" message="tns:ISvcInterface_m_intGetLisApplyInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetLisApplyInfoResponse" message="tns:ISvcInterface_m_intGetLisApplyInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImageChangeToString">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/ImageChangeToString" message="tns:ISvcInterface_ImageChangeToString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/ImageChangeToStringResponse" message="tns:ISvcInterface_ImageChangeToString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetPACSInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetPACSInfo" message="tns:ISvcInterface_m_intGetPACSInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetPACSInfoResponse" message="tns:ISvcInterface_m_intGetPACSInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetPACSReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetPACSReport" message="tns:ISvcInterface_m_intGetPACSReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetPACSReportResponse" message="tns:ISvcInterface_m_intGetPACSReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetOrderInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetOrderInfo" message="tns:ISvcInterface_m_intGetOrderInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetOrderInfoResponse" message="tns:ISvcInterface_m_intGetOrderInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetNumberForOutRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetNumberForOutRecord" message="tns:ISvcInterface_m_intGetNumberForOutRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetNumberForOutRecordResponse" message="tns:ISvcInterface_m_intGetNumberForOutRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetBLInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetBLInfo" message="tns:ISvcInterface_m_intGetBLInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetBLInfoResponse" message="tns:ISvcInterface_m_intGetBLInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetBLReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetBLReport" message="tns:ISvcInterface_m_intGetBLReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetBLReportResponse" message="tns:ISvcInterface_m_intGetBLReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetECGInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetECGInfo" message="tns:ISvcInterface_m_intGetECGInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetECGInfoResponse" message="tns:ISvcInterface_m_intGetECGInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetECGReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetECGReport" message="tns:ISvcInterface_m_intGetECGReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetECGReportResponse" message="tns:ISvcInterface_m_intGetECGReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intSaveKeepRecordToHIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intSaveKeepRecordToHIS" message="tns:ISvcInterface_m_intSaveKeepRecordToHIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intSaveKeepRecordToHISResponse" message="tns:ISvcInterface_m_intSaveKeepRecordToHIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetRecipeInfoFromOP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetRecipeInfoFromOP" message="tns:ISvcInterface_m_intGetRecipeInfoFromOP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetRecipeInfoFromOPResponse" message="tns:ISvcInterface_m_intGetRecipeInfoFromOP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetCheckResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetCheckResult" message="tns:ISvcInterface_m_intGetCheckResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetCheckResultResponse" message="tns:ISvcInterface_m_intGetCheckResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetZSPACSReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetZSPACSReport" message="tns:ISvcInterface_m_intGetZSPACSReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetZSPACSReportResponse" message="tns:ISvcInterface_m_intGetZSPACSReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetAllLisApplyInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetAllLisApplyInfo" message="tns:ISvcInterface_m_intGetAllLisApplyInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetAllLisApplyInfoResponse" message="tns:ISvcInterface_m_intGetAllLisApplyInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetAllBLInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetAllBLInfo" message="tns:ISvcInterface_m_intGetAllBLInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetAllBLInfoResponse" message="tns:ISvcInterface_m_intGetAllBLInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetAllPACSInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetAllPACSInfo" message="tns:ISvcInterface_m_intGetAllPACSInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetAllPACSInfoResponse" message="tns:ISvcInterface_m_intGetAllPACSInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetAllECGInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetAllECGInfo" message="tns:ISvcInterface_m_intGetAllECGInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetAllECGInfoResponse" message="tns:ISvcInterface_m_intGetAllECGInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetOPPateintInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetOPPateintInfo" message="tns:ISvcInterface_m_intGetOPPateintInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetOPPateintInfoResponse" message="tns:ISvcInterface_m_intGetOPPateintInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetOPPatientList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetOPPatientList" message="tns:ISvcInterface_m_intGetOPPatientList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetOPPatientListResponse" message="tns:ISvcInterface_m_intGetOPPatientList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intSynchronousInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intSynchronousInfo" message="tns:ISvcInterface_m_intSynchronousInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intSynchronousInfoResponse" message="tns:ISvcInterface_m_intSynchronousInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intSynchronousInfo1">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intSynchronousInfo1" message="tns:ISvcInterface_m_intSynchronousInfo1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intSynchronousInfo1Response" message="tns:ISvcInterface_m_intSynchronousInfo1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intSynchronousInfo2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intSynchronousInfo2" message="tns:ISvcInterface_m_intSynchronousInfo2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intSynchronousInfo2Response" message="tns:ISvcInterface_m_intSynchronousInfo2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_dtGetPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_dtGetPatient" message="tns:ISvcInterface_m_dtGetPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_dtGetPatientResponse" message="tns:ISvcInterface_m_dtGetPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_dtGetEhrPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_dtGetEhrPatient" message="tns:ISvcInterface_m_dtGetEhrPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_dtGetEhrPatientResponse" message="tns:ISvcInterface_m_dtGetEhrPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetZYPatientInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetZYPatientInfo" message="tns:ISvcInterface_m_intGetZYPatientInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcInterface/m_intGetZYPatientInfoResponse" message="tns:ISvcInterface_m_intGetZYPatientInfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISvcInterface" type="tns:ISvcInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Verify">
+      <soap:operation soapAction="http://tempuri.org/IBaseServiceContract/Verify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EHRInterface">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/EHRInterface" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EHRInterfaceBL">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/EHRInterfaceBL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_GetRefOrdercontent">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_GetRefOrdercontent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_GetRefLisResult">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_GetRefLisResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_GetRefPeResult">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_GetRefPeResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetLisApplyInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetLisApplyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImageChangeToString">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/ImageChangeToString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetPACSInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetPACSInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetPACSReport">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetPACSReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetOrderInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetOrderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetNumberForOutRecord">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetNumberForOutRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetBLInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetBLInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetBLReport">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetBLReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetECGInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetECGInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetECGReport">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetECGReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intSaveKeepRecordToHIS">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intSaveKeepRecordToHIS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetRecipeInfoFromOP">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetRecipeInfoFromOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetCheckResult">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetCheckResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetZSPACSReport">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetZSPACSReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetAllLisApplyInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetAllLisApplyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetAllBLInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetAllBLInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetAllPACSInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetAllPACSInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetAllECGInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetAllECGInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetOPPateintInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetOPPateintInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetOPPatientList">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetOPPatientList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intSynchronousInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intSynchronousInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intSynchronousInfo1">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intSynchronousInfo1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intSynchronousInfo2">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intSynchronousInfo2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_dtGetPatient">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_dtGetPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_dtGetEhrPatient">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_dtGetEhrPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="m_intGetZYPatientInfo">
+      <soap:operation soapAction="http://tempuri.org/ISvcInterface/m_intGetZYPatientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="clsWcfInterface">
+    <wsdl:port name="BasicHttpBinding_ISvcInterface" binding="tns:BasicHttpBinding_ISvcInterface">
+      <soap:address location="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

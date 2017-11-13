@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd1" filename="clsWcfInterface.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd0" filename="clsWcfInterface0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?wsdl" filename="clsWcfInterface.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?disco" filename="clsWcfInterface.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd5" filename="clsWcfInterface1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd4" filename="clsWcfInterface2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd3" filename="clsWcfInterface3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://ddl360g502:9000/Wcf.Ehr.Interface/clsWcfInterface.svc?xsd=xsd2" filename="clsWcfInterface4.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

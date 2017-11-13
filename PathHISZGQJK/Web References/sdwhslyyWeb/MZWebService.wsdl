@@ -1,0 +1,1137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlterCheckExecution">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlterCheckExecutionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlterCheckExecutionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeptInfoQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeptInfoQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeptInfoQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoctorInfoQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoctorInfoQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoctorInfoQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatientInfoQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatientInfoQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PatientInfoQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BangdingZFB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BangdingZFBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BangdingZFBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelBangdingZFB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelBangdingZFBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelBangdingZFBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueInfoQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueInfoQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YuyueInfoQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueGuahao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueGuahaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YuyueGuahaoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueQuxiao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueQuxiaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YuyueQuxiaoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueGuahaoQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueGuahaoQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YuyueGuahaoQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayYuyueGuahao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayYuyueGuahaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayYuyueGuahaoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueTodayQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueTodayQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YuyueTodayQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueTodayGuahao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueTodayGuahaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YuyueTodayGuahaoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueTodayQuxiao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YuyueTodayQuxiaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YuyueTodayQuxiaoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayTodayGuahao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayTodayGuahaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayTodayGuahaoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MzWaitingQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MzWaitingQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MzWaitingQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MzBillQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MzBillQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MzBillQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MzBillXxQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MzBillXxQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MzBillXxQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayMzOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayMzOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayMzOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DaoZhenDanQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DaoZhenDanQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DaoZhenDanQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChkListQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChkListQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChkListQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChkListQuery2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChkListQuery2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChkListQuery2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChkXxQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChkXxQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChkXxQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LisListQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LisListQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LisListQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LisXxQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LisXxQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LisXxQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlterCheckExecutionSoapIn">
+    <wsdl:part name="parameters" element="AlterCheckExecution" />
+  </wsdl:message>
+  <wsdl:message name="AlterCheckExecutionSoapOut">
+    <wsdl:part name="parameters" element="AlterCheckExecutionResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeptInfoQuerySoapIn">
+    <wsdl:part name="parameters" element="DeptInfoQuery" />
+  </wsdl:message>
+  <wsdl:message name="DeptInfoQuerySoapOut">
+    <wsdl:part name="parameters" element="DeptInfoQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoctorInfoQuerySoapIn">
+    <wsdl:part name="parameters" element="DoctorInfoQuery" />
+  </wsdl:message>
+  <wsdl:message name="DoctorInfoQuerySoapOut">
+    <wsdl:part name="parameters" element="DoctorInfoQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="PatientInfoQuerySoapIn">
+    <wsdl:part name="parameters" element="PatientInfoQuery" />
+  </wsdl:message>
+  <wsdl:message name="PatientInfoQuerySoapOut">
+    <wsdl:part name="parameters" element="PatientInfoQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="BangdingZFBSoapIn">
+    <wsdl:part name="parameters" element="BangdingZFB" />
+  </wsdl:message>
+  <wsdl:message name="BangdingZFBSoapOut">
+    <wsdl:part name="parameters" element="BangdingZFBResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelBangdingZFBSoapIn">
+    <wsdl:part name="parameters" element="CancelBangdingZFB" />
+  </wsdl:message>
+  <wsdl:message name="CancelBangdingZFBSoapOut">
+    <wsdl:part name="parameters" element="CancelBangdingZFBResponse" />
+  </wsdl:message>
+  <wsdl:message name="YuyueInfoQuerySoapIn">
+    <wsdl:part name="parameters" element="YuyueInfoQuery" />
+  </wsdl:message>
+  <wsdl:message name="YuyueInfoQuerySoapOut">
+    <wsdl:part name="parameters" element="YuyueInfoQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="YuyueGuahaoSoapIn">
+    <wsdl:part name="parameters" element="YuyueGuahao" />
+  </wsdl:message>
+  <wsdl:message name="YuyueGuahaoSoapOut">
+    <wsdl:part name="parameters" element="YuyueGuahaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="YuyueQuxiaoSoapIn">
+    <wsdl:part name="parameters" element="YuyueQuxiao" />
+  </wsdl:message>
+  <wsdl:message name="YuyueQuxiaoSoapOut">
+    <wsdl:part name="parameters" element="YuyueQuxiaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="YuyueGuahaoQuerySoapIn">
+    <wsdl:part name="parameters" element="YuyueGuahaoQuery" />
+  </wsdl:message>
+  <wsdl:message name="YuyueGuahaoQuerySoapOut">
+    <wsdl:part name="parameters" element="YuyueGuahaoQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayYuyueGuahaoSoapIn">
+    <wsdl:part name="parameters" element="PayYuyueGuahao" />
+  </wsdl:message>
+  <wsdl:message name="PayYuyueGuahaoSoapOut">
+    <wsdl:part name="parameters" element="PayYuyueGuahaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="YuyueTodayQuerySoapIn">
+    <wsdl:part name="parameters" element="YuyueTodayQuery" />
+  </wsdl:message>
+  <wsdl:message name="YuyueTodayQuerySoapOut">
+    <wsdl:part name="parameters" element="YuyueTodayQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="YuyueTodayGuahaoSoapIn">
+    <wsdl:part name="parameters" element="YuyueTodayGuahao" />
+  </wsdl:message>
+  <wsdl:message name="YuyueTodayGuahaoSoapOut">
+    <wsdl:part name="parameters" element="YuyueTodayGuahaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="YuyueTodayQuxiaoSoapIn">
+    <wsdl:part name="parameters" element="YuyueTodayQuxiao" />
+  </wsdl:message>
+  <wsdl:message name="YuyueTodayQuxiaoSoapOut">
+    <wsdl:part name="parameters" element="YuyueTodayQuxiaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayTodayGuahaoSoapIn">
+    <wsdl:part name="parameters" element="PayTodayGuahao" />
+  </wsdl:message>
+  <wsdl:message name="PayTodayGuahaoSoapOut">
+    <wsdl:part name="parameters" element="PayTodayGuahaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MzWaitingQuerySoapIn">
+    <wsdl:part name="parameters" element="MzWaitingQuery" />
+  </wsdl:message>
+  <wsdl:message name="MzWaitingQuerySoapOut">
+    <wsdl:part name="parameters" element="MzWaitingQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="MzBillQuerySoapIn">
+    <wsdl:part name="parameters" element="MzBillQuery" />
+  </wsdl:message>
+  <wsdl:message name="MzBillQuerySoapOut">
+    <wsdl:part name="parameters" element="MzBillQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="MzBillXxQuerySoapIn">
+    <wsdl:part name="parameters" element="MzBillXxQuery" />
+  </wsdl:message>
+  <wsdl:message name="MzBillXxQuerySoapOut">
+    <wsdl:part name="parameters" element="MzBillXxQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayMzOrderSoapIn">
+    <wsdl:part name="parameters" element="PayMzOrder" />
+  </wsdl:message>
+  <wsdl:message name="PayMzOrderSoapOut">
+    <wsdl:part name="parameters" element="PayMzOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="DaoZhenDanQuerySoapIn">
+    <wsdl:part name="parameters" element="DaoZhenDanQuery" />
+  </wsdl:message>
+  <wsdl:message name="DaoZhenDanQuerySoapOut">
+    <wsdl:part name="parameters" element="DaoZhenDanQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChkListQuerySoapIn">
+    <wsdl:part name="parameters" element="ChkListQuery" />
+  </wsdl:message>
+  <wsdl:message name="ChkListQuerySoapOut">
+    <wsdl:part name="parameters" element="ChkListQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChkListQuery2SoapIn">
+    <wsdl:part name="parameters" element="ChkListQuery2" />
+  </wsdl:message>
+  <wsdl:message name="ChkListQuery2SoapOut">
+    <wsdl:part name="parameters" element="ChkListQuery2Response" />
+  </wsdl:message>
+  <wsdl:message name="ChkXxQuerySoapIn">
+    <wsdl:part name="parameters" element="ChkXxQuery" />
+  </wsdl:message>
+  <wsdl:message name="ChkXxQuerySoapOut">
+    <wsdl:part name="parameters" element="ChkXxQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="LisListQuerySoapIn">
+    <wsdl:part name="parameters" element="LisListQuery" />
+  </wsdl:message>
+  <wsdl:message name="LisListQuerySoapOut">
+    <wsdl:part name="parameters" element="LisListQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="LisXxQuerySoapIn">
+    <wsdl:part name="parameters" element="LisXxQuery" />
+  </wsdl:message>
+  <wsdl:message name="LisXxQuerySoapOut">
+    <wsdl:part name="parameters" element="LisXxQueryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MZWebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">最简单的方法</wsdl:documentation>
+      <wsdl:input message="HelloWorldSoapIn" />
+      <wsdl:output message="HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterCheckExecution">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改检查申请单执行情况</wsdl:documentation>
+      <wsdl:input message="AlterCheckExecutionSoapIn" />
+      <wsdl:output message="AlterCheckExecutionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeptInfoQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.1.1 科室信息查询</wsdl:documentation>
+      <wsdl:input message="DeptInfoQuerySoapIn" />
+      <wsdl:output message="DeptInfoQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoctorInfoQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.1.2 医生信息查询</wsdl:documentation>
+      <wsdl:input message="DoctorInfoQuerySoapIn" />
+      <wsdl:output message="DoctorInfoQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PatientInfoQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.2.1 患者信息查询</wsdl:documentation>
+      <wsdl:input message="PatientInfoQuerySoapIn" />
+      <wsdl:output message="PatientInfoQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BangdingZFB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.2.2.1 绑定通知</wsdl:documentation>
+      <wsdl:input message="BangdingZFBSoapIn" />
+      <wsdl:output message="BangdingZFBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelBangdingZFB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.2.3 取消绑定通知</wsdl:documentation>
+      <wsdl:input message="CancelBangdingZFBSoapIn" />
+      <wsdl:output message="CancelBangdingZFBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YuyueInfoQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.3.1.	预约号源信息查询</wsdl:documentation>
+      <wsdl:input message="YuyueInfoQuerySoapIn" />
+      <wsdl:output message="YuyueInfoQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YuyueGuahao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.3.2.	预约挂号</wsdl:documentation>
+      <wsdl:input message="YuyueGuahaoSoapIn" />
+      <wsdl:output message="YuyueGuahaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YuyueQuxiao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.3.3.	取消预约</wsdl:documentation>
+      <wsdl:input message="YuyueQuxiaoSoapIn" />
+      <wsdl:output message="YuyueQuxiaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YuyueGuahaoQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.3.6.	预约挂号记录查询</wsdl:documentation>
+      <wsdl:input message="YuyueGuahaoQuerySoapIn" />
+      <wsdl:output message="YuyueGuahaoQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayYuyueGuahao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.3.7.	预约取号支付</wsdl:documentation>
+      <wsdl:input message="PayYuyueGuahaoSoapIn" />
+      <wsdl:output message="PayYuyueGuahaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YuyueTodayQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.4.1.	当班号源信息查询</wsdl:documentation>
+      <wsdl:input message="YuyueTodayQuerySoapIn" />
+      <wsdl:output message="YuyueTodayQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YuyueTodayGuahao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.4.2.	当班挂号锁号</wsdl:documentation>
+      <wsdl:input message="YuyueTodayGuahaoSoapIn" />
+      <wsdl:output message="YuyueTodayGuahaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YuyueTodayQuxiao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.4.3.	当班号源取消锁定</wsdl:documentation>
+      <wsdl:input message="YuyueTodayQuxiaoSoapIn" />
+      <wsdl:output message="YuyueTodayQuxiaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayTodayGuahao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.4.4.	当班挂号支付</wsdl:documentation>
+      <wsdl:input message="PayTodayGuahaoSoapIn" />
+      <wsdl:output message="PayTodayGuahaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MzWaitingQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.5.1.	门诊候诊信息查询</wsdl:documentation>
+      <wsdl:input message="MzWaitingQuerySoapIn" />
+      <wsdl:output message="MzWaitingQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MzBillQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.6.1.	门诊待缴费记录查询</wsdl:documentation>
+      <wsdl:input message="MzBillQuerySoapIn" />
+      <wsdl:output message="MzBillQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MzBillXxQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.6.2.	门诊待缴费记录明细查询</wsdl:documentation>
+      <wsdl:input message="MzBillXxQuerySoapIn" />
+      <wsdl:output message="MzBillXxQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayMzOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.6.3.	门诊缴费订单支付</wsdl:documentation>
+      <wsdl:input message="PayMzOrderSoapIn" />
+      <wsdl:output message="PayMzOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DaoZhenDanQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.1.6.4.	门诊缴费成功后导诊单查询</wsdl:documentation>
+      <wsdl:input message="DaoZhenDanQuerySoapIn" />
+      <wsdl:output message="DaoZhenDanQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChkListQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.2.2.1.	检查结果列表查询(卡号patCardNo)</wsdl:documentation>
+      <wsdl:input message="ChkListQuerySoapIn" />
+      <wsdl:output message="ChkListQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChkListQuery2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.2.2.1.	检查结果列表查询(门诊号mzh)</wsdl:documentation>
+      <wsdl:input message="ChkListQuery2SoapIn" />
+      <wsdl:output message="ChkListQuery2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChkXxQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.2.2.2.	检查结果详情查询</wsdl:documentation>
+      <wsdl:input message="ChkXxQuerySoapIn" />
+      <wsdl:output message="ChkXxQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LisListQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.3.1.1.	检验报告列表查询</wsdl:documentation>
+      <wsdl:input message="LisListQuerySoapIn" />
+      <wsdl:output message="LisListQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LisXxQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">2.3.1.2.	检验报告详情查询</wsdl:documentation>
+      <wsdl:input message="LisXxQuerySoapIn" />
+      <wsdl:output message="LisXxQuerySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MZWebServiceSoap" type="MZWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterCheckExecution">
+      <soap:operation soapAction="/AlterCheckExecution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeptInfoQuery">
+      <soap:operation soapAction="/DeptInfoQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoctorInfoQuery">
+      <soap:operation soapAction="/DoctorInfoQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientInfoQuery">
+      <soap:operation soapAction="/PatientInfoQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BangdingZFB">
+      <soap:operation soapAction="/BangdingZFB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelBangdingZFB">
+      <soap:operation soapAction="/CancelBangdingZFB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueInfoQuery">
+      <soap:operation soapAction="/YuyueInfoQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueGuahao">
+      <soap:operation soapAction="/YuyueGuahao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueQuxiao">
+      <soap:operation soapAction="/YuyueQuxiao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueGuahaoQuery">
+      <soap:operation soapAction="/YuyueGuahaoQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayYuyueGuahao">
+      <soap:operation soapAction="/PayYuyueGuahao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueTodayQuery">
+      <soap:operation soapAction="/YuyueTodayQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueTodayGuahao">
+      <soap:operation soapAction="/YuyueTodayGuahao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueTodayQuxiao">
+      <soap:operation soapAction="/YuyueTodayQuxiao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayTodayGuahao">
+      <soap:operation soapAction="/PayTodayGuahao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MzWaitingQuery">
+      <soap:operation soapAction="/MzWaitingQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MzBillQuery">
+      <soap:operation soapAction="/MzBillQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MzBillXxQuery">
+      <soap:operation soapAction="/MzBillXxQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayMzOrder">
+      <soap:operation soapAction="/PayMzOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DaoZhenDanQuery">
+      <soap:operation soapAction="/DaoZhenDanQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkListQuery">
+      <soap:operation soapAction="/ChkListQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkListQuery2">
+      <soap:operation soapAction="/ChkListQuery2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkXxQuery">
+      <soap:operation soapAction="/ChkXxQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LisListQuery">
+      <soap:operation soapAction="/LisListQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LisXxQuery">
+      <soap:operation soapAction="/LisXxQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MZWebServiceSoap12" type="MZWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterCheckExecution">
+      <soap12:operation soapAction="/AlterCheckExecution" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeptInfoQuery">
+      <soap12:operation soapAction="/DeptInfoQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoctorInfoQuery">
+      <soap12:operation soapAction="/DoctorInfoQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientInfoQuery">
+      <soap12:operation soapAction="/PatientInfoQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BangdingZFB">
+      <soap12:operation soapAction="/BangdingZFB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelBangdingZFB">
+      <soap12:operation soapAction="/CancelBangdingZFB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueInfoQuery">
+      <soap12:operation soapAction="/YuyueInfoQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueGuahao">
+      <soap12:operation soapAction="/YuyueGuahao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueQuxiao">
+      <soap12:operation soapAction="/YuyueQuxiao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueGuahaoQuery">
+      <soap12:operation soapAction="/YuyueGuahaoQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayYuyueGuahao">
+      <soap12:operation soapAction="/PayYuyueGuahao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueTodayQuery">
+      <soap12:operation soapAction="/YuyueTodayQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueTodayGuahao">
+      <soap12:operation soapAction="/YuyueTodayGuahao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YuyueTodayQuxiao">
+      <soap12:operation soapAction="/YuyueTodayQuxiao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayTodayGuahao">
+      <soap12:operation soapAction="/PayTodayGuahao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MzWaitingQuery">
+      <soap12:operation soapAction="/MzWaitingQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MzBillQuery">
+      <soap12:operation soapAction="/MzBillQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MzBillXxQuery">
+      <soap12:operation soapAction="/MzBillXxQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayMzOrder">
+      <soap12:operation soapAction="/PayMzOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DaoZhenDanQuery">
+      <soap12:operation soapAction="/DaoZhenDanQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkListQuery">
+      <soap12:operation soapAction="/ChkListQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkListQuery2">
+      <soap12:operation soapAction="/ChkListQuery2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkXxQuery">
+      <soap12:operation soapAction="/ChkXxQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LisListQuery">
+      <soap12:operation soapAction="/LisListQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LisXxQuery">
+      <soap12:operation soapAction="/LisXxQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MZWebService">
+    <wsdl:port name="MZWebServiceSoap" binding="MZWebServiceSoap">
+      <soap:address location="http://10.101.2.170:9008/MZWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MZWebServiceSoap12" binding="MZWebServiceSoap12">
+      <soap12:address location="http://10.101.2.170:9008/MZWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://ihis.pub.ws" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NYwclService" targetNamespace="http://ihis.pub.ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ihis.pub.ws">
+      <xsd:element name="Exception" type="tns:Exception" />
+      <xsd:complexType name="Exception">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="message" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="BeansException" type="tns:BeansException" />
+      <xsd:complexType name="BeansException">
+        <xsd:sequence />
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="BeansException">
+    <wsdl:part name="BeansException" element="tns:BeansException" />
+  </wsdl:message>
+  <wsdl:message name="pselect">
+    <wsdl:part name="arg0" type="xsd:int" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getMd5M">
+    <wsdl:part name="arg0" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sqlselectResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updatePic">
+    <wsdl:part name="arg0" type="xsd:string" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="singleSelect">
+    <wsdl:part name="arg0" type="xsd:int" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StaticSelectResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getglbm">
+    <wsdl:part name="arg0" type="xsd:string" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StaticSelect">
+    <wsdl:part name="arg0" type="xsd:int" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+    <wsdl:part name="arg5" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="SetJcjgbResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="business">
+    <wsdl:part name="arg0" type="xsd:int" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+    <wsdl:part name="arg5" type="xsd:int" />
+    <wsdl:part name="arg6" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="downFromServerResponse">
+    <wsdl:part name="return" type="xsd:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="Getxml">
+    <wsdl:part name="arg0" type="xsd:string" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="asyncbusiResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadGrqmResponse">
+    <wsdl:part name="return" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getPicResponse">
+    <wsdl:part name="return" type="xsd:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="downFromServer">
+    <wsdl:part name="arg0" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getBitMatrixResponse">
+    <wsdl:part name="return" type="xsd:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="asyncselect">
+    <wsdl:part name="arg0" type="xsd:int" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part name="Exception" element="tns:Exception" />
+  </wsdl:message>
+  <wsdl:message name="updatePicResponse">
+    <wsdl:part name="return" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="bselect">
+    <wsdl:part name="arg0" type="xsd:int" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getBitMatrix">
+    <wsdl:part name="arg0" type="xsd:string" />
+    <wsdl:part name="arg1" type="xsd:int" />
+    <wsdl:part name="arg2" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="uploadfileResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getPic">
+    <wsdl:part name="arg0" type="xsd:string" />
+    <wsdl:part name="arg1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadToThxResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sqlselect">
+    <wsdl:part name="arg0" type="xsd:int" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="syncbusiResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="gettyPicResponse">
+    <wsdl:part name="return" type="xsd:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="uploadToServer">
+    <wsdl:part name="arg0" type="xsd:string" />
+    <wsdl:part name="arg1" type="xsd:base64Binary" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadWithByte">
+    <wsdl:part name="arg0" type="xsd:base64Binary" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getglbmResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="asyncbusi">
+    <wsdl:part name="arg0" type="xsd:int" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+    <wsdl:part name="arg5" type="xsd:int" />
+    <wsdl:part name="arg6" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="bselectResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SetJcjgb">
+    <wsdl:part name="arg0" type="xsd:string" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+    <wsdl:part name="arg5" type="xsd:string" />
+    <wsdl:part name="arg6" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="emrGetBsResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="setApplicationContext">
+    <wsdl:part name="arg0" />
+  </wsdl:message>
+  <wsdl:message name="login">
+    <wsdl:part name="arg0" type="xsd:string" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+    <wsdl:part name="arg5" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadfile">
+    <wsdl:part name="sclx" type="xsd:string" />
+    <wsdl:part name="swjbt" type="xsd:string" />
+    <wsdl:part name="swjm" type="xsd:string" />
+    <wsdl:part name="sscr" type="xsd:string" />
+    <wsdl:part name="surl" type="xsd:string" />
+    <wsdl:part name="swid" type="xsd:string" />
+    <wsdl:part name="sywb" type="xsd:string" />
+    <wsdl:part name="wjnr" type="xsd:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="businessResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="asyncselectResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="bselectWithTime">
+    <wsdl:part name="arg0" type="xsd:int" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+    <wsdl:part name="arg5" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="pselectResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadGrqm">
+    <wsdl:part name="arg0" type="xsd:base64Binary" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadToThx">
+    <wsdl:part name="arg0" type="xsd:base64Binary" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="singleSelectResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadToServerResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetxmlResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getXmlFileResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadWithByteResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getTodayResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="gettyPic">
+    <wsdl:part name="arg0" type="xsd:string" />
+    <wsdl:part name="arg1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="bselectWithTimeResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getXmlFile">
+    <wsdl:part name="arg0" type="xsd:string" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getToday" />
+  <wsdl:message name="getMd5MResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getTxmResponse">
+    <wsdl:part name="return" type="xsd:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="emrGetBs">
+    <wsdl:part name="arg0" type="xsd:int" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getTxm">
+    <wsdl:part name="arg0" type="xsd:string" />
+    <wsdl:part name="arg1" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="syncbusi">
+    <wsdl:part name="arg0" type="xsd:int" />
+    <wsdl:part name="arg1" type="xsd:string" />
+    <wsdl:part name="arg2" type="xsd:string" />
+    <wsdl:part name="arg3" type="xsd:string" />
+    <wsdl:part name="arg4" type="xsd:string" />
+    <wsdl:part name="arg5" type="xsd:int" />
+    <wsdl:part name="arg6" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="setApplicationContextResponse" />
+  <wsdl:portType name="NYwcl">
+    <wsdl:operation name="syncbusi">
+      <wsdl:input name="syncbusi" message="tns:syncbusi" />
+      <wsdl:output name="syncbusiResponse" message="tns:syncbusiResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sqlselect">
+      <wsdl:input name="sqlselect" message="tns:sqlselect" />
+      <wsdl:output name="sqlselectResponse" message="tns:sqlselectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="business">
+      <wsdl:input name="business" message="tns:business" />
+      <wsdl:output name="businessResponse" message="tns:businessResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getBitMatrix">
+      <wsdl:input name="getBitMatrix" message="tns:getBitMatrix" />
+      <wsdl:output name="getBitMatrixResponse" message="tns:getBitMatrixResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadWithByte">
+      <wsdl:input name="uploadWithByte" message="tns:uploadWithByte" />
+      <wsdl:output name="uploadWithByteResponse" message="tns:uploadWithByteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="asyncbusi">
+      <wsdl:input name="asyncbusi" message="tns:asyncbusi" />
+      <wsdl:output name="asyncbusiResponse" message="tns:asyncbusiResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input name="login" message="tns:login" />
+      <wsdl:output name="loginResponse" message="tns:loginResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadToThx">
+      <wsdl:input name="uploadToThx" message="tns:uploadToThx" />
+      <wsdl:output name="uploadToThxResponse" message="tns:uploadToThxResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="asyncselect">
+      <wsdl:input name="asyncselect" message="tns:asyncselect" />
+      <wsdl:output name="asyncselectResponse" message="tns:asyncselectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="emrGetBs">
+      <wsdl:input name="emrGetBs" message="tns:emrGetBs" />
+      <wsdl:output name="emrGetBsResponse" message="tns:emrGetBsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getXmlFile">
+      <wsdl:input name="getXmlFile" message="tns:getXmlFile" />
+      <wsdl:output name="getXmlFileResponse" message="tns:getXmlFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="bselectWithTime">
+      <wsdl:input name="bselectWithTime" message="tns:bselectWithTime" />
+      <wsdl:output name="bselectWithTimeResponse" message="tns:bselectWithTimeResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="SetJcjgb">
+      <wsdl:input name="SetJcjgb" message="tns:SetJcjgb" />
+      <wsdl:output name="SetJcjgbResponse" message="tns:SetJcjgbResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePic">
+      <wsdl:input name="updatePic" message="tns:updatePic" />
+      <wsdl:output name="updatePicResponse" message="tns:updatePicResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadfile">
+      <wsdl:input name="uploadfile" message="tns:uploadfile" />
+      <wsdl:output name="uploadfileResponse" message="tns:uploadfileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="singleSelect">
+      <wsdl:input name="singleSelect" message="tns:singleSelect" />
+      <wsdl:output name="singleSelectResponse" message="tns:singleSelectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="getToday">
+      <wsdl:input name="getToday" message="tns:getToday" />
+      <wsdl:output name="getTodayResponse" message="tns:getTodayResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="bselect">
+      <wsdl:input name="bselect" message="tns:bselect" />
+      <wsdl:output name="bselectResponse" message="tns:bselectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadGrqm">
+      <wsdl:input name="uploadGrqm" message="tns:uploadGrqm" />
+      <wsdl:output name="uploadGrqmResponse" message="tns:uploadGrqmResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="Getxml">
+      <wsdl:input name="Getxml" message="tns:Getxml" />
+      <wsdl:output name="GetxmlResponse" message="tns:GetxmlResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="gettyPic">
+      <wsdl:input name="gettyPic" message="tns:gettyPic" />
+      <wsdl:output name="gettyPicResponse" message="tns:gettyPicResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="getPic">
+      <wsdl:input name="getPic" message="tns:getPic" />
+      <wsdl:output name="getPicResponse" message="tns:getPicResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="StaticSelect">
+      <wsdl:input name="StaticSelect" message="tns:StaticSelect" />
+      <wsdl:output name="StaticSelectResponse" message="tns:StaticSelectResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="pselect">
+      <wsdl:input name="pselect" message="tns:pselect" />
+      <wsdl:output name="pselectResponse" message="tns:pselectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="getTxm">
+      <wsdl:input name="getTxm" message="tns:getTxm" />
+      <wsdl:output name="getTxmResponse" message="tns:getTxmResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="setApplicationContext">
+      <wsdl:input name="setApplicationContext" message="tns:setApplicationContext" />
+      <wsdl:output name="setApplicationContextResponse" message="tns:setApplicationContextResponse" />
+      <wsdl:fault name="BeansException" message="tns:BeansException" />
+    </wsdl:operation>
+    <wsdl:operation name="getglbm">
+      <wsdl:input name="getglbm" message="tns:getglbm" />
+      <wsdl:output name="getglbmResponse" message="tns:getglbmResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadToServer">
+      <wsdl:input name="uploadToServer" message="tns:uploadToServer" />
+      <wsdl:output name="uploadToServerResponse" message="tns:uploadToServerResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getMd5M">
+      <wsdl:input name="getMd5M" message="tns:getMd5M" />
+      <wsdl:output name="getMd5MResponse" message="tns:getMd5MResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="downFromServer">
+      <wsdl:input name="downFromServer" message="tns:downFromServer" />
+      <wsdl:output name="downFromServerResponse" message="tns:downFromServerResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NYwclServiceSoapBinding" type="tns:NYwcl">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="syncbusi">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="syncbusi">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="syncbusiResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="business">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="business">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="businessResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sqlselect">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="sqlselect">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="sqlselectResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBitMatrix">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="getBitMatrix">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="getBitMatrixResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadWithByte">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="uploadWithByte">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="uploadWithByteResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asyncbusi">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="asyncbusi">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="asyncbusiResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="login">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="uploadToThx">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="uploadToThx">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="uploadToThxResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asyncselect">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="asyncselect">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="asyncselectResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="emrGetBs">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="emrGetBs">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="emrGetBsResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXmlFile">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="getXmlFile">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="getXmlFileResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bselectWithTime">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="bselectWithTime">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="bselectWithTimeResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetJcjgb">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="SetJcjgb">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="SetJcjgbResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePic">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="updatePic">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="updatePicResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="uploadfile">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="uploadfile">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="uploadfileResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="singleSelect">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="singleSelect">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="singleSelectResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getToday">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="getToday">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="getTodayResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bselect">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="bselect">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="bselectResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Getxml">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="Getxml">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="GetxmlResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadGrqm">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="uploadGrqm">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="uploadGrqmResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPic">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="getPic">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="getPicResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gettyPic">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="gettyPic">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="gettyPicResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StaticSelect">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="StaticSelect">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="StaticSelectResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTxm">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="getTxm">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="getTxmResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="pselect">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="pselect">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="pselectResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setApplicationContext">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="setApplicationContext">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="setApplicationContextResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="BeansException">
+        <soap:fault use="literal" name="BeansException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getglbm">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="getglbm">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="getglbmResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downFromServer">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="downFromServer">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="downFromServerResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="uploadToServer">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="uploadToServer">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="uploadToServerResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMd5M">
+      <soap:operation soapAction="" style="rpc" />
+      <wsdl:input name="getMd5M">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:input>
+      <wsdl:output name="getMd5MResponse">
+        <soap:body use="literal" namespace="http://ihis.pub.ws" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NYwclService">
+    <wsdl:port name="NYwclPort" binding="tns:NYwclServiceSoapBinding">
+      <soap:address location="http://192.168.3.19:8080/Services/NYwclService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

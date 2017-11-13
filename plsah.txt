@@ -1,0 +1,63 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////常规报告///////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////// 
+    If sBGLX = "正常报告" Then  '/**********正常报告
+            isSH = "0"
+            sSQL = "SELECT F_BGZT,F_BGYS,F_WFBGYY,F_SFDY FROM T_JCXX WHERE F_BLH = '" + List2.List(i) + "'"
+           
+            If RST.Fields("F_BGZT") = "已审核" Then
+                MsgBox "病理号为 " + List2.List(i) + " 的报告已被审核过，不能重复审核！"
+
+                Else
+
+               Select
+                sBGYQYY = Trim(RST.Fields("F_WFBGYY"))
+            End If
+
+      
+//////审核
+                    sEXESQL = "UPDATE T_JCXX SET F_BGZT = '已审核',F_WFBGYY = ' ',F_SHYS = '" + psYHMC + "',F_SPARE5 = '" + Format(Now, "YYYY-MM-DD HH:MM:SS") + "' WHERE F_BLH = '" + List2.List(i) + "'"
+
+
+                '修改复片状态
+                cnn_pathnet.Execute "update t_jcxx set f_spare1 = '2' where f_spare1= '1' and f_blh = '" + List2.List(i) + "'"
+                
+                '报告延期原因
+                If sBGYQYY <> "" Then
+                    cnn_pathnet.Execute "update t_jcxx set f_spare9 = '" + sBGYQYY + "' WHERE F_BLH = '" + List2.List(i) + "'"
+               
+                '报告痕迹
+                 Call Frm_main.BGHJ(List2.List(i), "审核", Frm_main.BGHJ_sZD(List2.List(i)), "批量审核")
+            
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////补充报告///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////       
+
+    
+            sSQL = "SELECT F_BC_BGZT,F_BC_BGYS,F_BCZD FROM T_BCBG WHERE F_BLH = '" + sBLH + "' AND F_BC_BGXH = " + sBGXH
+           
+            If RST.Fields("F_BC_BGZT") = "已审核" Then
+                MsgBox "病理号为 " + sBLH + " 的补充报告（报告序号：" + sBGXH + "）已被审核过，不能重复审核！"
+             
+
+                sEXESQL = "UPDATE T_BCBG SET F_BC_BGZT = '已审核',F_BC_SHYS = '" + psYHMC + "' WHERE F_BLH = '" + sBLH + "' AND F_BC_BGXH = " + sBGXH
+
+                '报告痕迹
+                 Call Frm_main.BGHJ(sBLH, "审核", "补充报告（" + sBGXH + "）：" + sBCZD, "批量审核")
+              
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////冰冻报告///////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////// 
+
+            sSQL = "SELECT F_BD_BGZT,F_BD_BGYS,F_BDZD FROM T_BDBG WHERE F_BLH = '" + sBLH + "' AND F_BD_BGXH = " + sBGXH
+          
+            If RST.Fields("F_BD_BGZT") = "已审核" Then
+                MsgBox "病理号为 " + sBLH + " 的冰冻报告（报告序号：" + sBGXH + "）已被审核过，不能重复审核！"
+
+                sEXESQL = "UPDATE T_BDBG SET F_BD_BGZT = '已审核',F_BD_SHYS = '" + psYHMC + "' WHERE F_BLH = '" + sBLH + "' AND F_BD_BGXH = " + sBGXH
+                '报告痕迹
+                 Call Frm_main.BGHJ(sBLH, "审核", "冰冻报告（" + sBGXH + "）：" + sBDZD, "批量审核")
+
+
+

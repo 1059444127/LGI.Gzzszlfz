@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://www.supcon.com/ExamFillerWS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.supcon.com/ExamFillerWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.supcon.com/ExamFillerWS">
+      <s:element name="ExamImagesSubmit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="fillerImages" type="s0:FillerImages" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FillerImages">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:reqBase">
+            <s:sequence>
+              <s:element name="ExamNo" type="s:string" />
+              <s:element minOccurs="0" name="PatientID" type="s:string" />
+              <s:element minOccurs="0" name="PatientName" type="s:string" />
+              <s:element minOccurs="0" name="PatientType" type="s:string" />
+              <s:element minOccurs="0" name="VisitNo" type="s:string" />
+              <s:element minOccurs="0" name="Technician" type="s:string" />
+              <s:element minOccurs="0" name="ExamDateTime" type="s:string" />
+              <s:element minOccurs="0" name="ImageInfo" type="s0:ArrayOfImageInfoImageInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="reqBase">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Ens_Request">
+            <s:sequence>
+              <s:element minOccurs="0" name="MsgID">
+                <s:simpleType>
+                  <s:restriction base="s:string">
+                    <s:maxLength value="120" />
+                  </s:restriction>
+                </s:simpleType>
+              </s:element>
+              <s:element minOccurs="0" name="MsgOrderControl" type="s:string" />
+              <s:element minOccurs="0" name="MsgSender" type="s:string" />
+              <s:element minOccurs="0" name="MsgReceiver" type="s:string" />
+              <s:element minOccurs="0" name="MsgEvent" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Ens_Request">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Ens_Messagebody" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Ens_Messagebody" />
+      <s:complexType name="ArrayOfImageInfoImageInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ImageInfo" nillable="true" type="s0:ImageInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ImageInfo">
+        <s:sequence>
+          <s:element minOccurs="0" name="DicomMoDality" type="s:string" />
+          <s:element minOccurs="0" name="PatientLocalID" type="s:string" />
+          <s:element minOccurs="0" name="FirstMedia" type="s:string" />
+          <s:element minOccurs="0" name="FirstPath">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="512" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="DataType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ExamImagesSubmitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ExamImagesSubmitResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExamReportsSubmit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="fillerReports" type="s0:FillerReports" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FillerReports">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:reqBase">
+            <s:sequence>
+              <s:element name="ExamNo" type="s:string" />
+              <s:element minOccurs="0" name="PatientID" type="s:string" />
+              <s:element minOccurs="0" name="PatientName" type="s:string" />
+              <s:element minOccurs="0" name="PatientType" type="s:string" />
+              <s:element minOccurs="0" name="VisitNo" type="s:string" />
+              <s:element minOccurs="0" name="ReportDocName" type="s:string" />
+              <s:element minOccurs="0" name="VerifierDocName" type="s:string" />
+              <s:element name="Status" type="s:string" />
+              <s:element minOccurs="0" name="ReportDateTime" type="s:string" />
+              <s:element minOccurs="0" name="ReportInfo" type="s0:ArrayOfReportInfoReportInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfReportInfoReportInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ReportInfo" nillable="true" type="s0:ReportInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReportInfo">
+        <s:sequence>
+          <s:element minOccurs="0" name="ReportNo">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="ExamPara">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="Impression">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="Description">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="3000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="Recommendation">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="IsAbnormal" type="s:string" />
+          <s:element minOccurs="0" name="FirstMedia" type="s:string" />
+          <s:element minOccurs="0" name="FirstPath">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="200" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="DataType" type="s:string" />
+          <s:element minOccurs="0" name="ReportMemo">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ExamReportsSubmitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ExamReportsSubmitResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExamUpdateStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="updateinfo" type="s0:UpdateStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateStatus">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:reqBase">
+            <s:sequence>
+              <s:element minOccurs="0" name="PatientID" type="s:string" />
+              <s:element minOccurs="0" name="OrderNo" type="s:string" />
+              <s:element minOccurs="0" name="Status" type="s:string" />
+              <s:element minOccurs="0" name="OperID" type="s:string" />
+              <s:element minOccurs="0" name="OperName" type="s:string" />
+              <s:element minOccurs="0" name="OperDateTime" type="s:string" />
+              <s:element minOccurs="0" name="PatientType" type="s:string" />
+              <s:element minOccurs="0" name="Memo" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ExamUpdateStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ExamUpdateStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ExamImagesSubmitSoapIn">
+    <wsdl:part name="parameters" element="s0:ExamImagesSubmit" />
+  </wsdl:message>
+  <wsdl:message name="ExamImagesSubmitSoapOut">
+    <wsdl:part name="parameters" element="s0:ExamImagesSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExamReportsSubmitSoapIn">
+    <wsdl:part name="parameters" element="s0:ExamReportsSubmit" />
+  </wsdl:message>
+  <wsdl:message name="ExamReportsSubmitSoapOut">
+    <wsdl:part name="parameters" element="s0:ExamReportsSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExamUpdateStatusSoapIn">
+    <wsdl:part name="parameters" element="s0:ExamUpdateStatus" />
+  </wsdl:message>
+  <wsdl:message name="ExamUpdateStatusSoapOut">
+    <wsdl:part name="parameters" element="s0:ExamUpdateStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ExamFillerWSSoap">
+    <wsdl:operation name="ExamImagesSubmit">
+      <wsdl:input message="s0:ExamImagesSubmitSoapIn" />
+      <wsdl:output message="s0:ExamImagesSubmitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExamReportsSubmit">
+      <wsdl:input message="s0:ExamReportsSubmitSoapIn" />
+      <wsdl:output message="s0:ExamReportsSubmitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExamUpdateStatus">
+      <wsdl:input message="s0:ExamUpdateStatusSoapIn" />
+      <wsdl:output message="s0:ExamUpdateStatusSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExamFillerWSSoap" type="s0:ExamFillerWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExamImagesSubmit">
+      <soap:operation soapAction="http://www.supcon.com/ExamFillerWS/BS.WS.ExamFillerWS.ExamImagesSubmit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExamReportsSubmit">
+      <soap:operation soapAction="http://www.supcon.com/ExamFillerWS/BS.WS.ExamFillerWS.ExamReportsSubmit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExamUpdateStatus">
+      <soap:operation soapAction="http://www.supcon.com/ExamFillerWS/BS.WS.ExamFillerWS.ExamUpdateStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExamFillerWS">
+    <wsdl:port name="ExamFillerWSSoap" binding="s0:ExamFillerWSSoap">
+      <soap:address location="http://132.147.254.44:57772/csp/supcon/BS.WS.ExamFillerWS.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
