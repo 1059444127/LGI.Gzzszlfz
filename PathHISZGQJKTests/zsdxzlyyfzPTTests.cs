@@ -15,7 +15,7 @@ namespace PathHISZGQJK.Tests
         public void pathtohisTest()
         {
             var sender = new zsdxzlyyfzPT();
-            sender.pathtohis("CE1700004", "","1","","0",new []{""});
+            sender.pathtohis("N43982", "","1","","0",new []{""});
         }
     }
 }

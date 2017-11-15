@@ -128,6 +128,12 @@
     <Compile Include="cszxyy.cs" />
     <Compile Include="cz2y.cs" />
     <Compile Include="sxssgyy.cs" />
+    <Compile Include="DiseaseSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiseaseSelector.designer.cs">
+      <DependentUpon>DiseaseSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="Web References\GzzszlyyFzLis\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -184,6 +190,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="DiseaseSelector.resx">
+      <DependentUpon>DiseaseSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

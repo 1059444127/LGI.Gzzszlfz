@@ -277,6 +277,15 @@ INSERT INTO [dbo].[T_QP]
 
             #endregion
 
+            #region 审核时,弹出疾病选择
+
+            if (bgzt=="已审核")
+            {
+                GetDisease(blh,bglx);
+            }
+
+            #endregion
+
             // //病理开出的医嘱
             if (sqxh.Contains("TJ-"))
             {
@@ -570,6 +579,37 @@ select [F_BLH]
                         }
                     }
                 }
+            }
+        }
+
+        public void GetDisease(string blh,string bglx)
+        {
+            var getDisease = f.ReadString("savetohis", "xzjb", "0");
+            if (getDisease == "1" && bglx == "cg")
+            {
+                var frm = new DiseaseSelector();
+#if DEBUG
+                frm.ShowInTaskbar = false;
+#endif
+                var r = frm.ShowDialog();
+                if (r != DialogResult.OK) //用户取消了选择
+                    return;
+                var disease = frm.SelectedItem;
+                if (disease == null)
+                    return;
+
+                //插入数据库
+                string delSql = $" delete t_jcxx_zdjb where t.f_blh = '{blh}' ";
+                string insertSql = $@"INSERT INTO [dbo].[T_JCXX_ZDJB]
+                                       ([F_BLH]
+                                       ,[F_Disease_Name]
+                                       ,[F_Disease_Code])
+                                 VALUES
+                                       ('{blh}'
+                                       ,'{disease.CYC_MC}'
+                                       ,'{disease.ZJC2}') ";
+                aa.ExecuteSQL(delSql);
+                aa.ExecuteSQL(insertSql);
             }
         }
 
