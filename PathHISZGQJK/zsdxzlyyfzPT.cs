@@ -281,7 +281,7 @@ INSERT INTO [dbo].[T_QP]
 
             if (bgzt=="已审核")
             {
-                GetDisease(blh,bglx);
+                GetDisease(blh,bglx,jcxx.Rows[0]["F_blk"].ToString());
             }
 
             #endregion
@@ -582,16 +582,15 @@ select [F_BLH]
             }
         }
 
-        public void GetDisease(string blh,string bglx)
+        public void GetDisease(string blh, string bglx, string blk)
         {
             var getDisease = f.ReadString("savetohis", "xzjb", "0");
+
             if (getDisease == "1" && bglx == "cg")
             {
                 var frm = new DiseaseSelector();
-#if DEBUG
-                frm.ShowInTaskbar = false;
-#endif
-                var r = frm.ShowDialog();
+                frm.F_BLK = blk;
+                var r = frm.ShowDialog(Application.OpenForms?[0]);
                 if (r != DialogResult.OK) //用户取消了选择
                     return;
                 var disease = frm.SelectedItem;

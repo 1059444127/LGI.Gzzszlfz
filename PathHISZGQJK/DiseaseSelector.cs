@@ -4,6 +4,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using dbbase;
+using PathHISJK;
 
 namespace PathHISZGQJK
 {
@@ -89,9 +90,10 @@ namespace PathHISZGQJK
             {
                 string fl = "f_fzbl_zdjb"; //f_fzbl_yzxm
                 string sqlWhereBlk = "";
-                if (string.IsNullOrEmpty(sqlWhereBlk.Trim()) == false)
-                    sqlWhereBlk = $" and f_blk = '{F_BLK}' ";
+                if (string.IsNullOrEmpty(F_BLK?.Trim()) == false)
+                    sqlWhereBlk = $" and f_zjc1 = '{F_BLK}' ";
                 string sql = $" select * from T_CYC where f_cyc_fl='{fl}' {sqlWhereBlk} order by F_CYC_MC ";
+
                 var _dtItems = aa.GetDataTable(sql, "table1");
                 CycItems=new List<CYC_Item>();
                 foreach (DataRow row in _dtItems.Rows)
@@ -160,9 +162,18 @@ namespace PathHISZGQJK
 
         private void TestItemSelector_Load(object sender, EventArgs e)
         {
-            GetItems();
+
             FilterItems();
             txtFilter.Focus();
+        }
+
+        public new DialogResult ShowDialog(IWin32Window form)
+        {
+            GetItems();
+            var r = DialogResult.Cancel;
+            if (CycItems?.Count > 0)
+                r = base.ShowDialog(form);
+            return r;
         }
 
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
