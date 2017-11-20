@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathHISZGQJK", "PathHISZGQJK\PathHISZGQJK.csproj", "{B742563A-43F4-4F73-8ED2-3AE72F35882A}"
 EndProject
@@ -19,6 +19,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File2Base64", "File2Base64\File2Base64.csproj", "{C3F525AE-9DEB-49AB-AEC3-0E4261AEF311}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpPic", "UpPic\UpPic.csproj", "{40431A73-A7C0-4F5F-A65A-35F5FBF27D0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchPdf2Jpeg", "..\BatchPdf2Jpeg\BatchPdf2Jpeg.csproj", "{54829901-A9B6-4EA2-8B61-1DF3E1EB01BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathnetCAzgq", "..\PathnetCAzgq\PathnetCAzgq\PathnetCAzgq.csproj", "{8E7E1BF2-0438-4C94-8741-4FF19CE3C18E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathnetCAzgqTests", "..\PathnetCAzgq\PathnetCAzgqTests\PathnetCAzgqTests.csproj", "{C923E65E-7189-447D-AEEB-A571D7A21D07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,8 +60,23 @@ Global
 		{40431A73-A7C0-4F5F-A65A-35F5FBF27D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40431A73-A7C0-4F5F-A65A-35F5FBF27D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40431A73-A7C0-4F5F-A65A-35F5FBF27D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54829901-A9B6-4EA2-8B61-1DF3E1EB01BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54829901-A9B6-4EA2-8B61-1DF3E1EB01BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54829901-A9B6-4EA2-8B61-1DF3E1EB01BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54829901-A9B6-4EA2-8B61-1DF3E1EB01BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E7E1BF2-0438-4C94-8741-4FF19CE3C18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E7E1BF2-0438-4C94-8741-4FF19CE3C18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E7E1BF2-0438-4C94-8741-4FF19CE3C18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E7E1BF2-0438-4C94-8741-4FF19CE3C18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C923E65E-7189-447D-AEEB-A571D7A21D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C923E65E-7189-447D-AEEB-A571D7A21D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C923E65E-7189-447D-AEEB-A571D7A21D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C923E65E-7189-447D-AEEB-A571D7A21D07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CD04FC2-9C53-49F1-B649-F1D115B92ABE}
 	EndGlobalSection
 EndGlobal
