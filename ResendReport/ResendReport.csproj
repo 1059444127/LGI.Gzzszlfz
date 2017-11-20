@@ -35,10 +35,6 @@
     <Reference Include="dbbase">
       <HintPath>..\PathHISZGQJK\bin\Debug\dbbase.dll</HintPath>
     </Reference>
-    <Reference Include="PathHISZGQJK, Version=1.1.1.5, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\PathHISZGQJK.exe</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -79,6 +75,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PathHISZGQJK\PathHISZGQJK.csproj">
+      <Project>{b742563a-43f4-4f73-8ed2-3ae72f35882a}</Project>
+      <Name>PathHISZGQJK</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

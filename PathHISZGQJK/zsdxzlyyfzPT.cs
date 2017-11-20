@@ -149,8 +149,8 @@ INSERT INTO [dbo].[T_QP]
 
                     string sqlCheckQpExists = $" select count(*) as cc from t_qp where f_blh='{blh}' ";
 
-//                    log.WriteMyLog("debug生成切片3,sqlCheckQpExists=" + sqlCheckQpExists);
-//                    log.WriteMyLog("debug生成切片4,sqlInsertQp=" + sqlInsertQp);
+                    //                    log.WriteMyLog("debug生成切片3,sqlCheckQpExists=" + sqlCheckQpExists);
+                    //                    log.WriteMyLog("debug生成切片4,sqlInsertQp=" + sqlInsertQp);
 
 
                     var qpCount = aa.GetDataTable(sqlCheckQpExists, "table1").Rows[0][0].ToString();
@@ -204,7 +204,7 @@ INSERT INTO [dbo].[T_QP]
             }
 
             #endregion
-            
+
 
             #region LIS标本签收
 
@@ -226,7 +226,7 @@ INSERT INTO [dbo].[T_QP]
                 {
                     if (bbqsDebug == "1")
                         log.WriteMyLog("标本签收被中断,因为医嘱id(条码号)为空");
-                        
+
                     goto 标本签收结束;
                 }
 
@@ -246,7 +246,7 @@ INSERT INTO [dbo].[T_QP]
 
                 if (bbqsDebug == "1")
                     log.WriteMyLog("标本签收XML:\r\n" + xml);
-                
+
 
                 GzzszlyyFzLis.PDAService ws = new GzzszlyyFzLis.PDAService();
                 ws.Url = lisUrl;
@@ -256,21 +256,21 @@ INSERT INTO [dbo].[T_QP]
                     //转成 Base64 形式的 System.String  
                     var xmlBase64String = Convert.ToBase64String(b);
                     var resultString = ws.Service(xmlBase64String);
-                    if (resultString.Contains(@"<Result>0</Result>")==false)
+                    if (resultString.Contains(@"<Result>0</Result>") == false)
                     {
                         throw new Exception(resultString);
                     }
 
-                    if(bbqsDebug=="1")
+                    if (bbqsDebug == "1")
                         log.WriteMyLog("标本签收成功!");
                 }
                 catch (Exception e)
                 {
-                    log.WriteMyLog("标本签收失败:"+e);
+                    log.WriteMyLog("标本签收失败:" + e);
                 }
             }
 
-标本签收结束:
+            标本签收结束:
             #endregion
 
 
@@ -279,9 +279,9 @@ INSERT INTO [dbo].[T_QP]
 
             #region 审核时,弹出疾病选择
 
-            if (bgzt=="已审核")
+            if (bgzt == "已审核")
             {
-                GetDisease(blh,bglx,jcxx.Rows[0]["F_blk"].ToString());
+                GetDisease(blh, bglx, jcxx.Rows[0]["F_blk"].ToString());
             }
 
             #endregion
@@ -727,7 +727,7 @@ select [F_BLH]
                     ZszlMQ_ZGQ.MQService MQSer = new PathHISZGQJK.ZszlMQ_ZGQ.MQService();
                     MQSer.Url = wsurl;
                     if (MQSer.SendMessageToMQ(rtnxml, ref msgtxt, "QI1_002", "PISFZ_Report", GUID, "报告发布"))
-                        //PISFZ_Report
+                    //PISFZ_Report
                     {
                         if (debug == "1")
                             log.WriteMyLog(blbh + ",发送成功:" + msgtxt);
@@ -748,7 +748,7 @@ select [F_BLH]
                                   "' where F_blbh='" + blbh + "' and F_BGZT='已审核'");
                 }
             }
-            catch (Exception  ee5)
+            catch (Exception ee5)
             {
                 log.WriteMyLog(ee5.Message);
             }
@@ -999,6 +999,27 @@ select [F_BLH]
                 ////	<!--结果更新标志；0-PACS新增，1-电子病历读取，2-PACS修改-->
                 rtnxml = rtnxml + "<updateFlag></updateFlag>";
 
+                rtnxml += $@"   	<!-- 非数值型 -->
+	                                <UNStruct>
+	                                <!-- 如有多条项目则多个Item -->
+	                                <Item>
+		                                <!-- 项目编码 -->
+		                                <itemCode/>
+		                                <!-- 项目名称 -->
+		                                <itemName>{dt_jcxx.Rows[0]["f_yzxm"]}</itemName>
+		                                <!-- 监测结果 请用<![CDATA[]]>包括  -->
+		                                <result><![CDATA[{dt_jcxx.Rows[0]["f_blzd"]}]]></result>
+		                                <!-- 监测结果单位 请用<![CDATA[]]>包括  -->
+		                                <resultUnit><![CDATA[]]></resultUnit>
+		                                <!-- 参考值 请用<![CDATA[]]>包括 如为范围请用英文半角字符 / 隔开 如>100或<200或100/200 -->
+                                        <reference ><![CDATA[]]></reference>
+                                        <!--参考值单位 请用 <![CDATA[]]> 包括-->
+                                        <referenceUnit><![CDATA[]]></referenceUnit>
+                                        <!--其他-->
+                                        <remark />
+                                     </Item >
+                                     </UNStruct> 
+                                     ";
                 ////	<!-- 报告PDA文档二进制串 BASE64 -->
                 rtnxml = rtnxml + "<body>";
                 rtnxml = rtnxml + "<text mediaType=\"application/pdf\" representation=\"base64\">" + pdfToBase64String +
@@ -1443,7 +1464,7 @@ select [F_BLH]
                 ZszlMQ_ZGQ.MQService MQSer = new PathHISZGQJK.ZszlMQ_ZGQ.MQService();
                 MQSer.Url = wsurl;
                 string msgtxt = "";
-                log.WriteMyLog("开始返回体检报告到平台:"+bgztxml);
+                log.WriteMyLog("开始返回体检报告到平台:" + bgztxml);
                 if (MQSer.SendMessageToMQ(bgztxml, ref msgtxt, "QI1_073", "PIS_State_PE", GUID, "返回状态"))
                 {
                     if (debug == "1")
