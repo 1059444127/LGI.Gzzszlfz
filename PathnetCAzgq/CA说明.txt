@@ -1,0 +1,56 @@
+审核前  SH^ZPT^03019^zpt^1
+审核后  TYSZQZ^240019^1^CG^QZ^zpt^zpt^03019^1
+
+取消审核前  SHQTYSZQZ^240019^1^CG^QXSH^ZPT^zpt^03019^1
+取消审核后  TYSZQZ^240019^1^CG^QXQZ^ZPT^zpt^03019^1
+
+补充：
+审核前  SH^ZPT^03019^zpt^1
+审核后  TYSZQZ^240019^1^BC^QZ^zpt^zpt^03019^1
+取消审核前  SHQTYSZQZ^240019^1^BC^QXSH^ZPT^zpt^03019^1
+取消审核后  TYSZQZ^240019^1^BC^QXQZ^ZPT^zpt^03019^1
+
+[rpt]
+shhszqz=1
+shqszqz=1
+shqszqzbdbcbg=1
+shyzkey=1
+
+审核：
+审核前  SH^ZPT^123456^张普通^1
+审核后  TYSZQZ^病理号^1^CG^QZ^ZPT^张普通^123456^1
+取消审核：
+取消审核前  SHQTYSZQZ^病理号^1^CG^QXSH^ZPT^张普通^123456^1
+取消审核后  TYSZQZ^病理号^1^CG^QXQZ^ZPT^张普通^123456^1
+
+rpt^shyzkey RPT-审核时验证KEY 0/1
+Login_CA("TYSZQZ^" + psCURBLH + "^" + sCURXH + "^BD^QXQZ^" + psYHM + "^" + psYHMC + "^" + psYHBH + "^" + psYHMM)
+rpt^shhszqz RPT-审核后数字签字 0/1
+Login_CA("SHQTYSZQZ^" + psCURBLH + "^1^CG^QXSH^" + psYHM + "^" + psYHMC + "^" + psYHBH + "^" + psYHMM)
+只涉及常规报告的取消审核.
+rpt^shqszqz RPT-审核前数字签字 0/1
+
+
+涉及到 常规报告的登记审核，打开审核，取消审核、
+批量审核:常规报告,冰冻报告,补充报告
+冰冻报告的登记审核，打开审核，取消审核、
+补充报告的登记审核，打开审核，取消审核。
+Login_CA("TYSZQZ^" + psCURBLH + "^" + sCURXH + "^BD^QXQZ^" + psYHM + "^" + psYHMC + "^" + psYHBH + "^" + psYHMM)
+rpt^shhszqz RPT-审核后数字签字 0/1
+
+1,审核前调用锋的数字签字接口:CA的dll.(瑞金北院-体检)
+涉及到 常规报告的取消审核.
+Login_CA("SHQTYSZQZ^" + psCURBLH + "^1^CG^QXSH^" + psYHM + "^" + psYHMC + "^" + psYHBH + "^" + psYHMM)
+rpt^shqszqz RPT-审核前数字签字 0/1
+
+1，打印报告时调用数字签字的接口，VIEW没改要把打印功能关掉，由接口来写打印状态和报告痕迹，还要更新PathnetCA.dll(厦门一院)
+rpt^dyszqz RPT-打印报告时数字签名 0/1
+
+PATHNetRPT 2.334.0
+1，冰冻报告和补充报告取消审核前数字签字。原来只有常规报告取消审核前数字签字。（北京宣武）
+rpt^shqszqzbdbcbg RPT-审核前数字签字-冰冻补充报告 1/0
+poSHqTYSZQZ.Login_CA("SHQTYSZQZ^" + psCURBLH + "^" + GetBGXH(Lst_BGXH.text) + "^BC^QXSH^" + psYHM + "^" + psYHMC + "^" + psYHBH + "^" + psYHMM)
+poSHqTYSZQZ.Login_CA("SHQTYSZQZ^" + psCURBLH + "^" + GetBGXH(Lst_BGXH.text) + "^BD^QXSH^" + psYHM + "^" + psYHMC + "^" + psYHBH + "^" + psYHMM)
+
+2，审核报告时检测KEY。涉及到常规报告的新登记审核，修改审核，冰冻报告的新登记审核，修改审核，补充报告的新登记审核，修改审核，批量审核，需要更新文件 PathnetCA.dll，PathnetCA.tlb。（新疆一附院）。
+rpt^shyzkey RPT-审核时验证KEY 0/1

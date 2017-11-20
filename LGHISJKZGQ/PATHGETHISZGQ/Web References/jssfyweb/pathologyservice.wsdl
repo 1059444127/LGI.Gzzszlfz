@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetPatientInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPatientInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="PathologyServiceSoap">
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取得病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoSoapIn" />
+      <wsdl:output message="tns:GetPatientInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PathologyServiceHttpGet">
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取得病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoHttpGetIn" />
+      <wsdl:output message="tns:GetPatientInfoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PathologyServiceHttpPost">
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取得病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoHttpPostIn" />
+      <wsdl:output message="tns:GetPatientInfoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PathologyServiceSoap" type="tns:PathologyServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPatientInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PathologyServiceSoap12" type="tns:PathologyServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPatientInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PathologyServiceHttpGet" type="tns:PathologyServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetPatientInfo">
+      <http:operation location="/GetPatientInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PathologyServiceHttpPost" type="tns:PathologyServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetPatientInfo">
+      <http:operation location="/GetPatientInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PathologyService">
+    <wsdl:port name="PathologyServiceSoap" binding="tns:PathologyServiceSoap">
+      <soap:address location="http://10.1.1.71/webapp/pathologyservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PathologyServiceSoap12" binding="tns:PathologyServiceSoap12">
+      <soap12:address location="http://10.1.1.71/webapp/pathologyservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PathologyServiceHttpGet" binding="tns:PathologyServiceHttpGet">
+      <http:address location="http://10.1.1.71/webapp/pathologyservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PathologyServiceHttpPost" binding="tns:PathologyServiceHttpPost">
+      <http:address location="http://10.1.1.71/webapp/pathologyservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

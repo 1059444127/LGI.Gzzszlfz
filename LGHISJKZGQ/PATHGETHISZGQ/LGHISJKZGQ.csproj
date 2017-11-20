@@ -1,0 +1,1257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5954BC84-29F1-432D-B8F7-4E7DAD4E9983}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LGHISJKZGQ</RootNamespace>
+    <AssemblyName>PATHGETHISZGQ</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dbbase">
+      <HintPath>..\..\..\接口文档\PathnetCAzgq\PathnetCAzgq\bin\Debug\dbbase.dll</HintPath>
+    </Reference>
+    <Reference Include="MQDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PathHISZGQJK\PathHISZGQJK\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AHSZLYY.cs" />
+    <Compile Include="AHSZLYY_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AHSZLYY_Frm.Designer.cs">
+      <DependentUpon>AHSZLYY_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AYD2FY.cs" />
+    <Compile Include="BJHTYY.cs" />
+    <Compile Include="bjxwyy.cs" />
+    <Compile Include="cdsdyrmyy.cs" />
+    <Compile Include="ClassZGQ.cs" />
+    <Compile Include="CQYCYY.cs" />
+    <Compile Include="cqyx_djy.cs" />
+    <Compile Include="CSSFY.cs" />
+    <Compile Include="cssfybjy.cs" />
+    <Compile Include="CSZXYY.cs" />
+    <Compile Include="DBdata.cs" />
+    <Compile Include="DBDataZGQ.cs" />
+    <Compile Include="DLLWrapper.cs" />
+    <Compile Include="FJSFYBJY.cs" />
+    <Compile Include="FJSSLYY.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_bjhtyy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_bjhtyy.Designer.cs">
+      <DependentUpon>Frm_bjhtyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_bjxwyy_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_bjxwyy_select.Designer.cs">
+      <DependentUpon>Frm_bjxwyy_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_BrxxShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_BrxxShow.Designer.cs">
+      <DependentUpon>Frm_BrxxShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_CDRMYY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_CDRMYY.Designer.cs">
+      <DependentUpon>Frm_CDRMYY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_cqycyy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_cqycyy.designer.cs">
+      <DependentUpon>Frm_cqycyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_cszxyy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_cszxyy.designer.cs">
+      <DependentUpon>Frm_cszxyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_FJSFYBJY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_FJSFYBJY.Designer.cs">
+      <DependentUpon>Frm_FJSFYBJY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_hnsrmyy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_hnsrmyy.Designer.cs">
+      <DependentUpon>Frm_hnsrmyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_nbyzrmyytj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_nbyzrmyytj.designer.cs">
+      <DependentUpon>Frm_nbyzrmyytj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_sfjk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sfjk.designer.cs">
+      <DependentUpon>frm_sfjk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SP_SELECT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SP_SELECT.Designer.cs">
+      <DependentUpon>FRM_SP_SELECT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_xmzsyy_mzfyrq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_xmzsyy_mzfyrq.Designer.cs">
+      <DependentUpon>frm_xmzsyy_mzfyrq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_YZ_SELECT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_YZ_SELECT.designer.cs">
+      <DependentUpon>FRM_YZ_SELECT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestItemSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestItemSelector.Designer.cs">
+      <DependentUpon>TestItemSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GzzszlfzLis\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="zsdxzlyy_FZYZ_FRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zsdxzlyy_FZYZ_FRM.designer.cs">
+      <DependentUpon>zsdxzlyy_FZYZ_FRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDSZYY_YZ_SELECT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDSZYY_YZ_SELECT.designer.cs">
+      <DependentUpon>GDSZYY_YZ_SELECT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GET_LOGENE_XML.cs" />
+    <Compile Include="jzykdxfsyy.cs" />
+    <Compile Include="sdswhslyy.cs" />
+    <Compile Include="Web References\BLToFZMQWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\gdszyytjWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\gdszyyWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\xy2yWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="xjzlyy.cs" />
+    <Compile Include="xy2y.cs" />
+    <Compile Include="xy2yShowFY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xy2yShowFY.Designer.cs">
+      <DependentUpon>xy2yShowFY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xyxxshowblh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xyxxshowblh.designer.cs">
+      <DependentUpon>xyxxshowblh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zsdxzlyy_fz.cs" />
+    <Compile Include="ZSYKYY_SELECT_YZMX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZSYKYY_SELECT_YZMX.designer.cs">
+      <DependentUpon>ZSYKYY_SELECT_YZMX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fzs2y.cs" />
+    <Compile Include="dgdhyy.cs" />
+    <Compile Include="gdszyy.cs" />
+    <Compile Include="Globe_Cls.cs" />
+    <Compile Include="gyxxml.cs" />
+    <Compile Include="hl7jm.cs" />
+    <Compile Include="HL7message.cs" />
+    <Compile Include="HL7_SYZXYY\hl7jm.cs" />
+    <Compile Include="HL7_SYZXYY\HL7message.cs" />
+    <Compile Include="HL7_SYZXYY\readhl7.cs" />
+    <Compile Include="HNSRMYY.cs" />
+    <Compile Include="jsszsfy.cs" />
+    <Compile Include="loaddll.cs" />
+    <Compile Include="loadfs.cs" />
+    <Compile Include="log.cs" />
+    <Compile Include="fzs2y_mzlb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fzs2y_mzlb.Designer.cs">
+      <DependentUpon>fzs2y_mzlb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NBBLRMYY.cs" />
+    <Compile Include="nbxsrmyy.cs" />
+    <Compile Include="NBYZRMYY.cs" />
+    <Compile Include="NBYZRMYY_sql.cs" />
+    <Compile Include="NBZY2Y.cs" />
+    <Compile Include="NJSGCRMYY.cs" />
+    <Compile Include="njxkyy.cs" />
+    <Compile Include="njzdyy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PT_XML.cs" />
+    <Compile Include="qhdxfsyy.cs" />
+    <Compile Include="readhl7.cs" />
+    <Compile Include="readini.cs" />
+    <Compile Include="shsjdqzyyy.cs" />
+    <Compile Include="shsrjyy.cs" />
+    <Compile Include="shz1fy.cs" />
+    <Compile Include="SP_SELECT.cs" />
+    <Compile Include="STZXYY.cs" />
+    <Compile Include="stzxyy_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stzxyy_select.Designer.cs">
+      <DependentUpon>stzxyy_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SXDEY.cs" />
+    <Compile Include="SXSZLYY.cs" />
+    <Compile Include="SYSZXYY.cs" />
+    <Compile Include="SZSZYY.cs" />
+    <Compile Include="TJXQYY_Json.cs" />
+    <Compile Include="URF.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web References\ahzlyyWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\aydefyweb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\cszxyyWEB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EHSBMQWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\fjsfybjyWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\gdszyyMzHisWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\hnsrmyyWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\jssfyweb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\nbyz2yWEB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\nbyzrmyyWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\sh7yweb2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\sh7yweb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\shsjdqzyyyweb2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\shsjdzyyyweb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SXDEYWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\sxzlyyWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\szyyWEB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\webServerAA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebTJ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebXYCX\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\whxhyyWEB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\xjshz_winning_web\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\xm1yweb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\xmzsyyWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\xyfyyyweb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\zjgsdyrmyyweb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ZszlHISWEB_ZGQ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ZSZLWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ZSZLWebMQ_ZGQ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="webservertohis.cs" />
+    <Compile Include="WHXHYY.cs" />
+    <Compile Include="WYSSLYY.cs" />
+    <Compile Include="xjshzyy.cs" />
+    <Compile Include="XMDYYY.cs" />
+    <Compile Include="xmszsyy.cs" />
+    <Compile Include="xmzsyy.cs" />
+    <Compile Include="XY3Y.cs" />
+    <Compile Include="XYFYYY.cs" />
+    <Compile Include="yzxz-yfy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yzxz-yfy.designer.cs">
+      <DependentUpon>yzxz-yfy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZGQClass.cs" />
+    <Compile Include="zjgsdyrmyy.cs" />
+    <Compile Include="zsdxykyy.cs" />
+    <Compile Include="zsdxzlyy.cs" />
+    <Compile Include="zsdxzlyyPT.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="C:\Documents and Settings\Administrator\桌面\苏附一取信息接口文档\苏附一取信息接口文档\pathologyservice.xml">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\jssfyweb\</RelPath>
+      <UpdateFromURL>C:\Documents and Settings\Administrator\桌面\苏附一取信息接口文档\苏附一取信息接口文档\pathologyservice.xml</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_jssfyweb_PathologyService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\Users\renoi\Desktop\PDAService.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GzzszlfzLis\</RelPath>
+      <UpdateFromURL>C:\Users\renoi\Desktop\PDAService.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_GzzszlfzLis_PDAService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="D:\FZMQService.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLToFZMQWS\</RelPath>
+      <UpdateFromURL>D:\FZMQService.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_BLToFZMQWS_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="D:\LisService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\gdszyytjWeb\</RelPath>
+      <UpdateFromURL>D:\LisService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_gdszyytjWeb_LisService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="D:\wsdl.xml">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\gdszyyWS\</RelPath>
+      <UpdateFromURL>D:\wsdl.xml</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_gdszyyWS_ChasCommonSvc</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.9.199.12:8002/HisForInspectItemService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\gdszyyMzHisWeb\</RelPath>
+      <UpdateFromURL>http://192.9.199.12:8002/HisForInspectItemService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_gdszyyMzHisWeb_HisForInspectItemService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\Users\Administrator\Desktop\LGHISJKZGQ\LGHISJKZGQ\PATHGETHISZGQ\Web References\xyfyyyweb\DHC.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\xyfyyyweb\</RelPath>
+      <UpdateFromURL>C:\Users\Administrator\Desktop\LGHISJKZGQ\LGHISJKZGQ\PATHGETHISZGQ\Web References\xyfyyyweb\DHC.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_xyfyyyweb1_DHC_Pis_XiangYaOne</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.16.200.119:57772/csp/xyepacs/PACS.BS.Service.cls%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\xy2yWebService\</RelPath>
+      <UpdateFromURL>http://172.16.200.119:57772/csp/xyepacs/PACS.BS.Service.cls%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_xy2yWebService_XYEPACS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.16.95.230/BLService/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ZszlHISWEB_ZGQ\</RelPath>
+      <UpdateFromURL>http://172.16.95.230/BLService/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_ZszlHISWEB_ZGQ_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.101.175:1006/services/PlatformCommonSvr%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\zjgsdyrmyyweb\</RelPath>
+      <UpdateFromURL>http://192.168.101.175:1006/services/PlatformCommonSvr%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_zjgsdyrmyyweb_PlatformCommonSvr</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://100.100.42.107/GetEHMQ/EHSBMQService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EHSBMQWeb\</RelPath>
+      <UpdateFromURL>http://100.100.42.107/GetEHMQ/EHSBMQService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_EHSBMQWeb_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="D:\ExamResultInput.xml">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\sh7yweb\</RelPath>
+      <UpdateFromURL>D:\ExamResultInput.xml</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_sh7yweb_webserviceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="D:\healthService.xml">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\sh7yweb2\</RelPath>
+      <UpdateFromURL>D:\healthService.xml</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_sh7yweb2_healthService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.0.100.53:8080/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\szyyWEB\</RelPath>
+      <UpdateFromURL>http://10.0.100.53:8080/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_szyyWEB_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.0.19.148:1507/services/wsinterface.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\xm1yweb\</RelPath>
+      <UpdateFromURL>http://192.0.19.148:1507/services/wsinterface.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_xm1yweb_WSInterface</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.158:1401/services/FGPublicService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\shsjdqzyyyweb2\</RelPath>
+      <UpdateFromURL>http://192.168.1.158:1401/services/FGPublicService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_shsjdqzyyyweb2_FGPublicService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.158:1405/services/FGPLService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\shsjdzyyyweb\</RelPath>
+      <UpdateFromURL>http://192.168.1.158:1405/services/FGPLService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_shsjdzyyyweb_FGPLService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.5.111:29000/services/WinningHIIPService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\xjshz_winning_web\</RelPath>
+      <UpdateFromURL>http://192.168.5.111:29000/services/WinningHIIPService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_xjshz_winning_web_WinningHIIPService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://198.100.100.8:1506/services/WSInterface%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\fjsfybjyWeb\</RelPath>
+      <UpdateFromURL>http://198.100.100.8:1506/services/WSInterface%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_fjsfybjyWeb_WSInterface</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.48.45.107/ktpis/PisServiceLJ.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLWebReference\</RelPath>
+      <UpdateFromURL>http://10.48.45.107/ktpis/PisServiceLJ.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_WebReference_PisServiceLJ</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://111.111.116.8:8071/LJservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\sxzlyyWeb\</RelPath>
+      <UpdateFromURL>http://111.111.116.8:8071/LJservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_sxzlyyWeb_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://132.147.254.44:57772/csp/supcon/WebApp.WSGeneral.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebXYCX\</RelPath>
+      <UpdateFromURL>http://132.147.254.44:57772/csp/supcon/WebApp.WSGeneral.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_WebXYCX_WSGeneral</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://168.192.8.10:8080/WebService/services/MatrixService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SXDEYWeb\</RelPath>
+      <UpdateFromURL>http://168.192.8.10:8080/WebService/services/MatrixService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_SXDEYWeb_MatrixService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.16.201.4/dthealth//web/web.ToBLCom.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ahzlyyWeb\</RelPath>
+      <UpdateFromURL>http://172.16.201.4/dthealth//web/web.ToBLCom.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_ahzlyyWeb_XDInterface</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.16.95.141:8003/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ZSZLWeb\</RelPath>
+      <UpdateFromURL>http://172.16.95.141:8003/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_ZSZLWeb_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.100.64:8082/PisServiceLJ.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\nbyzrmyyWeb\</RelPath>
+      <UpdateFromURL>http://192.168.100.64:8082/PisServiceLJ.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_nbyzrmyyWeb_PisServiceLJ</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.12.68:58080/csp/tongji/Tongji.COMM.SoapService.PathologySysService.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebTJ\</RelPath>
+      <UpdateFromURL>http://192.168.12.68:58080/csp/tongji/Tongji.COMM.SoapService.PathologySysService.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_WebTJ_PathologySysService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.3.15:8080/Services/NYwclService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\cszxyyWEB\</RelPath>
+      <UpdateFromURL>http://192.168.3.15:8080/Services/NYwclService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_cszxyyWEB_NYwclService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.52.100:8081/PisServiceLJ.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\nbyz2yWEB\</RelPath>
+      <UpdateFromURL>http://192.168.52.100:8081/PisServiceLJ.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_nbyz2yWEB_PisServiceLJ</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.60.32:57772/csp/i-risservice/DHC.RIS.BS.WebRisService.CLS%3fWSDL=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\whxhyyWEB\</RelPath>
+      <UpdateFromURL>http://192.168.60.32:57772/csp/i-risservice/DHC.RIS.BS.WebRisService.CLS%3fWSDL=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_whxhyyWEB_WebRisService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.8.100:80/TrasenWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\hnsrmyyWeb\</RelPath>
+      <UpdateFromURL>http://192.168.8.100:80/TrasenWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_hnsrmyyWeb_TrasenWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://223.220.200.45:1506/services/WSInterface%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\aydefyweb\</RelPath>
+      <UpdateFromURL>http://223.220.200.45:1506/services/WSInterface%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_aydefyweb_WSInterface</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:4319/WebSite1/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\webServerAA\</RelPath>
+      <UpdateFromURL>http://localhost:4319/WebSite1/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_webserverAAA_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:1266/ZSZL_MQService2010/MQService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ZSZLWebMQ_ZGQ\</RelPath>
+      <UpdateFromURL>http://localhost:1266/ZSZL_MQService2010/MQService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_ZSZLWeb_ZGQ_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="M:\Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\xmzsyyWeb\</RelPath>
+      <UpdateFromURL>M:\Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PATHGETHISZGQ_xmzsyyWeb_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLToFZMQWS\FZMQService.wsdl" />
+    <None Include="Web References\BLToFZMQWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLWebReference\PisServiceLJ.wsdl" />
+    <None Include="Web References\gdszyytjWeb\BarCodeInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\CONTAINERinfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\DEPHEADinfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\DEPTCODEinfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\EXTMTHDinfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\HealthCareUnitInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\HisPricesInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\HOSPITALinfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\LAB_REFinfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\LisBackMedicalAdviceInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\LisService.wsdl" />
+    <None Include="Web References\gdszyytjWeb\MACHINEinfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\Painent.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\PaintResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\ParmReportInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\gdszyytjWeb\ReportTempInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\SourcesInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\SRCINFOinfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdszyytjWeb\TestTypeInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GzzszlfzLis\PDAService.wsdl" />
+    <None Include="Web References\GzzszlfzLis\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\webServerAA\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\webServerAA\Service.disco" />
+    <None Include="Web References\webServerAA\Service.wsdl" />
+    <None Include="Web References\WebTJ\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebTJ\Tongji.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\BLWebReference\PisServiceLJ.disco" />
+    <None Include="Web References\BLWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\nbyzrmyyWeb\PisServiceLJ.wsdl" />
+    <None Include="Web References\szyyWEB\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\szyyWEB\Service.disco" />
+    <None Include="Web References\szyyWEB\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\nbyzrmyyWeb\PisServiceLJ.disco" />
+    <None Include="Web References\nbyzrmyyWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\whxhyyWEB\DHC.wsdl" />
+    <None Include="Web References\whxhyyWEB\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ahzlyyWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ahzlyyWeb\web.wsdl" />
+    <None Include="Web References\nbyz2yWEB\PisServiceLJ.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\cszxyyWEB\NYwclService.wsdl" />
+    <None Include="Web References\cszxyyWEB\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\nbyz2yWEB\PisServiceLJ.disco" />
+    <None Include="Web References\nbyz2yWEB\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\sxzlyyWeb\ljservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\hnsrmyyWeb\TrasenWS.wsdl" />
+    <None Include="Web References\sxzlyyWeb\ljservice.disco" />
+    <None Include="Web References\sxzlyyWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebXYCX\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebXYCX\WebApp.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AHSZLYY_Frm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AHSZLYY_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_bjhtyy.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_bjhtyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_bjxwyy_select.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_bjxwyy_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_BrxxShow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_BrxxShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_CDRMYY.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_CDRMYY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_cqycyy.resx">
+      <DependentUpon>Frm_cqycyy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_cszxyy.resx">
+      <DependentUpon>Frm_cszxyy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_FJSFYBJY.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_FJSFYBJY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_hnsrmyy.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_hnsrmyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_nbyzrmyytj.resx">
+      <DependentUpon>Frm_nbyzrmyytj.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_sfjk.resx">
+      <DependentUpon>frm_sfjk.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SP_SELECT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FRM_SP_SELECT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_xmzsyy_mzfyrq.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frm_xmzsyy_mzfyrq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_YZ_SELECT.resx">
+      <DependentUpon>FRM_YZ_SELECT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestItemSelector.resx">
+      <DependentUpon>TestItemSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zsdxzlyy_FZYZ_FRM.resx">
+      <DependentUpon>zsdxzlyy_FZYZ_FRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDSZYY_YZ_SELECT.resx">
+      <DependentUpon>GDSZYY_YZ_SELECT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xy2yShowFY.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>xy2yShowFY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xyxxshowblh.resx">
+      <DependentUpon>xyxxshowblh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZSYKYY_SELECT_YZMX.resx">
+      <DependentUpon>ZSYKYY_SELECT_YZMX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fzs2y_mzlb.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>fzs2y_mzlb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stzxyy_select.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>stzxyy_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yzxz-yfy.resx">
+      <DependentUpon>yzxz-yfy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\hnsrmyyWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\hnsrmyyWeb\TrasenWS.disco" />
+    <None Include="Web References\SXDEYWeb\MatrixService.wsdl" />
+    <None Include="Web References\SXDEYWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ZSZLWeb\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\aydefyweb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\aydefyweb\WSInterface.wsdl" />
+    <None Include="Web References\EHSBMQWeb\EHSBMQService.wsdl" />
+    <None Include="Web References\EHSBMQWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\fjsfybjyWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\fjsfybjyWeb\WSInterface.wsdl" />
+    <None Include="Web References\jssfyweb\pathologyservice.wsdl" />
+    <None Include="Web References\jssfyweb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\sh7yweb2\Conclusion1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\sh7yweb2\healthService.wsdl" />
+    <None Include="Web References\sh7yweb2\ImagingItem1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\sh7yweb2\NormalItem1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\sh7yweb2\PersonInfo1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\sh7yweb2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\sh7yweb\ExamResultInput.wsdl" />
+    <None Include="Web References\sh7yweb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\shsjdqzyyyweb2\FGPublicService.wsdl" />
+    <None Include="Web References\shsjdqzyyyweb2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\shsjdzyyyweb\FGPLService.wsdl" />
+    <None Include="Web References\shsjdzyyyweb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SXDEYWeb\getClientIpAxisResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebXYCX\ExamOrder1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebXYCX\PatBasicInfo1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\xjshz_winning_web\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\xjshz_winning_web\WinningHIIPService.wsdl" />
+    <None Include="Web References\xmzsyyWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\xmzsyyWeb\Service.wsdl" />
+    <None Include="Web References\xyfyyyweb\DHC.wsdl" />
+    <None Include="Web References\xyfyyyweb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ZSZLWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ZSZLWeb\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\EHSBMQWeb\EHSBMQService.disco" />
+    <None Include="Web References\xm1yweb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\xm1yweb\wsinterface.wsdl" />
+    <None Include="Web References\zjgsdyrmyyweb\PlatformCommonSvr.wsdl" />
+    <None Include="Web References\zjgsdyrmyyweb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ZSZLWebMQ_ZGQ\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ZSZLWebMQ_ZGQ\MQService.disco" />
+    <None Include="Web References\ZSZLWebMQ_ZGQ\MQService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\gdszyyMzHisWeb\HisForInspectItemService.wsdl" />
+    <None Include="Web References\gdszyyMzHisWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\xy2yWebService\PACS.wsdl" />
+    <None Include="Web References\xy2yWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ZszlHISWEB_ZGQ\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ZszlHISWEB_ZGQ\Service.disco" />
+    <None Include="Web References\ZszlHISWEB_ZGQ\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\gdszyyMzHisWeb\HisForInspectItemService.disco" />
+    <None Include="Web References\gdszyyWS\Chas4PivasSvc.wsdl" />
+    <None Include="Web References\gdszyyWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

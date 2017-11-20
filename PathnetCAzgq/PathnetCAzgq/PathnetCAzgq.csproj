@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E7E1BF2-0438-4C94-8741-4FF19CE3C18E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PathnetCAzgq</RootNamespace>
+    <AssemblyName>PathnetCAzgq</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cloud2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.AXSECURITYLib, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="AxInterop.KTSEDOCAXEXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="AxInterop.KTSEDOCAXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="AxInterop.KTSOFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="AxInterop.XJFormSeal, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\AxInterop.XJFormSeal.dll</HintPath>
+    </Reference>
+    <Reference Include="dbbase, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dbbase.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.KTPDFPrinterLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.KTPKIAPPCOMCLNTLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.netcapscertapphlpLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>bin\Debug\Interop.netcapscertapphlpLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Netca_PDFSign_COM, Version=1.1.1.2, Culture=neutral, PublicKeyToken=2196a024f627ddeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Netca_PDFSign_COM.dll</HintPath>
+    </Reference>
+    <Reference Include="pathnetdyblh, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bghj.cs" />
+    <Compile Include="bhdxfsyy.cs" />
+    <Compile Include="CA_Class.cs" />
+    <Compile Include="DBdata.cs" />
+    <Compile Include="DBDataZGQ.cs" />
+    <Compile Include="gzzszlly.cs" />
+    <Compile Include="NETCAPKIv4.1.cs" />
+    <Compile Include="XJCAFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XJCAFrm.Designer.cs">
+      <DependentUpon>XJCAFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_gdca_pwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_gdca_pwd.Designer.cs">
+      <DependentUpon>frm_gdca_pwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_bhdxfsyy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_bhdxfsyy.designer.cs">
+      <DependentUpon>frm_bhdxfsyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_XMZSYY_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_XMZSYY_Login.designer.cs">
+      <DependentUpon>Frm_XMZSYY_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FtpWeb.cs" />
+    <Compile Include="gdca_zs2y.cs" />
+    <Compile Include="gdsdermyy.cs" />
+    <Compile Include="gdszyy.cs" />
+    <Compile Include="klmy.cs" />
+    <Compile Include="loaddll.cs" />
+    <Compile Include="mdpdf.cs" />
+    <Compile Include="NETCAPKI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="prreport.cs" />
+    <Compile Include="readhl7.cs" />
+    <Compile Include="readini.cs" />
+    <Compile Include="timer_xm1y.cs" />
+    <Compile Include="Web References\gdcaweb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="XJCAverify.cs" />
+    <Compile Include="XJCA_HOSDLL.cs" />
+    <Compile Include="xm1y.cs" />
+    <Compile Include="XMDYYY.cs" />
+    <Compile Include="xmzsyy.cs" />
+    <Compile Include="ZGQClass.cs" />
+    <Compile Include="ZGQ_PDFJPG.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XJCAFrm.resx">
+      <DependentUpon>XJCAFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_bhdxfsyy.resx">
+      <DependentUpon>frm_bhdxfsyy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_gdca_pwd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frm_gdca_pwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_XMZSYY_Login.resx">
+      <DependentUpon>Frm_XMZSYY_Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="JHKeyLib">
+      <Guid>{ADACE6DD-0604-4A29-A4EB-DB212A798E14}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="NetcaPkiLib">
+      <Guid>{B820A4CC-7217-4553-BCAA-6ADB087BB70E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="SecuInter">
+      <Guid>{737DF276-D02D-4368-942F-CF547661E5DE}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="XjcaFgwATLLib">
+      <Guid>{F85AB01B-AEF9-4E07-A0AE-6B5CC6F19B9D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="xjcaTechATLLib">
+      <Guid>{892C2D21-7B36-46CE-A2C1-53495D32CC6F}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="XJFormSeal">
+      <Guid>{96D51CBE-ADED-457F-A888-81CCB072417D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://bswg.95105813.cn:8080/AGW/services/AGWService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\gdcaweb\</RelPath>
+      <UpdateFromURL>http://bswg.95105813.cn:8080/AGW/services/AGWService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PathnetCAzgq_gdcaweb_AGWService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\gdcaweb\AGWService.wsdl" />
+    <None Include="Web References\gdcaweb\RandResp1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gdcaweb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cloud2.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

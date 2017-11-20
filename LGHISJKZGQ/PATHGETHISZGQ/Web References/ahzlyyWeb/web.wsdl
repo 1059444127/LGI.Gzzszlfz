@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s0="http://tempuri.org" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org">
+      <s:element name="BLAPPLY">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="inPut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BLAPPLYResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="BLAPPLYResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BLAPPLYBYAPP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="inPut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BLAPPLYBYAPPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="BLAPPLYBYAPPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BLAPPLYBYAPPCardNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="inPut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BLAPPLYBYAPPCardNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="BLAPPLYBYAPPCardNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BLAPPLYByCardNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="inPut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BLAPPLYByCardNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="BLAPPLYByCardNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="BLAPPLYSoapIn">
+    <part name="parameters" element="s0:BLAPPLY" />
+  </message>
+  <message name="BLAPPLYSoapOut">
+    <part name="parameters" element="s0:BLAPPLYResponse" />
+  </message>
+  <message name="BLAPPLYBYAPPSoapIn">
+    <part name="parameters" element="s0:BLAPPLYBYAPP" />
+  </message>
+  <message name="BLAPPLYBYAPPSoapOut">
+    <part name="parameters" element="s0:BLAPPLYBYAPPResponse" />
+  </message>
+  <message name="BLAPPLYBYAPPCardNoSoapIn">
+    <part name="parameters" element="s0:BLAPPLYBYAPPCardNo" />
+  </message>
+  <message name="BLAPPLYBYAPPCardNoSoapOut">
+    <part name="parameters" element="s0:BLAPPLYBYAPPCardNoResponse" />
+  </message>
+  <message name="BLAPPLYByCardNoSoapIn">
+    <part name="parameters" element="s0:BLAPPLYByCardNo" />
+  </message>
+  <message name="BLAPPLYByCardNoSoapOut">
+    <part name="parameters" element="s0:BLAPPLYByCardNoResponse" />
+  </message>
+  <portType name="XDInterfaceSoap">
+    <operation name="BLAPPLY">
+      <input message="s0:BLAPPLYSoapIn" />
+      <output message="s0:BLAPPLYSoapOut" />
+    </operation>
+    <operation name="BLAPPLYBYAPP">
+      <input message="s0:BLAPPLYBYAPPSoapIn" />
+      <output message="s0:BLAPPLYBYAPPSoapOut" />
+    </operation>
+    <operation name="BLAPPLYBYAPPCardNo">
+      <input message="s0:BLAPPLYBYAPPCardNoSoapIn" />
+      <output message="s0:BLAPPLYBYAPPCardNoSoapOut" />
+    </operation>
+    <operation name="BLAPPLYByCardNo">
+      <input message="s0:BLAPPLYByCardNoSoapIn" />
+      <output message="s0:BLAPPLYByCardNoSoapOut" />
+    </operation>
+  </portType>
+  <binding name="XDInterfaceSoap" type="s0:XDInterfaceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="BLAPPLY">
+      <soap:operation soapAction="http://tempuri.org/web.ToBLCom.BLAPPLY" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BLAPPLYBYAPP">
+      <soap:operation soapAction="http://tempuri.org/web.ToBLCom.BLAPPLYBYAPP" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BLAPPLYBYAPPCardNo">
+      <soap:operation soapAction="http://tempuri.org/web.ToBLCom.BLAPPLYBYAPPCardNo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BLAPPLYByCardNo">
+      <soap:operation soapAction="http://tempuri.org/web.ToBLCom.BLAPPLYByCardNo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="XDInterface">
+    <port name="XDInterfaceSoap" binding="s0:XDInterfaceSoap">
+      <soap:address location="http://172.16.201.4/dthealth/web//web.ToBLCom.cls" />
+    </port>
+  </service>
+</definitions>

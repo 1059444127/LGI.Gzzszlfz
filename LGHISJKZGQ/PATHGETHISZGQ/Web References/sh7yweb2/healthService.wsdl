@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns="http://webservice.frame.com.cn" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ax21="http://entity.frame.com.cn/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://webservice.frame.com.cn" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>healthService</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema xmlns:ax22="http://entity.frame.com.cn/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://webservice.frame.com.cn">
+      <xs:import namespace="http://entity.frame.com.cn/xsd" />
+      <xs:element name="getStudyidByYyrq">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getStudyidByYyrqResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getStudyidByRq">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getStudyidByRqResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getRadiologicalItems">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="studyid" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getRadiologicalItemsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="ax22:ImagingItem" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getNormalItems">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="studyid" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getNormalItemsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="ax22:NormalItem" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getImagingItems">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="studyid" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getImagingItemsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="ax22:ImagingItem" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getHistoryInfoByStudyid">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="studyid" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getHistoryInfoByStudyidResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:PersonInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getHistoryInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="identityNum" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="studyid" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="telephone" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="cardno" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getHistoryInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="ax22:PersonInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getConclusion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="studyid" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getConclusionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:Conclusion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://entity.frame.com.cn/xsd">
+      <xs:complexType name="ImagingItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="departmentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="departmentType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="doctor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="num" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remoteFile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="remoteFiles" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NormalItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="date" nillable="true" type="xs:date" />
+          <xs:element minOccurs="0" name="defvalue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="departmentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="departmentReport" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="departmentType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="doctor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="item" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="positiveFlag" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="unit" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PersonInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="age" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="birthday" nillable="true" type="xs:date" />
+          <xs:element minOccurs="0" name="cardno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="companyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="date" nillable="true" type="xs:date" />
+          <xs:element minOccurs="0" name="identityNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="itemjson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="studyid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="telephone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="wcbz" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Conclusion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="conclusion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="doctor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="healthCare" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getHistoryInfoByStudyidRequest">
+    <wsdl:part name="parameters" element="ns:getHistoryInfoByStudyid" />
+  </wsdl:message>
+  <wsdl:message name="getHistoryInfoByStudyidResponse">
+    <wsdl:part name="parameters" element="ns:getHistoryInfoByStudyidResponse" />
+  </wsdl:message>
+  <wsdl:message name="getHistoryInfoRequest">
+    <wsdl:part name="parameters" element="ns:getHistoryInfo" />
+  </wsdl:message>
+  <wsdl:message name="getHistoryInfoResponse">
+    <wsdl:part name="parameters" element="ns:getHistoryInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConclusionRequest">
+    <wsdl:part name="parameters" element="ns:getConclusion" />
+  </wsdl:message>
+  <wsdl:message name="getConclusionResponse">
+    <wsdl:part name="parameters" element="ns:getConclusionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRadiologicalItemsRequest">
+    <wsdl:part name="parameters" element="ns:getRadiologicalItems" />
+  </wsdl:message>
+  <wsdl:message name="getRadiologicalItemsResponse">
+    <wsdl:part name="parameters" element="ns:getRadiologicalItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStudyidByRqRequest">
+    <wsdl:part name="parameters" element="ns:getStudyidByRq" />
+  </wsdl:message>
+  <wsdl:message name="getStudyidByRqResponse">
+    <wsdl:part name="parameters" element="ns:getStudyidByRqResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNormalItemsRequest">
+    <wsdl:part name="parameters" element="ns:getNormalItems" />
+  </wsdl:message>
+  <wsdl:message name="getNormalItemsResponse">
+    <wsdl:part name="parameters" element="ns:getNormalItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStudyidByYyrqRequest">
+    <wsdl:part name="parameters" element="ns:getStudyidByYyrq" />
+  </wsdl:message>
+  <wsdl:message name="getStudyidByYyrqResponse">
+    <wsdl:part name="parameters" element="ns:getStudyidByYyrqResponse" />
+  </wsdl:message>
+  <wsdl:message name="getImagingItemsRequest">
+    <wsdl:part name="parameters" element="ns:getImagingItems" />
+  </wsdl:message>
+  <wsdl:message name="getImagingItemsResponse">
+    <wsdl:part name="parameters" element="ns:getImagingItemsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="healthServicePortType">
+    <wsdl:operation name="getHistoryInfoByStudyid">
+      <wsdl:input wsaw:Action="urn:getHistoryInfoByStudyid" message="ns:getHistoryInfoByStudyidRequest" />
+      <wsdl:output wsaw:Action="urn:getHistoryInfoByStudyidResponse" message="ns:getHistoryInfoByStudyidResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getHistoryInfo">
+      <wsdl:input wsaw:Action="urn:getHistoryInfo" message="ns:getHistoryInfoRequest" />
+      <wsdl:output wsaw:Action="urn:getHistoryInfoResponse" message="ns:getHistoryInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getConclusion">
+      <wsdl:input wsaw:Action="urn:getConclusion" message="ns:getConclusionRequest" />
+      <wsdl:output wsaw:Action="urn:getConclusionResponse" message="ns:getConclusionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getRadiologicalItems">
+      <wsdl:input wsaw:Action="urn:getRadiologicalItems" message="ns:getRadiologicalItemsRequest" />
+      <wsdl:output wsaw:Action="urn:getRadiologicalItemsResponse" message="ns:getRadiologicalItemsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStudyidByRq">
+      <wsdl:input wsaw:Action="urn:getStudyidByRq" message="ns:getStudyidByRqRequest" />
+      <wsdl:output wsaw:Action="urn:getStudyidByRqResponse" message="ns:getStudyidByRqResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getNormalItems">
+      <wsdl:input wsaw:Action="urn:getNormalItems" message="ns:getNormalItemsRequest" />
+      <wsdl:output wsaw:Action="urn:getNormalItemsResponse" message="ns:getNormalItemsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStudyidByYyrq">
+      <wsdl:input wsaw:Action="urn:getStudyidByYyrq" message="ns:getStudyidByYyrqRequest" />
+      <wsdl:output wsaw:Action="urn:getStudyidByYyrqResponse" message="ns:getStudyidByYyrqResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getImagingItems">
+      <wsdl:input wsaw:Action="urn:getImagingItems" message="ns:getImagingItemsRequest" />
+      <wsdl:output wsaw:Action="urn:getImagingItemsResponse" message="ns:getImagingItemsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="healthServiceSoap11Binding" type="ns:healthServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getHistoryInfoByStudyid">
+      <soap:operation soapAction="urn:getHistoryInfoByStudyid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConclusion">
+      <soap:operation soapAction="urn:getConclusion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHistoryInfo">
+      <soap:operation soapAction="urn:getHistoryInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRadiologicalItems">
+      <soap:operation soapAction="urn:getRadiologicalItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStudyidByRq">
+      <soap:operation soapAction="urn:getStudyidByRq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNormalItems">
+      <soap:operation soapAction="urn:getNormalItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImagingItems">
+      <soap:operation soapAction="urn:getImagingItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStudyidByYyrq">
+      <soap:operation soapAction="urn:getStudyidByYyrq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="healthServiceSoap12Binding" type="ns:healthServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getHistoryInfoByStudyid">
+      <soap12:operation soapAction="urn:getHistoryInfoByStudyid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConclusion">
+      <soap12:operation soapAction="urn:getConclusion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHistoryInfo">
+      <soap12:operation soapAction="urn:getHistoryInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRadiologicalItems">
+      <soap12:operation soapAction="urn:getRadiologicalItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStudyidByRq">
+      <soap12:operation soapAction="urn:getStudyidByRq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNormalItems">
+      <soap12:operation soapAction="urn:getNormalItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImagingItems">
+      <soap12:operation soapAction="urn:getImagingItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStudyidByYyrq">
+      <soap12:operation soapAction="urn:getStudyidByYyrq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="healthServiceHttpBinding" type="ns:healthServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getHistoryInfoByStudyid">
+      <http:operation location="healthService/getHistoryInfoByStudyid" />
+      <wsdl:input>
+        <mime:content part="getHistoryInfoByStudyid" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getHistoryInfoByStudyid" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConclusion">
+      <http:operation location="healthService/getConclusion" />
+      <wsdl:input>
+        <mime:content part="getConclusion" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getConclusion" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHistoryInfo">
+      <http:operation location="healthService/getHistoryInfo" />
+      <wsdl:input>
+        <mime:content part="getHistoryInfo" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getHistoryInfo" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRadiologicalItems">
+      <http:operation location="healthService/getRadiologicalItems" />
+      <wsdl:input>
+        <mime:content part="getRadiologicalItems" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getRadiologicalItems" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStudyidByRq">
+      <http:operation location="healthService/getStudyidByRq" />
+      <wsdl:input>
+        <mime:content part="getStudyidByRq" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getStudyidByRq" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNormalItems">
+      <http:operation location="healthService/getNormalItems" />
+      <wsdl:input>
+        <mime:content part="getNormalItems" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getNormalItems" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImagingItems">
+      <http:operation location="healthService/getImagingItems" />
+      <wsdl:input>
+        <mime:content part="getImagingItems" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getImagingItems" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStudyidByYyrq">
+      <http:operation location="healthService/getStudyidByYyrq" />
+      <wsdl:input>
+        <mime:content part="getStudyidByYyrq" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getStudyidByYyrq" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="healthService">
+    <wsdl:port name="healthServiceHttpSoap11Endpoint" binding="ns:healthServiceSoap11Binding">
+      <soap:address location="http://155.165.13.14:8085/sevenHospitalService/services/healthService.healthServiceHttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="healthServiceHttpSoap12Endpoint" binding="ns:healthServiceSoap12Binding">
+      <soap12:address location="http://155.165.13.14:8085/sevenHospitalService/services/healthService.healthServiceHttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="healthServiceHttpEndpoint" binding="ns:healthServiceHttpBinding">
+      <http:address location="http://155.165.13.14:8085/sevenHospitalService/services/healthService.healthServiceHttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,3858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.trasen.com.cn/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.trasen.com.cn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.trasen.com.cn/">
+      <s:element name="NetTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NetTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NetTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IDCardCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IDCardCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDCardCheckResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateCardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JYMM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JYMMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="JYMMResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCard_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCard_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateCard_IDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditTel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditTelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EditTelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditPassWord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditPassWordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EditPassWordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateCardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BankChongZhi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BankChongZhiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BankChongZhiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DOCKSList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DOCKSListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DOCKSListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DOCHBList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DOCHBListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DOCHBListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OPRegist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OPRegistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OPRegistResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchDiagRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchDiagRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchDiagRecordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchBillList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchBillListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchBillListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OPBillCharge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OPBillChargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OPBillChargeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AppNoList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AppNoListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppNoListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAppNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchReportList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchReportListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchReportListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrintReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatChargeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatChargeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PatChargeListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MedicareWizard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MedicareWizardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MedicareWizardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatDateFeeInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatDateFeeInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatDateFeeInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatDateFee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatDateFeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatDateFeeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZyDeposits">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZyDepositsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZyDepositsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZYPatInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZYPatInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetZYPatInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZYDisChargeInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZYDisChargeInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetZYDisChargeInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZYFeeSumReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZYFeeSumReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetZYFeeSumReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OPOrderRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OPOrderRegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OPOrderRegisterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OPOrderCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OPOrderCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OPOrderCancelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBaseDeptInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBaseDeptInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBaseDeptInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBaseDoctorInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBaseDoctorInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBaseDoctorInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrderRegFlag">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrderRegFlagResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateOrderRegFlagResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OPRegCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OPRegCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OPRegCancelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckPatInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckPatInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckPatInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMzFeeHz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMzFeeHzResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMzFeeHzResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderRegInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderRegInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderRegInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetOrderFeeByJmyy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetOrderFeeByJmyyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetOrderFeeByJmyyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDoctorInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDoctorInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDoctorInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDoctorDetailInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDoctorDetailInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDoctorDetailInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TyFeeHz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TyFeeHzResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TyFeeHzResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPassward">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPasswardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetPasswardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetYYisqh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetYYisqhResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetYYisqhResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMPatinfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMPatinfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMPatinfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZPatinfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZPatinfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetZPatinfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="NetTestSoapIn">
+    <wsdl:part name="parameters" element="tns:NetTest" />
+  </wsdl:message>
+  <wsdl:message name="NetTestSoapOut">
+    <wsdl:part name="parameters" element="tns:NetTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPatInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDCardCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:IDCardCheck" />
+  </wsdl:message>
+  <wsdl:message name="IDCardCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:IDCardCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCardSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCard" />
+  </wsdl:message>
+  <wsdl:message name="CreateCardSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="JYMMSoapIn">
+    <wsdl:part name="parameters" element="tns:JYMM" />
+  </wsdl:message>
+  <wsdl:message name="JYMMSoapOut">
+    <wsdl:part name="parameters" element="tns:JYMMResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCard_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCard_ID" />
+  </wsdl:message>
+  <wsdl:message name="CreateCard_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCard_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditTelSoapIn">
+    <wsdl:part name="parameters" element="tns:EditTel" />
+  </wsdl:message>
+  <wsdl:message name="EditTelSoapOut">
+    <wsdl:part name="parameters" element="tns:EditTelResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditPassWordSoapIn">
+    <wsdl:part name="parameters" element="tns:EditPassWord" />
+  </wsdl:message>
+  <wsdl:message name="EditPassWordSoapOut">
+    <wsdl:part name="parameters" element="tns:EditPassWordResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCardSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCard" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCardSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="BankChongZhiSoapIn">
+    <wsdl:part name="parameters" element="tns:BankChongZhi" />
+  </wsdl:message>
+  <wsdl:message name="BankChongZhiSoapOut">
+    <wsdl:part name="parameters" element="tns:BankChongZhiResponse" />
+  </wsdl:message>
+  <wsdl:message name="DOCKSListSoapIn">
+    <wsdl:part name="parameters" element="tns:DOCKSList" />
+  </wsdl:message>
+  <wsdl:message name="DOCKSListSoapOut">
+    <wsdl:part name="parameters" element="tns:DOCKSListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DOCHBListSoapIn">
+    <wsdl:part name="parameters" element="tns:DOCHBList" />
+  </wsdl:message>
+  <wsdl:message name="DOCHBListSoapOut">
+    <wsdl:part name="parameters" element="tns:DOCHBListResponse" />
+  </wsdl:message>
+  <wsdl:message name="OPRegistSoapIn">
+    <wsdl:part name="parameters" element="tns:OPRegist" />
+  </wsdl:message>
+  <wsdl:message name="OPRegistSoapOut">
+    <wsdl:part name="parameters" element="tns:OPRegistResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchDiagRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchDiagRecord" />
+  </wsdl:message>
+  <wsdl:message name="SearchDiagRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchDiagRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchBillListSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchBillList" />
+  </wsdl:message>
+  <wsdl:message name="SearchBillListSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchBillListResponse" />
+  </wsdl:message>
+  <wsdl:message name="OPBillChargeSoapIn">
+    <wsdl:part name="parameters" element="tns:OPBillCharge" />
+  </wsdl:message>
+  <wsdl:message name="OPBillChargeSoapOut">
+    <wsdl:part name="parameters" element="tns:OPBillChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AppNoListSoapIn">
+    <wsdl:part name="parameters" element="tns:AppNoList" />
+  </wsdl:message>
+  <wsdl:message name="AppNoListSoapOut">
+    <wsdl:part name="parameters" element="tns:AppNoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAppNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAppNo" />
+  </wsdl:message>
+  <wsdl:message name="GetAppNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAppNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchReportListSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchReportList" />
+  </wsdl:message>
+  <wsdl:message name="SearchReportListSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchReportListResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrintReportSoapIn">
+    <wsdl:part name="parameters" element="tns:PrintReport" />
+  </wsdl:message>
+  <wsdl:message name="PrintReportSoapOut">
+    <wsdl:part name="parameters" element="tns:PrintReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="PatChargeListSoapIn">
+    <wsdl:part name="parameters" element="tns:PatChargeList" />
+  </wsdl:message>
+  <wsdl:message name="PatChargeListSoapOut">
+    <wsdl:part name="parameters" element="tns:PatChargeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="MedicareWizardSoapIn">
+    <wsdl:part name="parameters" element="tns:MedicareWizard" />
+  </wsdl:message>
+  <wsdl:message name="MedicareWizardSoapOut">
+    <wsdl:part name="parameters" element="tns:MedicareWizardResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatDateFeeInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatDateFeeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatDateFee" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatDateFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZyDepositsSoapIn">
+    <wsdl:part name="parameters" element="tns:ZyDeposits" />
+  </wsdl:message>
+  <wsdl:message name="ZyDepositsSoapOut">
+    <wsdl:part name="parameters" element="tns:ZyDepositsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetZYPatInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetZYPatInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetZYPatInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetZYPatInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetZYDisChargeInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetZYDisChargeInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetZYDisChargeInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetZYDisChargeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetZYFeeSumReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetZYFeeSumReport" />
+  </wsdl:message>
+  <wsdl:message name="GetZYFeeSumReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetZYFeeSumReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:OPOrderRegister" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:OPOrderRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:OPOrderCancel" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:OPOrderCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDeptInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBaseDeptInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDeptInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBaseDeptInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDoctorInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBaseDoctorInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDoctorInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBaseDoctorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderRegFlagSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateOrderRegFlag" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderRegFlagSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateOrderRegFlagResponse" />
+  </wsdl:message>
+  <wsdl:message name="OPRegCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:OPRegCancel" />
+  </wsdl:message>
+  <wsdl:message name="OPRegCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:OPRegCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckPatInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckPatInfo" />
+  </wsdl:message>
+  <wsdl:message name="CheckPatInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckPatInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMzFeeHzSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMzFeeHz" />
+  </wsdl:message>
+  <wsdl:message name="GetMzFeeHzSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMzFeeHzResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderRegInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderRegInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderRegInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderRegInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetOrderFeeByJmyySoapIn">
+    <wsdl:part name="parameters" element="tns:SetOrderFeeByJmyy" />
+  </wsdl:message>
+  <wsdl:message name="SetOrderFeeByJmyySoapOut">
+    <wsdl:part name="parameters" element="tns:SetOrderFeeByJmyyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDoctorInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDoctorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorDetailInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDoctorDetailInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorDetailInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDoctorDetailInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TyFeeHzSoapIn">
+    <wsdl:part name="parameters" element="tns:TyFeeHz" />
+  </wsdl:message>
+  <wsdl:message name="TyFeeHzSoapOut">
+    <wsdl:part name="parameters" element="tns:TyFeeHzResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPasswardSoapIn">
+    <wsdl:part name="parameters" element="tns:SetPassward" />
+  </wsdl:message>
+  <wsdl:message name="SetPasswardSoapOut">
+    <wsdl:part name="parameters" element="tns:SetPasswardResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetYYisqhSoapIn">
+    <wsdl:part name="parameters" element="tns:GetYYisqh" />
+  </wsdl:message>
+  <wsdl:message name="GetYYisqhSoapOut">
+    <wsdl:part name="parameters" element="tns:GetYYisqhResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMPatinfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMPatinfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMPatinfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMPatinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetZPatinfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetZPatinfo" />
+  </wsdl:message>
+  <wsdl:message name="GetZPatinfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetZPatinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="NetTestHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NetTestHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatInfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IDCardCheckHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IDCardCheckHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateCardHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateCardHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="JYMMHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="JYMMHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateCard_IDHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateCard_IDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EditTelHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EditTelHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EditPassWordHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EditPassWordHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCardHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCardHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BankChongZhiHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BankChongZhiHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DOCKSListHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DOCKSListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DOCHBListHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DOCHBListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OPRegistHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OPRegistHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchDiagRecordHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchDiagRecordHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchBillListHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchBillListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OPBillChargeHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OPBillChargeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AppNoListHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AppNoListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAppNoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAppNoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchReportListHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchReportListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PrintReportHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PrintReportHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PatChargeListHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PatChargeListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MedicareWizardHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MedicareWizardHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeInfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ZyDepositsHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZyDepositsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYPatInfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYPatInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYDisChargeInfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYDisChargeInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYFeeSumReportHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYFeeSumReportHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderRegisterHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderRegisterHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderCancelHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderCancelHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDeptInfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDeptInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDoctorInfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDoctorInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderRegFlagHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderRegFlagHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OPRegCancelHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OPRegCancelHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckPatInfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckPatInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMzFeeHzHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMzFeeHzHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderRegInfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderRegInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SetOrderFeeByJmyyHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetOrderFeeByJmyyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorInfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorDetailInfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorDetailInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TyFeeHzHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TyFeeHzHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SetPasswardHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetPasswardHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetYYisqhHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetYYisqhHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMPatinfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMPatinfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZPatinfoHttpGetIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZPatinfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NetTestHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NetTestHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatInfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IDCardCheckHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IDCardCheckHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateCardHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateCardHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="JYMMHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="JYMMHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateCard_IDHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateCard_IDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EditTelHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EditTelHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EditPassWordHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EditPassWordHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCardHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCardHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BankChongZhiHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BankChongZhiHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DOCKSListHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DOCKSListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DOCHBListHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DOCHBListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OPRegistHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OPRegistHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchDiagRecordHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchDiagRecordHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchBillListHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchBillListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OPBillChargeHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OPBillChargeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AppNoListHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AppNoListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAppNoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAppNoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchReportListHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchReportListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PrintReportHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PrintReportHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PatChargeListHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PatChargeListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MedicareWizardHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MedicareWizardHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeInfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatDateFeeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ZyDepositsHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZyDepositsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYPatInfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYPatInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYDisChargeInfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYDisChargeInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYFeeSumReportHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZYFeeSumReportHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderRegisterHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderRegisterHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderCancelHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OPOrderCancelHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDeptInfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDeptInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDoctorInfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBaseDoctorInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderRegFlagHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderRegFlagHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OPRegCancelHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OPRegCancelHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckPatInfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckPatInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMzFeeHzHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMzFeeHzHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderRegInfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderRegInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SetOrderFeeByJmyyHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetOrderFeeByJmyyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorInfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorDetailInfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctorDetailInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TyFeeHzHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TyFeeHzHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SetPasswardHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetPasswardHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetYYisqhHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetYYisqhHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMPatinfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMPatinfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZPatinfoHttpPostIn">
+    <wsdl:part name="PostString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZPatinfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="TrasenWSSoap">
+    <wsdl:operation name="NetTest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">1、测试服务器运行环境是否开启</wsdl:documentation>
+      <wsdl:input message="tns:NetTestSoapIn" />
+      <wsdl:output message="tns:NetTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">3、根据诊疗卡获取病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatInfoSoapIn" />
+      <wsdl:output message="tns:GetPatInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IDCardCheck">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">4、身份证校验</wsdl:documentation>
+      <wsdl:input message="tns:IDCardCheckSoapIn" />
+      <wsdl:output message="tns:IDCardCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">5、现金建卡</wsdl:documentation>
+      <wsdl:input message="tns:CreateCardSoapIn" />
+      <wsdl:output message="tns:CreateCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JYMM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">6、校验用户密码</wsdl:documentation>
+      <wsdl:input message="tns:JYMMSoapIn" />
+      <wsdl:output message="tns:JYMMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard_ID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">7、身份证账户激活建立</wsdl:documentation>
+      <wsdl:input message="tns:CreateCard_IDSoapIn" />
+      <wsdl:output message="tns:CreateCard_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditTel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">8、修改电话号码或职业</wsdl:documentation>
+      <wsdl:input message="tns:EditTelSoapIn" />
+      <wsdl:output message="tns:EditTelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPassWord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">9、修改用户密码</wsdl:documentation>
+      <wsdl:input message="tns:EditPassWordSoapIn" />
+      <wsdl:output message="tns:EditPassWordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">10、现金充值</wsdl:documentation>
+      <wsdl:input message="tns:UpdateCardSoapIn" />
+      <wsdl:output message="tns:UpdateCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BankChongZhi">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">11、中行借记卡或他行卡向诊疗卡账户中充值</wsdl:documentation>
+      <wsdl:input message="tns:BankChongZhiSoapIn" />
+      <wsdl:output message="tns:BankChongZhiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DOCKSList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">12、查询挂号科室</wsdl:documentation>
+      <wsdl:input message="tns:DOCKSListSoapIn" />
+      <wsdl:output message="tns:DOCKSListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DOCHBList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">13、查询出诊医生</wsdl:documentation>
+      <wsdl:input message="tns:DOCHBListSoapIn" />
+      <wsdl:output message="tns:DOCHBListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPRegist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">14、挂号</wsdl:documentation>
+      <wsdl:input message="tns:OPRegistSoapIn" />
+      <wsdl:output message="tns:OPRegistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDiagRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">15、查询就诊记录</wsdl:documentation>
+      <wsdl:input message="tns:SearchDiagRecordSoapIn" />
+      <wsdl:output message="tns:SearchDiagRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBillList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">16、查询费用项目</wsdl:documentation>
+      <wsdl:input message="tns:SearchBillListSoapIn" />
+      <wsdl:output message="tns:SearchBillListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPBillCharge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">17、提交缴费</wsdl:documentation>
+      <wsdl:input message="tns:OPBillChargeSoapIn" />
+      <wsdl:output message="tns:OPBillChargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AppNoList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">18、查询取号列表</wsdl:documentation>
+      <wsdl:input message="tns:AppNoListSoapIn" />
+      <wsdl:output message="tns:AppNoListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">19、预约取号</wsdl:documentation>
+      <wsdl:input message="tns:GetAppNoSoapIn" />
+      <wsdl:output message="tns:GetAppNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchReportList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">20、查询检验基本信息列表</wsdl:documentation>
+      <wsdl:input message="tns:SearchReportListSoapIn" />
+      <wsdl:output message="tns:SearchReportListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">21、打印报告单</wsdl:documentation>
+      <wsdl:input message="tns:PrintReportSoapIn" />
+      <wsdl:output message="tns:PrintReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PatChargeList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">22、查询费用清单</wsdl:documentation>
+      <wsdl:input message="tns:PatChargeListSoapIn" />
+      <wsdl:output message="tns:PatChargeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MedicareWizard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">23、简易门诊</wsdl:documentation>
+      <wsdl:input message="tns:MedicareWizardSoapIn" />
+      <wsdl:output message="tns:MedicareWizardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFeeInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">24、在院病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatDateFeeInfoSoapIn" />
+      <wsdl:output message="tns:GetPatDateFeeInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">25、在院病人明细清单</wsdl:documentation>
+      <wsdl:input message="tns:GetPatDateFeeSoapIn" />
+      <wsdl:output message="tns:GetPatDateFeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZyDeposits">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">26、在院病人交预交金</wsdl:documentation>
+      <wsdl:input message="tns:ZyDepositsSoapIn" />
+      <wsdl:output message="tns:ZyDepositsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZYPatInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">27、根据卡号查询住院病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetZYPatInfoSoapIn" />
+      <wsdl:output message="tns:GetZYPatInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZYDisChargeInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">28、根据卡号查询住院病人结算记录</wsdl:documentation>
+      <wsdl:input message="tns:GetZYDisChargeInfoSoapIn" />
+      <wsdl:output message="tns:GetZYDisChargeInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZYFeeSumReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">29、根据病人结算记录号查询住院病人结算费用汇总记录</wsdl:documentation>
+      <wsdl:input message="tns:GetZYFeeSumReportSoapIn" />
+      <wsdl:output message="tns:GetZYFeeSumReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderRegister">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">30、预约挂号登记</wsdl:documentation>
+      <wsdl:input message="tns:OPOrderRegisterSoapIn" />
+      <wsdl:output message="tns:OPOrderRegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">31、注销未取号的预约挂号记录</wsdl:documentation>
+      <wsdl:input message="tns:OPOrderCancelSoapIn" />
+      <wsdl:output message="tns:OPOrderCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDeptInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">32、获取科室基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetBaseDeptInfoSoapIn" />
+      <wsdl:output message="tns:GetBaseDeptInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDoctorInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">33、获取医生基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetBaseDoctorInfoSoapIn" />
+      <wsdl:output message="tns:GetBaseDoctorInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderRegFlag">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">34、更新预约挂号费用标记为已收费</wsdl:documentation>
+      <wsdl:input message="tns:UpdateOrderRegFlagSoapIn" />
+      <wsdl:output message="tns:UpdateOrderRegFlagSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPRegCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">35、诊疗卡支付取号成功后撤销退号</wsdl:documentation>
+      <wsdl:input message="tns:OPRegCancelSoapIn" />
+      <wsdl:output message="tns:OPRegCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPatInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">36、验证诊疗卡号和身份证是否匹配</wsdl:documentation>
+      <wsdl:input message="tns:CheckPatInfoSoapIn" />
+      <wsdl:output message="tns:CheckPatInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMzFeeHz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">37、获取门诊病人费用汇总</wsdl:documentation>
+      <wsdl:input message="tns:GetMzFeeHzSoapIn" />
+      <wsdl:output message="tns:GetMzFeeHzSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderRegInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">38、获取预约挂号信息</wsdl:documentation>
+      <wsdl:input message="tns:GetOrderRegInfoSoapIn" />
+      <wsdl:output message="tns:GetOrderRegInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderFeeByJmyy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">39、静脉药品费用新增</wsdl:documentation>
+      <wsdl:input message="tns:SetOrderFeeByJmyySoapIn" />
+      <wsdl:output message="tns:SetOrderFeeByJmyySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">40、医生的出诊设置信息</wsdl:documentation>
+      <wsdl:input message="tns:GetDoctorInfoSoapIn" />
+      <wsdl:output message="tns:GetDoctorInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorDetailInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">41、医生出诊时段信息</wsdl:documentation>
+      <wsdl:input message="tns:GetDoctorDetailInfoSoapIn" />
+      <wsdl:output message="tns:GetDoctorDetailInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TyFeeHz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">42、退药</wsdl:documentation>
+      <wsdl:input message="tns:TyFeeHzSoapIn" />
+      <wsdl:output message="tns:TyFeeHzSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPassward">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">43、生成取号密码(自助机用)</wsdl:documentation>
+      <wsdl:input message="tns:SetPasswardSoapIn" />
+      <wsdl:output message="tns:SetPasswardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">44、查询病人信息(提供公安局用)</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoSoapIn" />
+      <wsdl:output message="tns:GetPatientInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYYisqh">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">45、获取第三方预约是否已取号</wsdl:documentation>
+      <wsdl:input message="tns:GetYYisqhSoapIn" />
+      <wsdl:output message="tns:GetYYisqhSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMPatinfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">46、病理获取门诊病人信息根据卡号或者发票号查询</wsdl:documentation>
+      <wsdl:input message="tns:GetMPatinfoSoapIn" />
+      <wsdl:output message="tns:GetMPatinfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZPatinfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">47、病理获取住院病人信息根据住院号查询</wsdl:documentation>
+      <wsdl:input message="tns:GetZPatinfoSoapIn" />
+      <wsdl:output message="tns:GetZPatinfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TrasenWSHttpGet">
+    <wsdl:operation name="NetTest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">1、测试服务器运行环境是否开启</wsdl:documentation>
+      <wsdl:input message="tns:NetTestHttpGetIn" />
+      <wsdl:output message="tns:NetTestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">3、根据诊疗卡获取病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatInfoHttpGetIn" />
+      <wsdl:output message="tns:GetPatInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IDCardCheck">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">4、身份证校验</wsdl:documentation>
+      <wsdl:input message="tns:IDCardCheckHttpGetIn" />
+      <wsdl:output message="tns:IDCardCheckHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">5、现金建卡</wsdl:documentation>
+      <wsdl:input message="tns:CreateCardHttpGetIn" />
+      <wsdl:output message="tns:CreateCardHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JYMM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">6、校验用户密码</wsdl:documentation>
+      <wsdl:input message="tns:JYMMHttpGetIn" />
+      <wsdl:output message="tns:JYMMHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard_ID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">7、身份证账户激活建立</wsdl:documentation>
+      <wsdl:input message="tns:CreateCard_IDHttpGetIn" />
+      <wsdl:output message="tns:CreateCard_IDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditTel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">8、修改电话号码或职业</wsdl:documentation>
+      <wsdl:input message="tns:EditTelHttpGetIn" />
+      <wsdl:output message="tns:EditTelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPassWord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">9、修改用户密码</wsdl:documentation>
+      <wsdl:input message="tns:EditPassWordHttpGetIn" />
+      <wsdl:output message="tns:EditPassWordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">10、现金充值</wsdl:documentation>
+      <wsdl:input message="tns:UpdateCardHttpGetIn" />
+      <wsdl:output message="tns:UpdateCardHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BankChongZhi">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">11、中行借记卡或他行卡向诊疗卡账户中充值</wsdl:documentation>
+      <wsdl:input message="tns:BankChongZhiHttpGetIn" />
+      <wsdl:output message="tns:BankChongZhiHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DOCKSList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">12、查询挂号科室</wsdl:documentation>
+      <wsdl:input message="tns:DOCKSListHttpGetIn" />
+      <wsdl:output message="tns:DOCKSListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DOCHBList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">13、查询出诊医生</wsdl:documentation>
+      <wsdl:input message="tns:DOCHBListHttpGetIn" />
+      <wsdl:output message="tns:DOCHBListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPRegist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">14、挂号</wsdl:documentation>
+      <wsdl:input message="tns:OPRegistHttpGetIn" />
+      <wsdl:output message="tns:OPRegistHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDiagRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">15、查询就诊记录</wsdl:documentation>
+      <wsdl:input message="tns:SearchDiagRecordHttpGetIn" />
+      <wsdl:output message="tns:SearchDiagRecordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBillList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">16、查询费用项目</wsdl:documentation>
+      <wsdl:input message="tns:SearchBillListHttpGetIn" />
+      <wsdl:output message="tns:SearchBillListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPBillCharge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">17、提交缴费</wsdl:documentation>
+      <wsdl:input message="tns:OPBillChargeHttpGetIn" />
+      <wsdl:output message="tns:OPBillChargeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AppNoList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">18、查询取号列表</wsdl:documentation>
+      <wsdl:input message="tns:AppNoListHttpGetIn" />
+      <wsdl:output message="tns:AppNoListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">19、预约取号</wsdl:documentation>
+      <wsdl:input message="tns:GetAppNoHttpGetIn" />
+      <wsdl:output message="tns:GetAppNoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchReportList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">20、查询检验基本信息列表</wsdl:documentation>
+      <wsdl:input message="tns:SearchReportListHttpGetIn" />
+      <wsdl:output message="tns:SearchReportListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">21、打印报告单</wsdl:documentation>
+      <wsdl:input message="tns:PrintReportHttpGetIn" />
+      <wsdl:output message="tns:PrintReportHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PatChargeList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">22、查询费用清单</wsdl:documentation>
+      <wsdl:input message="tns:PatChargeListHttpGetIn" />
+      <wsdl:output message="tns:PatChargeListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MedicareWizard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">23、简易门诊</wsdl:documentation>
+      <wsdl:input message="tns:MedicareWizardHttpGetIn" />
+      <wsdl:output message="tns:MedicareWizardHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFeeInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">24、在院病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatDateFeeInfoHttpGetIn" />
+      <wsdl:output message="tns:GetPatDateFeeInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">25、在院病人明细清单</wsdl:documentation>
+      <wsdl:input message="tns:GetPatDateFeeHttpGetIn" />
+      <wsdl:output message="tns:GetPatDateFeeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZyDeposits">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">26、在院病人交预交金</wsdl:documentation>
+      <wsdl:input message="tns:ZyDepositsHttpGetIn" />
+      <wsdl:output message="tns:ZyDepositsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZYPatInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">27、根据卡号查询住院病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetZYPatInfoHttpGetIn" />
+      <wsdl:output message="tns:GetZYPatInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZYDisChargeInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">28、根据卡号查询住院病人结算记录</wsdl:documentation>
+      <wsdl:input message="tns:GetZYDisChargeInfoHttpGetIn" />
+      <wsdl:output message="tns:GetZYDisChargeInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZYFeeSumReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">29、根据病人结算记录号查询住院病人结算费用汇总记录</wsdl:documentation>
+      <wsdl:input message="tns:GetZYFeeSumReportHttpGetIn" />
+      <wsdl:output message="tns:GetZYFeeSumReportHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderRegister">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">30、预约挂号登记</wsdl:documentation>
+      <wsdl:input message="tns:OPOrderRegisterHttpGetIn" />
+      <wsdl:output message="tns:OPOrderRegisterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">31、注销未取号的预约挂号记录</wsdl:documentation>
+      <wsdl:input message="tns:OPOrderCancelHttpGetIn" />
+      <wsdl:output message="tns:OPOrderCancelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDeptInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">32、获取科室基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetBaseDeptInfoHttpGetIn" />
+      <wsdl:output message="tns:GetBaseDeptInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDoctorInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">33、获取医生基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetBaseDoctorInfoHttpGetIn" />
+      <wsdl:output message="tns:GetBaseDoctorInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderRegFlag">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">34、更新预约挂号费用标记为已收费</wsdl:documentation>
+      <wsdl:input message="tns:UpdateOrderRegFlagHttpGetIn" />
+      <wsdl:output message="tns:UpdateOrderRegFlagHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPRegCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">35、诊疗卡支付取号成功后撤销退号</wsdl:documentation>
+      <wsdl:input message="tns:OPRegCancelHttpGetIn" />
+      <wsdl:output message="tns:OPRegCancelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPatInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">36、验证诊疗卡号和身份证是否匹配</wsdl:documentation>
+      <wsdl:input message="tns:CheckPatInfoHttpGetIn" />
+      <wsdl:output message="tns:CheckPatInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMzFeeHz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">37、获取门诊病人费用汇总</wsdl:documentation>
+      <wsdl:input message="tns:GetMzFeeHzHttpGetIn" />
+      <wsdl:output message="tns:GetMzFeeHzHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderRegInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">38、获取预约挂号信息</wsdl:documentation>
+      <wsdl:input message="tns:GetOrderRegInfoHttpGetIn" />
+      <wsdl:output message="tns:GetOrderRegInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderFeeByJmyy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">39、静脉药品费用新增</wsdl:documentation>
+      <wsdl:input message="tns:SetOrderFeeByJmyyHttpGetIn" />
+      <wsdl:output message="tns:SetOrderFeeByJmyyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">40、医生的出诊设置信息</wsdl:documentation>
+      <wsdl:input message="tns:GetDoctorInfoHttpGetIn" />
+      <wsdl:output message="tns:GetDoctorInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorDetailInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">41、医生出诊时段信息</wsdl:documentation>
+      <wsdl:input message="tns:GetDoctorDetailInfoHttpGetIn" />
+      <wsdl:output message="tns:GetDoctorDetailInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TyFeeHz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">42、退药</wsdl:documentation>
+      <wsdl:input message="tns:TyFeeHzHttpGetIn" />
+      <wsdl:output message="tns:TyFeeHzHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPassward">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">43、生成取号密码(自助机用)</wsdl:documentation>
+      <wsdl:input message="tns:SetPasswardHttpGetIn" />
+      <wsdl:output message="tns:SetPasswardHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">44、查询病人信息(提供公安局用)</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoHttpGetIn" />
+      <wsdl:output message="tns:GetPatientInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYYisqh">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">45、获取第三方预约是否已取号</wsdl:documentation>
+      <wsdl:input message="tns:GetYYisqhHttpGetIn" />
+      <wsdl:output message="tns:GetYYisqhHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMPatinfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">46、病理获取门诊病人信息根据卡号或者发票号查询</wsdl:documentation>
+      <wsdl:input message="tns:GetMPatinfoHttpGetIn" />
+      <wsdl:output message="tns:GetMPatinfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZPatinfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">47、病理获取住院病人信息根据住院号查询</wsdl:documentation>
+      <wsdl:input message="tns:GetZPatinfoHttpGetIn" />
+      <wsdl:output message="tns:GetZPatinfoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TrasenWSHttpPost">
+    <wsdl:operation name="NetTest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">1、测试服务器运行环境是否开启</wsdl:documentation>
+      <wsdl:input message="tns:NetTestHttpPostIn" />
+      <wsdl:output message="tns:NetTestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">3、根据诊疗卡获取病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatInfoHttpPostIn" />
+      <wsdl:output message="tns:GetPatInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IDCardCheck">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">4、身份证校验</wsdl:documentation>
+      <wsdl:input message="tns:IDCardCheckHttpPostIn" />
+      <wsdl:output message="tns:IDCardCheckHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">5、现金建卡</wsdl:documentation>
+      <wsdl:input message="tns:CreateCardHttpPostIn" />
+      <wsdl:output message="tns:CreateCardHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JYMM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">6、校验用户密码</wsdl:documentation>
+      <wsdl:input message="tns:JYMMHttpPostIn" />
+      <wsdl:output message="tns:JYMMHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard_ID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">7、身份证账户激活建立</wsdl:documentation>
+      <wsdl:input message="tns:CreateCard_IDHttpPostIn" />
+      <wsdl:output message="tns:CreateCard_IDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditTel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">8、修改电话号码或职业</wsdl:documentation>
+      <wsdl:input message="tns:EditTelHttpPostIn" />
+      <wsdl:output message="tns:EditTelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPassWord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">9、修改用户密码</wsdl:documentation>
+      <wsdl:input message="tns:EditPassWordHttpPostIn" />
+      <wsdl:output message="tns:EditPassWordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">10、现金充值</wsdl:documentation>
+      <wsdl:input message="tns:UpdateCardHttpPostIn" />
+      <wsdl:output message="tns:UpdateCardHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BankChongZhi">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">11、中行借记卡或他行卡向诊疗卡账户中充值</wsdl:documentation>
+      <wsdl:input message="tns:BankChongZhiHttpPostIn" />
+      <wsdl:output message="tns:BankChongZhiHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DOCKSList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">12、查询挂号科室</wsdl:documentation>
+      <wsdl:input message="tns:DOCKSListHttpPostIn" />
+      <wsdl:output message="tns:DOCKSListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DOCHBList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">13、查询出诊医生</wsdl:documentation>
+      <wsdl:input message="tns:DOCHBListHttpPostIn" />
+      <wsdl:output message="tns:DOCHBListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPRegist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">14、挂号</wsdl:documentation>
+      <wsdl:input message="tns:OPRegistHttpPostIn" />
+      <wsdl:output message="tns:OPRegistHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDiagRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">15、查询就诊记录</wsdl:documentation>
+      <wsdl:input message="tns:SearchDiagRecordHttpPostIn" />
+      <wsdl:output message="tns:SearchDiagRecordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBillList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">16、查询费用项目</wsdl:documentation>
+      <wsdl:input message="tns:SearchBillListHttpPostIn" />
+      <wsdl:output message="tns:SearchBillListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPBillCharge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">17、提交缴费</wsdl:documentation>
+      <wsdl:input message="tns:OPBillChargeHttpPostIn" />
+      <wsdl:output message="tns:OPBillChargeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AppNoList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">18、查询取号列表</wsdl:documentation>
+      <wsdl:input message="tns:AppNoListHttpPostIn" />
+      <wsdl:output message="tns:AppNoListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">19、预约取号</wsdl:documentation>
+      <wsdl:input message="tns:GetAppNoHttpPostIn" />
+      <wsdl:output message="tns:GetAppNoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchReportList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">20、查询检验基本信息列表</wsdl:documentation>
+      <wsdl:input message="tns:SearchReportListHttpPostIn" />
+      <wsdl:output message="tns:SearchReportListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">21、打印报告单</wsdl:documentation>
+      <wsdl:input message="tns:PrintReportHttpPostIn" />
+      <wsdl:output message="tns:PrintReportHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PatChargeList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">22、查询费用清单</wsdl:documentation>
+      <wsdl:input message="tns:PatChargeListHttpPostIn" />
+      <wsdl:output message="tns:PatChargeListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MedicareWizard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">23、简易门诊</wsdl:documentation>
+      <wsdl:input message="tns:MedicareWizardHttpPostIn" />
+      <wsdl:output message="tns:MedicareWizardHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFeeInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">24、在院病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatDateFeeInfoHttpPostIn" />
+      <wsdl:output message="tns:GetPatDateFeeInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">25、在院病人明细清单</wsdl:documentation>
+      <wsdl:input message="tns:GetPatDateFeeHttpPostIn" />
+      <wsdl:output message="tns:GetPatDateFeeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZyDeposits">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">26、在院病人交预交金</wsdl:documentation>
+      <wsdl:input message="tns:ZyDepositsHttpPostIn" />
+      <wsdl:output message="tns:ZyDepositsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZYPatInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">27、根据卡号查询住院病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetZYPatInfoHttpPostIn" />
+      <wsdl:output message="tns:GetZYPatInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZYDisChargeInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">28、根据卡号查询住院病人结算记录</wsdl:documentation>
+      <wsdl:input message="tns:GetZYDisChargeInfoHttpPostIn" />
+      <wsdl:output message="tns:GetZYDisChargeInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZYFeeSumReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">29、根据病人结算记录号查询住院病人结算费用汇总记录</wsdl:documentation>
+      <wsdl:input message="tns:GetZYFeeSumReportHttpPostIn" />
+      <wsdl:output message="tns:GetZYFeeSumReportHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderRegister">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">30、预约挂号登记</wsdl:documentation>
+      <wsdl:input message="tns:OPOrderRegisterHttpPostIn" />
+      <wsdl:output message="tns:OPOrderRegisterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">31、注销未取号的预约挂号记录</wsdl:documentation>
+      <wsdl:input message="tns:OPOrderCancelHttpPostIn" />
+      <wsdl:output message="tns:OPOrderCancelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDeptInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">32、获取科室基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetBaseDeptInfoHttpPostIn" />
+      <wsdl:output message="tns:GetBaseDeptInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDoctorInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">33、获取医生基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetBaseDoctorInfoHttpPostIn" />
+      <wsdl:output message="tns:GetBaseDoctorInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderRegFlag">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">34、更新预约挂号费用标记为已收费</wsdl:documentation>
+      <wsdl:input message="tns:UpdateOrderRegFlagHttpPostIn" />
+      <wsdl:output message="tns:UpdateOrderRegFlagHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OPRegCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">35、诊疗卡支付取号成功后撤销退号</wsdl:documentation>
+      <wsdl:input message="tns:OPRegCancelHttpPostIn" />
+      <wsdl:output message="tns:OPRegCancelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPatInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">36、验证诊疗卡号和身份证是否匹配</wsdl:documentation>
+      <wsdl:input message="tns:CheckPatInfoHttpPostIn" />
+      <wsdl:output message="tns:CheckPatInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMzFeeHz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">37、获取门诊病人费用汇总</wsdl:documentation>
+      <wsdl:input message="tns:GetMzFeeHzHttpPostIn" />
+      <wsdl:output message="tns:GetMzFeeHzHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderRegInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">38、获取预约挂号信息</wsdl:documentation>
+      <wsdl:input message="tns:GetOrderRegInfoHttpPostIn" />
+      <wsdl:output message="tns:GetOrderRegInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderFeeByJmyy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">39、静脉药品费用新增</wsdl:documentation>
+      <wsdl:input message="tns:SetOrderFeeByJmyyHttpPostIn" />
+      <wsdl:output message="tns:SetOrderFeeByJmyyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">40、医生的出诊设置信息</wsdl:documentation>
+      <wsdl:input message="tns:GetDoctorInfoHttpPostIn" />
+      <wsdl:output message="tns:GetDoctorInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorDetailInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">41、医生出诊时段信息</wsdl:documentation>
+      <wsdl:input message="tns:GetDoctorDetailInfoHttpPostIn" />
+      <wsdl:output message="tns:GetDoctorDetailInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TyFeeHz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">42、退药</wsdl:documentation>
+      <wsdl:input message="tns:TyFeeHzHttpPostIn" />
+      <wsdl:output message="tns:TyFeeHzHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPassward">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">43、生成取号密码(自助机用)</wsdl:documentation>
+      <wsdl:input message="tns:SetPasswardHttpPostIn" />
+      <wsdl:output message="tns:SetPasswardHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">44、查询病人信息(提供公安局用)</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoHttpPostIn" />
+      <wsdl:output message="tns:GetPatientInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYYisqh">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">45、获取第三方预约是否已取号</wsdl:documentation>
+      <wsdl:input message="tns:GetYYisqhHttpPostIn" />
+      <wsdl:output message="tns:GetYYisqhHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMPatinfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">46、病理获取门诊病人信息根据卡号或者发票号查询</wsdl:documentation>
+      <wsdl:input message="tns:GetMPatinfoHttpPostIn" />
+      <wsdl:output message="tns:GetMPatinfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZPatinfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">47、病理获取住院病人信息根据住院号查询</wsdl:documentation>
+      <wsdl:input message="tns:GetZPatinfoHttpPostIn" />
+      <wsdl:output message="tns:GetZPatinfoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TrasenWSSoap" type="tns:TrasenWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NetTest">
+      <soap:operation soapAction="http://www.trasen.com.cn/NetTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatInfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetPatInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDCardCheck">
+      <soap:operation soapAction="http://www.trasen.com.cn/IDCardCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard">
+      <soap:operation soapAction="http://www.trasen.com.cn/CreateCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JYMM">
+      <soap:operation soapAction="http://www.trasen.com.cn/JYMM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard_ID">
+      <soap:operation soapAction="http://www.trasen.com.cn/CreateCard_ID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTel">
+      <soap:operation soapAction="http://www.trasen.com.cn/EditTel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPassWord">
+      <soap:operation soapAction="http://www.trasen.com.cn/EditPassWord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCard">
+      <soap:operation soapAction="http://www.trasen.com.cn/UpdateCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BankChongZhi">
+      <soap:operation soapAction="http://www.trasen.com.cn/BankChongZhi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOCKSList">
+      <soap:operation soapAction="http://www.trasen.com.cn/DOCKSList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOCHBList">
+      <soap:operation soapAction="http://www.trasen.com.cn/DOCHBList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPRegist">
+      <soap:operation soapAction="http://www.trasen.com.cn/OPRegist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDiagRecord">
+      <soap:operation soapAction="http://www.trasen.com.cn/SearchDiagRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBillList">
+      <soap:operation soapAction="http://www.trasen.com.cn/SearchBillList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPBillCharge">
+      <soap:operation soapAction="http://www.trasen.com.cn/OPBillCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppNoList">
+      <soap:operation soapAction="http://www.trasen.com.cn/AppNoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppNo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetAppNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchReportList">
+      <soap:operation soapAction="http://www.trasen.com.cn/SearchReportList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintReport">
+      <soap:operation soapAction="http://www.trasen.com.cn/PrintReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatChargeList">
+      <soap:operation soapAction="http://www.trasen.com.cn/PatChargeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MedicareWizard">
+      <soap:operation soapAction="http://www.trasen.com.cn/MedicareWizard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFeeInfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetPatDateFeeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFee">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetPatDateFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZyDeposits">
+      <soap:operation soapAction="http://www.trasen.com.cn/ZyDeposits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYPatInfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetZYPatInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYDisChargeInfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetZYDisChargeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYFeeSumReport">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetZYFeeSumReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderRegister">
+      <soap:operation soapAction="http://www.trasen.com.cn/OPOrderRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderCancel">
+      <soap:operation soapAction="http://www.trasen.com.cn/OPOrderCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDeptInfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetBaseDeptInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDoctorInfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetBaseDoctorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderRegFlag">
+      <soap:operation soapAction="http://www.trasen.com.cn/UpdateOrderRegFlag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPRegCancel">
+      <soap:operation soapAction="http://www.trasen.com.cn/OPRegCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPatInfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/CheckPatInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMzFeeHz">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetMzFeeHz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderRegInfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetOrderRegInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderFeeByJmyy">
+      <soap:operation soapAction="http://www.trasen.com.cn/SetOrderFeeByJmyy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorInfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetDoctorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorDetailInfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetDoctorDetailInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TyFeeHz">
+      <soap:operation soapAction="http://www.trasen.com.cn/TyFeeHz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPassward">
+      <soap:operation soapAction="http://www.trasen.com.cn/SetPassward" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYYisqh">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetYYisqh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMPatinfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetMPatinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZPatinfo">
+      <soap:operation soapAction="http://www.trasen.com.cn/GetZPatinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TrasenWSSoap12" type="tns:TrasenWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NetTest">
+      <soap12:operation soapAction="http://www.trasen.com.cn/NetTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatInfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetPatInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDCardCheck">
+      <soap12:operation soapAction="http://www.trasen.com.cn/IDCardCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard">
+      <soap12:operation soapAction="http://www.trasen.com.cn/CreateCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JYMM">
+      <soap12:operation soapAction="http://www.trasen.com.cn/JYMM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard_ID">
+      <soap12:operation soapAction="http://www.trasen.com.cn/CreateCard_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTel">
+      <soap12:operation soapAction="http://www.trasen.com.cn/EditTel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPassWord">
+      <soap12:operation soapAction="http://www.trasen.com.cn/EditPassWord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCard">
+      <soap12:operation soapAction="http://www.trasen.com.cn/UpdateCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BankChongZhi">
+      <soap12:operation soapAction="http://www.trasen.com.cn/BankChongZhi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOCKSList">
+      <soap12:operation soapAction="http://www.trasen.com.cn/DOCKSList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOCHBList">
+      <soap12:operation soapAction="http://www.trasen.com.cn/DOCHBList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPRegist">
+      <soap12:operation soapAction="http://www.trasen.com.cn/OPRegist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDiagRecord">
+      <soap12:operation soapAction="http://www.trasen.com.cn/SearchDiagRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBillList">
+      <soap12:operation soapAction="http://www.trasen.com.cn/SearchBillList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPBillCharge">
+      <soap12:operation soapAction="http://www.trasen.com.cn/OPBillCharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppNoList">
+      <soap12:operation soapAction="http://www.trasen.com.cn/AppNoList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppNo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetAppNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchReportList">
+      <soap12:operation soapAction="http://www.trasen.com.cn/SearchReportList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintReport">
+      <soap12:operation soapAction="http://www.trasen.com.cn/PrintReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatChargeList">
+      <soap12:operation soapAction="http://www.trasen.com.cn/PatChargeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MedicareWizard">
+      <soap12:operation soapAction="http://www.trasen.com.cn/MedicareWizard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFeeInfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetPatDateFeeInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFee">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetPatDateFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZyDeposits">
+      <soap12:operation soapAction="http://www.trasen.com.cn/ZyDeposits" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYPatInfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetZYPatInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYDisChargeInfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetZYDisChargeInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYFeeSumReport">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetZYFeeSumReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderRegister">
+      <soap12:operation soapAction="http://www.trasen.com.cn/OPOrderRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderCancel">
+      <soap12:operation soapAction="http://www.trasen.com.cn/OPOrderCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDeptInfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetBaseDeptInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDoctorInfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetBaseDoctorInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderRegFlag">
+      <soap12:operation soapAction="http://www.trasen.com.cn/UpdateOrderRegFlag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPRegCancel">
+      <soap12:operation soapAction="http://www.trasen.com.cn/OPRegCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPatInfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/CheckPatInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMzFeeHz">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetMzFeeHz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderRegInfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetOrderRegInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderFeeByJmyy">
+      <soap12:operation soapAction="http://www.trasen.com.cn/SetOrderFeeByJmyy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorInfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetDoctorInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorDetailInfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetDoctorDetailInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TyFeeHz">
+      <soap12:operation soapAction="http://www.trasen.com.cn/TyFeeHz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPassward">
+      <soap12:operation soapAction="http://www.trasen.com.cn/SetPassward" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYYisqh">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetYYisqh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMPatinfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetMPatinfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZPatinfo">
+      <soap12:operation soapAction="http://www.trasen.com.cn/GetZPatinfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TrasenWSHttpGet" type="tns:TrasenWSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="NetTest">
+      <http:operation location="/NetTest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatInfo">
+      <http:operation location="/GetPatInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDCardCheck">
+      <http:operation location="/IDCardCheck" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard">
+      <http:operation location="/CreateCard" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JYMM">
+      <http:operation location="/JYMM" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard_ID">
+      <http:operation location="/CreateCard_ID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTel">
+      <http:operation location="/EditTel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPassWord">
+      <http:operation location="/EditPassWord" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCard">
+      <http:operation location="/UpdateCard" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BankChongZhi">
+      <http:operation location="/BankChongZhi" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOCKSList">
+      <http:operation location="/DOCKSList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOCHBList">
+      <http:operation location="/DOCHBList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPRegist">
+      <http:operation location="/OPRegist" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDiagRecord">
+      <http:operation location="/SearchDiagRecord" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBillList">
+      <http:operation location="/SearchBillList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPBillCharge">
+      <http:operation location="/OPBillCharge" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppNoList">
+      <http:operation location="/AppNoList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppNo">
+      <http:operation location="/GetAppNo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchReportList">
+      <http:operation location="/SearchReportList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintReport">
+      <http:operation location="/PrintReport" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatChargeList">
+      <http:operation location="/PatChargeList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MedicareWizard">
+      <http:operation location="/MedicareWizard" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFeeInfo">
+      <http:operation location="/GetPatDateFeeInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFee">
+      <http:operation location="/GetPatDateFee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZyDeposits">
+      <http:operation location="/ZyDeposits" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYPatInfo">
+      <http:operation location="/GetZYPatInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYDisChargeInfo">
+      <http:operation location="/GetZYDisChargeInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYFeeSumReport">
+      <http:operation location="/GetZYFeeSumReport" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderRegister">
+      <http:operation location="/OPOrderRegister" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderCancel">
+      <http:operation location="/OPOrderCancel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDeptInfo">
+      <http:operation location="/GetBaseDeptInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDoctorInfo">
+      <http:operation location="/GetBaseDoctorInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderRegFlag">
+      <http:operation location="/UpdateOrderRegFlag" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPRegCancel">
+      <http:operation location="/OPRegCancel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPatInfo">
+      <http:operation location="/CheckPatInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMzFeeHz">
+      <http:operation location="/GetMzFeeHz" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderRegInfo">
+      <http:operation location="/GetOrderRegInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderFeeByJmyy">
+      <http:operation location="/SetOrderFeeByJmyy" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorInfo">
+      <http:operation location="/GetDoctorInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorDetailInfo">
+      <http:operation location="/GetDoctorDetailInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TyFeeHz">
+      <http:operation location="/TyFeeHz" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPassward">
+      <http:operation location="/SetPassward" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <http:operation location="/GetPatientInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYYisqh">
+      <http:operation location="/GetYYisqh" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMPatinfo">
+      <http:operation location="/GetMPatinfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZPatinfo">
+      <http:operation location="/GetZPatinfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TrasenWSHttpPost" type="tns:TrasenWSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="NetTest">
+      <http:operation location="/NetTest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatInfo">
+      <http:operation location="/GetPatInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDCardCheck">
+      <http:operation location="/IDCardCheck" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard">
+      <http:operation location="/CreateCard" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JYMM">
+      <http:operation location="/JYMM" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCard_ID">
+      <http:operation location="/CreateCard_ID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTel">
+      <http:operation location="/EditTel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPassWord">
+      <http:operation location="/EditPassWord" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCard">
+      <http:operation location="/UpdateCard" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BankChongZhi">
+      <http:operation location="/BankChongZhi" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOCKSList">
+      <http:operation location="/DOCKSList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOCHBList">
+      <http:operation location="/DOCHBList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPRegist">
+      <http:operation location="/OPRegist" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDiagRecord">
+      <http:operation location="/SearchDiagRecord" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBillList">
+      <http:operation location="/SearchBillList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPBillCharge">
+      <http:operation location="/OPBillCharge" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppNoList">
+      <http:operation location="/AppNoList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppNo">
+      <http:operation location="/GetAppNo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchReportList">
+      <http:operation location="/SearchReportList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintReport">
+      <http:operation location="/PrintReport" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatChargeList">
+      <http:operation location="/PatChargeList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MedicareWizard">
+      <http:operation location="/MedicareWizard" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFeeInfo">
+      <http:operation location="/GetPatDateFeeInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatDateFee">
+      <http:operation location="/GetPatDateFee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZyDeposits">
+      <http:operation location="/ZyDeposits" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYPatInfo">
+      <http:operation location="/GetZYPatInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYDisChargeInfo">
+      <http:operation location="/GetZYDisChargeInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYFeeSumReport">
+      <http:operation location="/GetZYFeeSumReport" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderRegister">
+      <http:operation location="/OPOrderRegister" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPOrderCancel">
+      <http:operation location="/OPOrderCancel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDeptInfo">
+      <http:operation location="/GetBaseDeptInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseDoctorInfo">
+      <http:operation location="/GetBaseDoctorInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderRegFlag">
+      <http:operation location="/UpdateOrderRegFlag" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OPRegCancel">
+      <http:operation location="/OPRegCancel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPatInfo">
+      <http:operation location="/CheckPatInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMzFeeHz">
+      <http:operation location="/GetMzFeeHz" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderRegInfo">
+      <http:operation location="/GetOrderRegInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderFeeByJmyy">
+      <http:operation location="/SetOrderFeeByJmyy" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorInfo">
+      <http:operation location="/GetDoctorInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorDetailInfo">
+      <http:operation location="/GetDoctorDetailInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TyFeeHz">
+      <http:operation location="/TyFeeHz" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPassward">
+      <http:operation location="/SetPassward" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <http:operation location="/GetPatientInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYYisqh">
+      <http:operation location="/GetYYisqh" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMPatinfo">
+      <http:operation location="/GetMPatinfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZPatinfo">
+      <http:operation location="/GetZPatinfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TrasenWS">
+    <wsdl:port name="TrasenWSSoap" binding="tns:TrasenWSSoap">
+      <soap:address location="http://192.168.8.100/TrasenWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TrasenWSSoap12" binding="tns:TrasenWSSoap12">
+      <soap12:address location="http://192.168.8.100/TrasenWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TrasenWSHttpGet" binding="tns:TrasenWSHttpGet">
+      <http:address location="http://192.168.8.100/TrasenWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TrasenWSHttpPost" binding="tns:TrasenWSHttpPost">
+      <http:address location="http://192.168.8.100/TrasenWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

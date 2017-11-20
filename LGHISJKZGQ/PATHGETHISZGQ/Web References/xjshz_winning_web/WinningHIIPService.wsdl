@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://www.winning.com.cn/" targetNamespace="http://www.winning.com.cn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="servicePolicy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsam:Addressing wsp:Optional="true" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+          <wsp:Policy>
+            <wsam:AnonymousResponses />
+          </wsp:Policy>
+        </wsam:Addressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.winning.com.cn/">
+      <xs:element name="TechService">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="actionCode" type="xs:string" />
+            <xs:element name="xmlContent" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TechServiceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="returnCode" type="xs:int" />
+            <xs:element minOccurs="0" name="returnXml" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TechServiceFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="TechServiceFault">
+    <wsdl:part name="parameters" element="ns0:TechServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="TechServiceResponse">
+    <wsdl:part name="parameters" element="ns0:TechServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="TechServiceRequest">
+    <wsdl:part name="parameters" element="ns0:TechService" />
+  </wsdl:message>
+  <wsdl:portType wsp:PolicyURIs="#servicePolicy" name="WinningHIIPServicePortType">
+    <wsdl:operation name="TechService">
+      <wsdl:input wsaw:Action="urn:TechService" message="ns0:TechServiceRequest" />
+      <wsdl:output wsaw:Action="http://www.winning.com.cn//WinningHIIPServicePortType/TechServiceResponse" message="ns0:TechServiceResponse" />
+      <wsdl:fault wsaw:Action="http://www.winning.com.cn//WinningHIIPServicePortType/TechServiceFault" name="TechServiceFault" message="ns0:TechServiceFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WinningHIIPServiceSoap12Binding" type="ns0:WinningHIIPServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsdl:operation name="TechService">
+      <soap12:operation soapAction="urn:TechService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TechServiceFault">
+        <soap12:fault use="literal" name="TechServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WinningHIIPServiceSoap11Binding" type="ns0:WinningHIIPServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsdl:operation name="TechService">
+      <soap:operation soapAction="urn:TechService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TechServiceFault">
+        <soap:fault use="literal" name="TechServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WinningHIIPService">
+    <wsdl:port name="WinningHIIPServiceHttpSoap11Endpoint" binding="ns0:WinningHIIPServiceSoap11Binding">
+      <soap:address location="http://dfg:29000/services/WinningHIIPService.WinningHIIPServiceHttpSoap11Endpoint" />
+    </wsdl:port>
+    <wsdl:port name="WinningHIIPServiceHttpSoap12Endpoint" binding="ns0:WinningHIIPServiceSoap12Binding">
+      <soap12:address location="http://dfg:29000/services/WinningHIIPService.WinningHIIPServiceHttpSoap12Endpoint" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

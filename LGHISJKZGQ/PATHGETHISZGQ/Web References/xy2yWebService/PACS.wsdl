@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AutoOPBillCharge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="pInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoOPBillChargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="AutoOPBillChargeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BillInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="pInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BillInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="BillInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="pInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ModifyStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="pInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="RegInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetReportInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="pInput">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:maxLength value="32767" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetReportInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="SetReportInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AutoOPBillChargeSoapIn">
+    <wsdl:part name="parameters" element="s0:AutoOPBillCharge" />
+  </wsdl:message>
+  <wsdl:message name="AutoOPBillChargeSoapOut">
+    <wsdl:part name="parameters" element="s0:AutoOPBillChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillInfoSoapIn">
+    <wsdl:part name="parameters" element="s0:BillInfo" />
+  </wsdl:message>
+  <wsdl:message name="BillInfoSoapOut">
+    <wsdl:part name="parameters" element="s0:BillInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyStatusSoapIn">
+    <wsdl:part name="parameters" element="s0:ModifyStatus" />
+  </wsdl:message>
+  <wsdl:message name="ModifyStatusSoapOut">
+    <wsdl:part name="parameters" element="s0:ModifyStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegInfoSoapIn">
+    <wsdl:part name="parameters" element="s0:RegInfo" />
+  </wsdl:message>
+  <wsdl:message name="RegInfoSoapOut">
+    <wsdl:part name="parameters" element="s0:RegInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetReportInfoSoapIn">
+    <wsdl:part name="parameters" element="s0:SetReportInfo" />
+  </wsdl:message>
+  <wsdl:message name="SetReportInfoSoapOut">
+    <wsdl:part name="parameters" element="s0:SetReportInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="XYEPACSSoap">
+    <wsdl:operation name="AutoOPBillCharge">
+      <wsdl:input message="s0:AutoOPBillChargeSoapIn" />
+      <wsdl:output message="s0:AutoOPBillChargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BillInfo">
+      <wsdl:input message="s0:BillInfoSoapIn" />
+      <wsdl:output message="s0:BillInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyStatus">
+      <wsdl:input message="s0:ModifyStatusSoapIn" />
+      <wsdl:output message="s0:ModifyStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegInfo">
+      <wsdl:input message="s0:RegInfoSoapIn" />
+      <wsdl:output message="s0:RegInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetReportInfo">
+      <wsdl:input message="s0:SetReportInfoSoapIn" />
+      <wsdl:output message="s0:SetReportInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="XYEPACSSoap" type="s0:XYEPACSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AutoOPBillCharge">
+      <soap:operation soapAction="http://tempuri.org//PACS.BS.Service.AutoOPBillCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BillInfo">
+      <soap:operation soapAction="http://tempuri.org//PACS.BS.Service.BillInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyStatus">
+      <soap:operation soapAction="http://tempuri.org//PACS.BS.Service.ModifyStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegInfo">
+      <soap:operation soapAction="http://tempuri.org//PACS.BS.Service.RegInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetReportInfo">
+      <soap:operation soapAction="http://tempuri.org//PACS.BS.Service.SetReportInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="XYEPACS">
+    <wsdl:port name="XYEPACSSoap" binding="s0:XYEPACSSoap">
+      <soap:address location="http://172.16.200.119:57772/csp/xyepacs/PACS.BS.Service.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

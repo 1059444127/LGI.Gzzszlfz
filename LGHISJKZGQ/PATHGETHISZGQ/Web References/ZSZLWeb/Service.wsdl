@@ -1,0 +1,2654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://HIS.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://HIS.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://HIS.org/">
+      <s:element name="HellorWorld">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HellorWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HellorWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InitConn">
+        <s:complexType />
+      </s:element>
+      <s:element name="InitConnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InitConnResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPatientNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="card_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPatientNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAllPatientNoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPatientNoByPatientNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="card_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPatientNoByPatientNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllPatientNoByPatientNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfirmInfoOfXCGByICCardNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IC_Cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfirmInfoOfXCGByICCardNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConfirmInfoOfXCGByICCardNOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfirmInfoOfXCGByCardNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfirmInfoOfXCGByCardNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConfirmInfoOfXCGByCardNOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfirmInfoOfXDTByCardNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfirmInfoOfXDTByCardNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConfirmInfoOfXDTByCardNOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfirmInfoOfXDTByICCardNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IC_Cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfirmInfoOfXDTByICCardNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConfirmInfoOfXDTByICCardNOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoByCardorIcCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoByCardorIcCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientInfoByCardorIcCardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientBaseInfoByCardorIcCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientBaseInfoByCardorIcCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientBaseInfoByCardorIcCardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TestResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUndrugInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUndrugInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUndrugInfoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDrugInfoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetYBYPMLByPactCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pact_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetYBYPMLByPactCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetYBYPMLByPactCodeResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientNoByCardNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patient_no">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientNoByCardNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPatientNoByCardNoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="patient_no">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOperationInfoByDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="operationInfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOperationInfoByDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOperationInfoByDateResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="operationInfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAllRegisterInfoBySeedate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptschema">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="seedate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAllRegisterInfoBySeedateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryAllRegisterInfoBySeedateResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptschema">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryInhosInfoByICCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inhos_info">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ic_cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryInhosInfoByICCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryInhosInfoByICCardResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="inhos_info">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryInhosDrugFeeInfoByCardNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inhos_feeinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="card_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="in_times" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryInhosDrugFeeInfoByCardNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryInhosDrugFeeInfoByCardNoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="inhos_feeinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryInhosUnDrugFeeInfoByCardNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inhos_feeinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="card_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="in_times" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryInhosUnDrugFeeInfoByCardNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryInhosUnDrugFeeInfoByCardNoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="inhos_feeinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryOutPatientFeeDetailByICCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="out_feeinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ic_cardno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryOutPatientFeeDetailByICCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryOutPatientFeeDetailByICCardResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="out_feeinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRegInfoByICCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reg_info">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ic_cardno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRegInfoByICCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryRegInfoByICCardResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="reg_info">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryChkInfoByICCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chk_info">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ic_cardno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryChkInfoByICCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryChkInfoByICCardResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="chk_info">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRegInfobyDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reg_info">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRegInfobyDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryRegInfobyDateResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="reg_info">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryBySeedate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptschema">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="seedate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryBySeedateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryBySeedateResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptschema">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryDoctBySeedate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doctschema">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="seedate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="regcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryDoctBySeedateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryDoctBySeedateResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="doctschema">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAutregde">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAutregdeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAutregdeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRegLev">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="regfee">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="reglev" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRegLevResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryRegLevResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="regfee">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPatientInfobyCardNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPatientInfobyCardNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryPatientInfobyCardNoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="patientinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveAutoPatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clinicseeno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="schemaid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clinic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="autcost" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oldcost" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveAutoPatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveAutoPatientResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="clinicseeno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoByIccard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ic_cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoByIccardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientInfoByIccardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoBycardNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="card_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoBycardNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientInfoBycardNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserLoginResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Decrypt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecryptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DecryptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCasPhotoCardNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CARD_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STAS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PHOTO_DATE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PACKAGE_DATE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LAST_OUT_DATE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCasPhotoCardNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertCasPhotoCardNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCasPhotoCardNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CARD_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PHOTO_DATE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCasPhotoCardNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateCasPhotoCardNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLastPhotoOutDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CARD_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LASTPHOTO_OUT_DATE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLastPhotoOutDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateLastPhotoOutDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCardNoBySecondCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CardNoList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCardNoBySecondCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryCardNoBySecondCodeResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNoList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryDiagnoseByInpatientNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DiagnoseList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="inpatientno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryDiagnoseByInpatientNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryDiagnoseByInpatientNoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DiagnoseList">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPhotoCardNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CARD_NO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPhotoCardNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPhotoCardNoResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMZPatientInfoForGYS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMZPatientInfoForGYSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMZPatientInfoForGYSResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="patientinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZYPatientInfoForGYS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZYPatientInfoForGYSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetZYPatientInfoForGYSResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="patientinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeptInfoForGYS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeptInfoForGYSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDeptInfoForGYSResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNurseInfoForGYS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nurseinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNurseInfoForGYSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetNurseInfoForGYSResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nurseinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOPSInfoForGYS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="cardno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOPSInfoForGYSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOPSInfoForGYSResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="patientinfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoByInpatientNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InpatientNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoByInpatientNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientInfoByInpatientNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveLISFSRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="empi_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="card_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveLISFSRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveLISFSRecordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientWithNewOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="time_interval" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dept_code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientWithNewOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPatientWithNewOrderResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCancelSchema">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="schemaInfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCancelSchemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCancelSchemaResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="schemaInfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHYXTerminal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cardno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HYXInfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHYXTerminalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetHYXTerminalResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="HYXInfo">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HellorWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HellorWorld" />
+  </wsdl:message>
+  <wsdl:message name="HellorWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HellorWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="InitConnSoapIn">
+    <wsdl:part name="parameters" element="tns:InitConn" />
+  </wsdl:message>
+  <wsdl:message name="InitConnSoapOut">
+    <wsdl:part name="parameters" element="tns:InitConnResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPatientNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllPatientNo" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPatientNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllPatientNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPatientNoByPatientNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllPatientNoByPatientNo" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPatientNoByPatientNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllPatientNoByPatientNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConfirmInfoOfXCGByICCardNOSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConfirmInfoOfXCGByICCardNO" />
+  </wsdl:message>
+  <wsdl:message name="GetConfirmInfoOfXCGByICCardNOSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConfirmInfoOfXCGByICCardNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConfirmInfoOfXCGByCardNOSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConfirmInfoOfXCGByCardNO" />
+  </wsdl:message>
+  <wsdl:message name="GetConfirmInfoOfXCGByCardNOSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConfirmInfoOfXCGByCardNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConfirmInfoOfXDTByCardNOSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConfirmInfoOfXDTByCardNO" />
+  </wsdl:message>
+  <wsdl:message name="GetConfirmInfoOfXDTByCardNOSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConfirmInfoOfXDTByCardNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConfirmInfoOfXDTByICCardNOSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConfirmInfoOfXDTByICCardNO" />
+  </wsdl:message>
+  <wsdl:message name="GetConfirmInfoOfXDTByICCardNOSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConfirmInfoOfXDTByICCardNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoByCardorIcCardSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoByCardorIcCard" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoByCardorIcCardSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoByCardorIcCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientBaseInfoByCardorIcCardSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientBaseInfoByCardorIcCard" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientBaseInfoByCardorIcCardSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientBaseInfoByCardorIcCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUndrugInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUndrugInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUndrugInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUndrugInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDrugInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDrugInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetYBYPMLByPactCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetYBYPMLByPactCode" />
+  </wsdl:message>
+  <wsdl:message name="GetYBYPMLByPactCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetYBYPMLByPactCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientNoByCardNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientNoByCardNo" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientNoByCardNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientNoByCardNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOperationInfoByDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOperationInfoByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetOperationInfoByDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOperationInfoByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllRegisterInfoBySeedateSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAllRegisterInfoBySeedate" />
+  </wsdl:message>
+  <wsdl:message name="QueryAllRegisterInfoBySeedateSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAllRegisterInfoBySeedateResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryInhosInfoByICCardSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryInhosInfoByICCard" />
+  </wsdl:message>
+  <wsdl:message name="QueryInhosInfoByICCardSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryInhosInfoByICCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryInhosDrugFeeInfoByCardNoSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryInhosDrugFeeInfoByCardNo" />
+  </wsdl:message>
+  <wsdl:message name="QueryInhosDrugFeeInfoByCardNoSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryInhosDrugFeeInfoByCardNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryInhosUnDrugFeeInfoByCardNoSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryInhosUnDrugFeeInfoByCardNo" />
+  </wsdl:message>
+  <wsdl:message name="QueryInhosUnDrugFeeInfoByCardNoSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryInhosUnDrugFeeInfoByCardNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryOutPatientFeeDetailByICCardSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryOutPatientFeeDetailByICCard" />
+  </wsdl:message>
+  <wsdl:message name="QueryOutPatientFeeDetailByICCardSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryOutPatientFeeDetailByICCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRegInfoByICCardSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRegInfoByICCard" />
+  </wsdl:message>
+  <wsdl:message name="QueryRegInfoByICCardSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRegInfoByICCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryChkInfoByICCardSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryChkInfoByICCard" />
+  </wsdl:message>
+  <wsdl:message name="QueryChkInfoByICCardSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryChkInfoByICCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRegInfobyDateSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRegInfobyDate" />
+  </wsdl:message>
+  <wsdl:message name="QueryRegInfobyDateSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRegInfobyDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryBySeedateSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryBySeedate" />
+  </wsdl:message>
+  <wsdl:message name="QueryBySeedateSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryBySeedateResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryDoctBySeedateSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryDoctBySeedate" />
+  </wsdl:message>
+  <wsdl:message name="QueryDoctBySeedateSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryDoctBySeedateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAutregdeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAutregde" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAutregdeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAutregdeResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRegLevSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRegLev" />
+  </wsdl:message>
+  <wsdl:message name="QueryRegLevSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRegLevResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPatientInfobyCardNoSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPatientInfobyCardNo" />
+  </wsdl:message>
+  <wsdl:message name="QueryPatientInfobyCardNoSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPatientInfobyCardNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveAutoPatientSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveAutoPatient" />
+  </wsdl:message>
+  <wsdl:message name="SaveAutoPatientSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveAutoPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoByIccardSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoByIccard" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoByIccardSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoByIccardResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoBycardNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoBycardNo" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoBycardNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoBycardNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:UserLogin" />
+  </wsdl:message>
+  <wsdl:message name="UserLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:UserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="DecryptSoapIn">
+    <wsdl:part name="parameters" element="tns:Decrypt" />
+  </wsdl:message>
+  <wsdl:message name="DecryptSoapOut">
+    <wsdl:part name="parameters" element="tns:DecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertCasPhotoCardNoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCasPhotoCardNo" />
+  </wsdl:message>
+  <wsdl:message name="InsertCasPhotoCardNoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCasPhotoCardNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCasPhotoCardNoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCasPhotoCardNo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCasPhotoCardNoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCasPhotoCardNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLastPhotoOutDateSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateLastPhotoOutDate" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLastPhotoOutDateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateLastPhotoOutDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryCardNoBySecondCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryCardNoBySecondCode" />
+  </wsdl:message>
+  <wsdl:message name="QueryCardNoBySecondCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryCardNoBySecondCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryDiagnoseByInpatientNoSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryDiagnoseByInpatientNo" />
+  </wsdl:message>
+  <wsdl:message name="QueryDiagnoseByInpatientNoSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryDiagnoseByInpatientNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPhotoCardNoSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPhotoCardNo" />
+  </wsdl:message>
+  <wsdl:message name="QueryPhotoCardNoSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPhotoCardNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMZPatientInfoForGYSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMZPatientInfoForGYS" />
+  </wsdl:message>
+  <wsdl:message name="GetMZPatientInfoForGYSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMZPatientInfoForGYSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetZYPatientInfoForGYSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetZYPatientInfoForGYS" />
+  </wsdl:message>
+  <wsdl:message name="GetZYPatientInfoForGYSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetZYPatientInfoForGYSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDeptInfoForGYSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeptInfoForGYS" />
+  </wsdl:message>
+  <wsdl:message name="GetDeptInfoForGYSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeptInfoForGYSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNurseInfoForGYSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNurseInfoForGYS" />
+  </wsdl:message>
+  <wsdl:message name="GetNurseInfoForGYSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNurseInfoForGYSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOPSInfoForGYSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOPSInfoForGYS" />
+  </wsdl:message>
+  <wsdl:message name="GetOPSInfoForGYSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOPSInfoForGYSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoByInpatientNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoByInpatientNo" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoByInpatientNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoByInpatientNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveLISFSRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveLISFSRecord" />
+  </wsdl:message>
+  <wsdl:message name="SaveLISFSRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveLISFSRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientWithNewOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientWithNewOrder" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientWithNewOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientWithNewOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCancelSchemaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCancelSchema" />
+  </wsdl:message>
+  <wsdl:message name="GetCancelSchemaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCancelSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHYXTerminalSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHYXTerminal" />
+  </wsdl:message>
+  <wsdl:message name="GetHYXTerminalSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHYXTerminalResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="HellorWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">测试webservice调用</wsdl:documentation>
+      <wsdl:input message="tns:HellorWorldSoapIn" />
+      <wsdl:output message="tns:HellorWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InitConn">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">LIS 那边之前有调用到这个函数，现在没用了</wsdl:documentation>
+      <wsdl:input message="tns:InitConnSoapIn" />
+      <wsdl:output message="tns:InitConnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPatientNo">
+      <wsdl:input message="tns:GetAllPatientNoSoapIn" />
+      <wsdl:output message="tns:GetAllPatientNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPatientNoByPatientNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据任意病历号获取患者的所有病历号</wsdl:documentation>
+      <wsdl:input message="tns:GetAllPatientNoByPatientNoSoapIn" />
+      <wsdl:output message="tns:GetAllPatientNoByPatientNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXCGByICCardNO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据任意病历号获取患者的所有病历号</wsdl:documentation>
+      <wsdl:input message="tns:GetConfirmInfoOfXCGByICCardNOSoapIn" />
+      <wsdl:output message="tns:GetConfirmInfoOfXCGByICCardNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXCGByCardNO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据任意病历号获取患者的所有病历号</wsdl:documentation>
+      <wsdl:input message="tns:GetConfirmInfoOfXCGByCardNOSoapIn" />
+      <wsdl:output message="tns:GetConfirmInfoOfXCGByCardNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXDTByCardNO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据病历号查询是否有心电图项目</wsdl:documentation>
+      <wsdl:input message="tns:GetConfirmInfoOfXDTByCardNOSoapIn" />
+      <wsdl:output message="tns:GetConfirmInfoOfXDTByCardNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXDTByICCardNO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据诊疗卡号查询是否有心电图项目</wsdl:documentation>
+      <wsdl:input message="tns:GetConfirmInfoOfXDTByICCardNOSoapIn" />
+      <wsdl:output message="tns:GetConfirmInfoOfXDTByICCardNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByCardorIcCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据诊疗卡号或者是病历号查询患者病理检验信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoByCardorIcCardSoapIn" />
+      <wsdl:output message="tns:GetPatientInfoByCardorIcCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientBaseInfoByCardorIcCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据诊疗卡号或者是病历号查询患者基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientBaseInfoByCardorIcCardSoapIn" />
+      <wsdl:output message="tns:GetPatientBaseInfoByCardorIcCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">test</wsdl:documentation>
+      <wsdl:input message="tns:TestSoapIn" />
+      <wsdl:output message="tns:TestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUndrugInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取所有的诊疗项目</wsdl:documentation>
+      <wsdl:input message="tns:GetUndrugInfoSoapIn" />
+      <wsdl:output message="tns:GetUndrugInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取所有的药品信息</wsdl:documentation>
+      <wsdl:input message="tns:GetDrugInfoSoapIn" />
+      <wsdl:output message="tns:GetDrugInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYBYPMLByPactCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过卡号获取病人基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetYBYPMLByPactCodeSoapIn" />
+      <wsdl:output message="tns:GetYBYPMLByPactCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientNoByCardNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据卡号获取患者的所有病历号（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientNoByCardNoSoapIn" />
+      <wsdl:output message="tns:GetPatientNoByCardNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationInfoByDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取指定日期的手术安排信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:GetOperationInfoByDateSoapIn" />
+      <wsdl:output message="tns:GetOperationInfoByDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllRegisterInfoBySeedate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据日期获取普通挂号排班信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryAllRegisterInfoBySeedateSoapIn" />
+      <wsdl:output message="tns:QueryAllRegisterInfoBySeedateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryInhosInfoByICCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据卡号获取住院次数信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryInhosInfoByICCardSoapIn" />
+      <wsdl:output message="tns:QueryInhosInfoByICCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryInhosDrugFeeInfoByCardNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据病历号和住院次数获取该次住院的费用明细（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryInhosDrugFeeInfoByCardNoSoapIn" />
+      <wsdl:output message="tns:QueryInhosDrugFeeInfoByCardNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryInhosUnDrugFeeInfoByCardNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据病历号和住院次数获取该次住院的费用明细（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryInhosUnDrugFeeInfoByCardNoSoapIn" />
+      <wsdl:output message="tns:QueryInhosUnDrugFeeInfoByCardNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPatientFeeDetailByICCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据卡号和时间获取门诊费用明细（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryOutPatientFeeDetailByICCardSoapIn" />
+      <wsdl:output message="tns:QueryOutPatientFeeDetailByICCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRegInfoByICCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据卡号和时间获取挂号信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryRegInfoByICCardSoapIn" />
+      <wsdl:output message="tns:QueryRegInfoByICCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryChkInfoByICCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据卡号和时间获取检查预约信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryChkInfoByICCardSoapIn" />
+      <wsdl:output message="tns:QueryChkInfoByICCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRegInfobyDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据时间获取挂号相关信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryRegInfobyDateSoapIn" />
+      <wsdl:output message="tns:QueryRegInfobyDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryBySeedate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据日期获取普通挂号排班信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryBySeedateSoapIn" />
+      <wsdl:output message="tns:QueryBySeedateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDoctBySeedate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据日期和挂号科室获取专科、专家挂号排班信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryDoctBySeedateSoapIn" />
+      <wsdl:output message="tns:QueryDoctBySeedateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAutregde">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">减看诊和自助挂号限额（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAutregdeSoapIn" />
+      <wsdl:output message="tns:UpdateAutregdeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRegLev">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据挂号级别查询挂号费，只处理自费（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryRegLevSoapIn" />
+      <wsdl:output message="tns:QueryRegLevSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPatientInfobyCardNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据诊疗卡号获取病人基本信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryPatientInfobyCardNoSoapIn" />
+      <wsdl:output message="tns:QueryPatientInfobyCardNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAutoPatient">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据诊疗卡号获取病人基本信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:SaveAutoPatientSoapIn" />
+      <wsdl:output message="tns:SaveAutoPatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByIccard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过卡号获取病人基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoByIccardSoapIn" />
+      <wsdl:output message="tns:GetPatientInfoByIccardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoBycardNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过卡号获取病人基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoBycardNoSoapIn" />
+      <wsdl:output message="tns:GetPatientInfoBycardNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">参数：用户名，密码 
+ 返回值 0-成功，-1 - 失败，-2-用户已经停用，-3-用户已经作废</wsdl:documentation>
+      <wsdl:input message="tns:UserLoginSoapIn" />
+      <wsdl:output message="tns:UserLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">参数：密码密文
+ 返回值 明文</wsdl:documentation>
+      <wsdl:input message="tns:DecryptSoapIn" />
+      <wsdl:output message="tns:DecryptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCasPhotoCardNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">插入已翻拍病历信息（1－成功、0-插入失败、－1－其他错误）</wsdl:documentation>
+      <wsdl:input message="tns:InsertCasPhotoCardNoSoapIn" />
+      <wsdl:output message="tns:InsertCasPhotoCardNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCasPhotoCardNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新已翻拍病历信息（2-该病历号不存在、1－成功、0-更新失败、－1－其他错误）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateCasPhotoCardNoSoapIn" />
+      <wsdl:output message="tns:UpdateCasPhotoCardNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastPhotoOutDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新已翻拍病历的最后出院时间信息（2-该病历号不存在、1－成功、0-更新失败、－1－其他错误）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateLastPhotoOutDateSoapIn" />
+      <wsdl:output message="tns:UpdateLastPhotoOutDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCardNoBySecondCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据C号获取病人病历号信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryCardNoBySecondCodeSoapIn" />
+      <wsdl:output message="tns:QueryCardNoBySecondCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDiagnoseByInpatientNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据病历号获取诊断信息（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:QueryDiagnoseByInpatientNoSoapIn" />
+      <wsdl:output message="tns:QueryDiagnoseByInpatientNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPhotoCardNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回病人照片数据流（Byte）</wsdl:documentation>
+      <wsdl:input message="tns:QueryPhotoCardNoSoapIn" />
+      <wsdl:output message="tns:QueryPhotoCardNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMZPatientInfoForGYS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">供应室接口，获取门诊病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetMZPatientInfoForGYSSoapIn" />
+      <wsdl:output message="tns:GetMZPatientInfoForGYSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZYPatientInfoForGYS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">供应室接口，获取在院病人信息</wsdl:documentation>
+      <wsdl:input message="tns:GetZYPatientInfoForGYSSoapIn" />
+      <wsdl:output message="tns:GetZYPatientInfoForGYSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptInfoForGYS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">供应室接口，获取科室信息</wsdl:documentation>
+      <wsdl:input message="tns:GetDeptInfoForGYSSoapIn" />
+      <wsdl:output message="tns:GetDeptInfoForGYSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNurseInfoForGYS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">供应室接口，获取护士信息</wsdl:documentation>
+      <wsdl:input message="tns:GetNurseInfoForGYSSoapIn" />
+      <wsdl:output message="tns:GetNurseInfoForGYSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOPSInfoForGYS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">供应室接口，获取手术信息</wsdl:documentation>
+      <wsdl:input message="tns:GetOPSInfoForGYSSoapIn" />
+      <wsdl:output message="tns:GetOPSInfoForGYSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByInpatientNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过流水号获取病人基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoByInpatientNoSoapIn" />
+      <wsdl:output message="tns:GetPatientInfoByInpatientNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveLISFSRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检验系统调用短信平台</wsdl:documentation>
+      <wsdl:input message="tns:SaveLISFSRecordSoapIn" />
+      <wsdl:output message="tns:SaveLISFSRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientWithNewOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检验系统调用短信平台</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientWithNewOrderSoapIn" />
+      <wsdl:output message="tns:GetPatientWithNewOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCancelSchema">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">被取消排班信息</wsdl:documentation>
+      <wsdl:input message="tns:GetCancelSchemaSoapIn" />
+      <wsdl:output message="tns:GetCancelSchemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHYXTerminal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取核医学科的终端确认（1－成功、－1－失败）</wsdl:documentation>
+      <wsdl:input message="tns:GetHYXTerminalSoapIn" />
+      <wsdl:output message="tns:GetHYXTerminalSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HellorWorld">
+      <soap:operation soapAction="http://HIS.org/HellorWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitConn">
+      <soap:operation soapAction="http://HIS.org/InitConn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPatientNo">
+      <soap:operation soapAction="http://HIS.org/GetAllPatientNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPatientNoByPatientNo">
+      <soap:operation soapAction="http://HIS.org/GetAllPatientNoByPatientNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXCGByICCardNO">
+      <soap:operation soapAction="http://HIS.org/GetConfirmInfoOfXCGByICCardNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXCGByCardNO">
+      <soap:operation soapAction="http://HIS.org/GetConfirmInfoOfXCGByCardNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXDTByCardNO">
+      <soap:operation soapAction="http://HIS.org/GetConfirmInfoOfXDTByCardNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXDTByICCardNO">
+      <soap:operation soapAction="http://HIS.org/GetConfirmInfoOfXDTByICCardNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByCardorIcCard">
+      <soap:operation soapAction="http://HIS.org/GetPatientInfoByCardorIcCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientBaseInfoByCardorIcCard">
+      <soap:operation soapAction="http://HIS.org/GetPatientBaseInfoByCardorIcCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://HIS.org/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUndrugInfo">
+      <soap:operation soapAction="http://HIS.org/GetUndrugInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugInfo">
+      <soap:operation soapAction="http://HIS.org/GetDrugInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYBYPMLByPactCode">
+      <soap:operation soapAction="http://HIS.org/GetYBYPMLByPactCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientNoByCardNo">
+      <soap:operation soapAction="http://HIS.org/GetPatientNoByCardNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationInfoByDate">
+      <soap:operation soapAction="http://HIS.org/GetOperationInfoByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllRegisterInfoBySeedate">
+      <soap:operation soapAction="http://HIS.org/QueryAllRegisterInfoBySeedate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInhosInfoByICCard">
+      <soap:operation soapAction="http://HIS.org/QueryInhosInfoByICCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInhosDrugFeeInfoByCardNo">
+      <soap:operation soapAction="http://HIS.org/QueryInhosDrugFeeInfoByCardNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInhosUnDrugFeeInfoByCardNo">
+      <soap:operation soapAction="http://HIS.org/QueryInhosUnDrugFeeInfoByCardNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPatientFeeDetailByICCard">
+      <soap:operation soapAction="http://HIS.org/QueryOutPatientFeeDetailByICCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRegInfoByICCard">
+      <soap:operation soapAction="http://HIS.org/QueryRegInfoByICCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryChkInfoByICCard">
+      <soap:operation soapAction="http://HIS.org/QueryChkInfoByICCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRegInfobyDate">
+      <soap:operation soapAction="http://HIS.org/QueryRegInfobyDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBySeedate">
+      <soap:operation soapAction="http://HIS.org/QueryBySeedate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDoctBySeedate">
+      <soap:operation soapAction="http://HIS.org/QueryDoctBySeedate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAutregde">
+      <soap:operation soapAction="http://HIS.org/UpdateAutregde" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRegLev">
+      <soap:operation soapAction="http://HIS.org/QueryRegLev" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPatientInfobyCardNo">
+      <soap:operation soapAction="http://HIS.org/QueryPatientInfobyCardNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAutoPatient">
+      <soap:operation soapAction="http://HIS.org/SaveAutoPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByIccard">
+      <soap:operation soapAction="http://HIS.org/GetPatientInfoByIccard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoBycardNo">
+      <soap:operation soapAction="http://HIS.org/GetPatientInfoBycardNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <soap:operation soapAction="http://HIS.org/UserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <soap:operation soapAction="http://HIS.org/Decrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCasPhotoCardNo">
+      <soap:operation soapAction="http://HIS.org/InsertCasPhotoCardNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCasPhotoCardNo">
+      <soap:operation soapAction="http://HIS.org/UpdateCasPhotoCardNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastPhotoOutDate">
+      <soap:operation soapAction="http://HIS.org/UpdateLastPhotoOutDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCardNoBySecondCode">
+      <soap:operation soapAction="http://HIS.org/QueryCardNoBySecondCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDiagnoseByInpatientNo">
+      <soap:operation soapAction="http://HIS.org/QueryDiagnoseByInpatientNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPhotoCardNo">
+      <soap:operation soapAction="http://HIS.org/QueryPhotoCardNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMZPatientInfoForGYS">
+      <soap:operation soapAction="http://HIS.org/GetMZPatientInfoForGYS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYPatientInfoForGYS">
+      <soap:operation soapAction="http://HIS.org/GetZYPatientInfoForGYS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptInfoForGYS">
+      <soap:operation soapAction="http://HIS.org/GetDeptInfoForGYS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNurseInfoForGYS">
+      <soap:operation soapAction="http://HIS.org/GetNurseInfoForGYS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPSInfoForGYS">
+      <soap:operation soapAction="http://HIS.org/GetOPSInfoForGYS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByInpatientNo">
+      <soap:operation soapAction="http://HIS.org/GetPatientInfoByInpatientNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLISFSRecord">
+      <soap:operation soapAction="http://HIS.org/SaveLISFSRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientWithNewOrder">
+      <soap:operation soapAction="http://HIS.org/GetPatientWithNewOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCancelSchema">
+      <soap:operation soapAction="http://HIS.org/GetCancelSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHYXTerminal">
+      <soap:operation soapAction="http://HIS.org/GetHYXTerminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HellorWorld">
+      <soap12:operation soapAction="http://HIS.org/HellorWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitConn">
+      <soap12:operation soapAction="http://HIS.org/InitConn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPatientNo">
+      <soap12:operation soapAction="http://HIS.org/GetAllPatientNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPatientNoByPatientNo">
+      <soap12:operation soapAction="http://HIS.org/GetAllPatientNoByPatientNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXCGByICCardNO">
+      <soap12:operation soapAction="http://HIS.org/GetConfirmInfoOfXCGByICCardNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXCGByCardNO">
+      <soap12:operation soapAction="http://HIS.org/GetConfirmInfoOfXCGByCardNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXDTByCardNO">
+      <soap12:operation soapAction="http://HIS.org/GetConfirmInfoOfXDTByCardNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmInfoOfXDTByICCardNO">
+      <soap12:operation soapAction="http://HIS.org/GetConfirmInfoOfXDTByICCardNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByCardorIcCard">
+      <soap12:operation soapAction="http://HIS.org/GetPatientInfoByCardorIcCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientBaseInfoByCardorIcCard">
+      <soap12:operation soapAction="http://HIS.org/GetPatientBaseInfoByCardorIcCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://HIS.org/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUndrugInfo">
+      <soap12:operation soapAction="http://HIS.org/GetUndrugInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugInfo">
+      <soap12:operation soapAction="http://HIS.org/GetDrugInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYBYPMLByPactCode">
+      <soap12:operation soapAction="http://HIS.org/GetYBYPMLByPactCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientNoByCardNo">
+      <soap12:operation soapAction="http://HIS.org/GetPatientNoByCardNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationInfoByDate">
+      <soap12:operation soapAction="http://HIS.org/GetOperationInfoByDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllRegisterInfoBySeedate">
+      <soap12:operation soapAction="http://HIS.org/QueryAllRegisterInfoBySeedate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInhosInfoByICCard">
+      <soap12:operation soapAction="http://HIS.org/QueryInhosInfoByICCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInhosDrugFeeInfoByCardNo">
+      <soap12:operation soapAction="http://HIS.org/QueryInhosDrugFeeInfoByCardNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryInhosUnDrugFeeInfoByCardNo">
+      <soap12:operation soapAction="http://HIS.org/QueryInhosUnDrugFeeInfoByCardNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOutPatientFeeDetailByICCard">
+      <soap12:operation soapAction="http://HIS.org/QueryOutPatientFeeDetailByICCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRegInfoByICCard">
+      <soap12:operation soapAction="http://HIS.org/QueryRegInfoByICCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryChkInfoByICCard">
+      <soap12:operation soapAction="http://HIS.org/QueryChkInfoByICCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRegInfobyDate">
+      <soap12:operation soapAction="http://HIS.org/QueryRegInfobyDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBySeedate">
+      <soap12:operation soapAction="http://HIS.org/QueryBySeedate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDoctBySeedate">
+      <soap12:operation soapAction="http://HIS.org/QueryDoctBySeedate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAutregde">
+      <soap12:operation soapAction="http://HIS.org/UpdateAutregde" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRegLev">
+      <soap12:operation soapAction="http://HIS.org/QueryRegLev" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPatientInfobyCardNo">
+      <soap12:operation soapAction="http://HIS.org/QueryPatientInfobyCardNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAutoPatient">
+      <soap12:operation soapAction="http://HIS.org/SaveAutoPatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByIccard">
+      <soap12:operation soapAction="http://HIS.org/GetPatientInfoByIccard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoBycardNo">
+      <soap12:operation soapAction="http://HIS.org/GetPatientInfoBycardNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLogin">
+      <soap12:operation soapAction="http://HIS.org/UserLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <soap12:operation soapAction="http://HIS.org/Decrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCasPhotoCardNo">
+      <soap12:operation soapAction="http://HIS.org/InsertCasPhotoCardNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCasPhotoCardNo">
+      <soap12:operation soapAction="http://HIS.org/UpdateCasPhotoCardNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastPhotoOutDate">
+      <soap12:operation soapAction="http://HIS.org/UpdateLastPhotoOutDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCardNoBySecondCode">
+      <soap12:operation soapAction="http://HIS.org/QueryCardNoBySecondCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDiagnoseByInpatientNo">
+      <soap12:operation soapAction="http://HIS.org/QueryDiagnoseByInpatientNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPhotoCardNo">
+      <soap12:operation soapAction="http://HIS.org/QueryPhotoCardNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMZPatientInfoForGYS">
+      <soap12:operation soapAction="http://HIS.org/GetMZPatientInfoForGYS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZYPatientInfoForGYS">
+      <soap12:operation soapAction="http://HIS.org/GetZYPatientInfoForGYS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptInfoForGYS">
+      <soap12:operation soapAction="http://HIS.org/GetDeptInfoForGYS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNurseInfoForGYS">
+      <soap12:operation soapAction="http://HIS.org/GetNurseInfoForGYS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOPSInfoForGYS">
+      <soap12:operation soapAction="http://HIS.org/GetOPSInfoForGYS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByInpatientNo">
+      <soap12:operation soapAction="http://HIS.org/GetPatientInfoByInpatientNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLISFSRecord">
+      <soap12:operation soapAction="http://HIS.org/SaveLISFSRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientWithNewOrder">
+      <soap12:operation soapAction="http://HIS.org/GetPatientWithNewOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCancelSchema">
+      <soap12:operation soapAction="http://HIS.org/GetCancelSchema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHYXTerminal">
+      <soap12:operation soapAction="http://HIS.org/GetHYXTerminal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://172.16.95.141:8003/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://172.16.95.141:8003/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

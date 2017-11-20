@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://tempuri.org/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>复高ESB平台通用方法调用接口</wsdl:documentation>
+  <wsp:Policy wsu:Id="servicePolicy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsam:Addressing wsp:Optional="true" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+          <wsp:Policy>
+            <wsam:AnonymousResponses />
+          </wsp:Policy>
+        </wsam:Addressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <xs:element name="GetPatientInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GPI" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPatientInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPatientInfoFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDictionary">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GPI" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDictionaryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDictionaryFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPathologyReport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GPR" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPathologyReportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPathologyReportFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetOperationRecord">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GOR" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetOperationRecordResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetOperationRecordFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDictionaryResponse">
+    <wsdl:part name="parameters" element="ns0:GetDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoFault">
+    <wsdl:part name="parameters" element="ns0:GetPatientInfoFault" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoRequest">
+    <wsdl:part name="parameters" element="ns0:GetPatientInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPathologyReportRequest">
+    <wsdl:part name="parameters" element="ns0:GetPathologyReport" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoResponse">
+    <wsdl:part name="parameters" element="ns0:GetPatientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOperationRecordFault">
+    <wsdl:part name="parameters" element="ns0:GetOperationRecordFault" />
+  </wsdl:message>
+  <wsdl:message name="GetPathologyReportFault">
+    <wsdl:part name="parameters" element="ns0:GetPathologyReportFault" />
+  </wsdl:message>
+  <wsdl:message name="GetOperationRecordRequest">
+    <wsdl:part name="parameters" element="ns0:GetOperationRecord" />
+  </wsdl:message>
+  <wsdl:message name="GetOperationRecordResponse">
+    <wsdl:part name="parameters" element="ns0:GetOperationRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDictionaryRequest">
+    <wsdl:part name="parameters" element="ns0:GetDictionary" />
+  </wsdl:message>
+  <wsdl:message name="GetDictionaryFault">
+    <wsdl:part name="parameters" element="ns0:GetDictionaryFault" />
+  </wsdl:message>
+  <wsdl:message name="GetPathologyReportResponse">
+    <wsdl:part name="parameters" element="ns0:GetPathologyReportResponse" />
+  </wsdl:message>
+  <wsdl:portType wsp:PolicyURIs="#servicePolicy" name="FGPublicServicePortType">
+    <wsdl:operation name="GetOperationRecord">
+      <wsdl:documentation>超声系统获取手术记录</wsdl:documentation>
+      <wsdl:input wsaw:Action="urn:GetOperationRecord" message="ns0:GetOperationRecordRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org//FGPublicServicePortType/GetOperationRecordResponse" message="ns0:GetOperationRecordResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org//FGPublicServicePortType/GetOperationRecordFault" name="GetOperationRecordFault" message="ns0:GetOperationRecordFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:documentation>获取病人就诊信息</wsdl:documentation>
+      <wsdl:input wsaw:Action="urn:GetPatientInfo" message="ns0:GetPatientInfoRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org//FGPublicServicePortType/GetPatientInfoResponse" message="ns0:GetPatientInfoResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org//FGPublicServicePortType/GetPatientInfoFault" name="GetPatientInfoFault" message="ns0:GetPatientInfoFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDictionary">
+      <wsdl:documentation>获取HIS系统各字典信息</wsdl:documentation>
+      <wsdl:input wsaw:Action="urn:GetDictionary" message="ns0:GetDictionaryRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org//FGPublicServicePortType/GetDictionaryResponse" message="ns0:GetDictionaryResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org//FGPublicServicePortType/GetDictionaryFault" name="GetDictionaryFault" message="ns0:GetDictionaryFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPathologyReport">
+      <wsdl:documentation>超声系统获取病理报告</wsdl:documentation>
+      <wsdl:input wsaw:Action="urn:GetPathologyReport" message="ns0:GetPathologyReportRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org//FGPublicServicePortType/GetPathologyReportResponse" message="ns0:GetPathologyReportResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org//FGPublicServicePortType/GetPathologyReportFault" name="GetPathologyReportFault" message="ns0:GetPathologyReportFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FGPublicServiceSoap11Binding" type="ns0:FGPublicServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsdl:operation name="GetOperationRecord">
+      <soap:operation soapAction="urn:GetOperationRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetOperationRecordFault">
+        <soap:fault use="literal" name="GetOperationRecordFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <soap:operation soapAction="urn:GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetPatientInfoFault">
+        <soap:fault use="literal" name="GetPatientInfoFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDictionary">
+      <soap:operation soapAction="urn:GetDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetDictionaryFault">
+        <soap:fault use="literal" name="GetDictionaryFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPathologyReport">
+      <soap:operation soapAction="urn:GetPathologyReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetPathologyReportFault">
+        <soap:fault use="literal" name="GetPathologyReportFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FGPublicServiceSoap12Binding" type="ns0:FGPublicServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsdl:operation name="GetOperationRecord">
+      <soap12:operation soapAction="urn:GetOperationRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetOperationRecordFault">
+        <soap12:fault use="literal" name="GetOperationRecordFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <soap12:operation soapAction="urn:GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetPatientInfoFault">
+        <soap12:fault use="literal" name="GetPatientInfoFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDictionary">
+      <soap12:operation soapAction="urn:GetDictionary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetDictionaryFault">
+        <soap12:fault use="literal" name="GetDictionaryFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPathologyReport">
+      <soap12:operation soapAction="urn:GetPathologyReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetPathologyReportFault">
+        <soap12:fault use="literal" name="GetPathologyReportFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FGPublicService">
+    <wsdl:port name="FGPublicServiceHttpSoap12Endpoint" binding="ns0:FGPublicServiceSoap12Binding">
+      <soap12:address location="http://192.168.1.158:1401/services/FGPublicService.FGPublicServiceHttpSoap12Endpoint" />
+    </wsdl:port>
+    <wsdl:port name="FGPublicServiceHttpSoap11Endpoint" binding="ns0:FGPublicServiceSoap11Binding">
+      <soap:address location="http://192.168.1.158:1401/services/FGPublicService.FGPublicServiceHttpSoap11Endpoint" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

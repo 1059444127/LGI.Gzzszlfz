@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="PatBillWritePIS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sHISKeyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBillInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSampleInfo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatBillWritePISResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PatBillWritePISResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBillInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSampleInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatBillWritePISCeShi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sHISKeyNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatBillWritePISCeShiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PatBillWritePISCeShiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatBillWritePISBD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBillInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatBillWritePISBDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PatBillWritePISBDResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBillInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatBillWritePISBDCeShi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatBillWritePISBDCeShiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PatBillWritePISBDCeShiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPISReportInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sqdbh" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="reportInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPISReportInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetPISReportInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="zgid" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lx" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddFeeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelFee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="zgid" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lx" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelFeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DelFeeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PatBillWritePISSoapIn">
+    <wsdl:part name="parameters" element="tns:PatBillWritePIS" />
+  </wsdl:message>
+  <wsdl:message name="PatBillWritePISSoapOut">
+    <wsdl:part name="parameters" element="tns:PatBillWritePISResponse" />
+  </wsdl:message>
+  <wsdl:message name="PatBillWritePISCeShiSoapIn">
+    <wsdl:part name="parameters" element="tns:PatBillWritePISCeShi" />
+  </wsdl:message>
+  <wsdl:message name="PatBillWritePISCeShiSoapOut">
+    <wsdl:part name="parameters" element="tns:PatBillWritePISCeShiResponse" />
+  </wsdl:message>
+  <wsdl:message name="PatBillWritePISBDSoapIn">
+    <wsdl:part name="parameters" element="tns:PatBillWritePISBD" />
+  </wsdl:message>
+  <wsdl:message name="PatBillWritePISBDSoapOut">
+    <wsdl:part name="parameters" element="tns:PatBillWritePISBDResponse" />
+  </wsdl:message>
+  <wsdl:message name="PatBillWritePISBDCeShiSoapIn">
+    <wsdl:part name="parameters" element="tns:PatBillWritePISBDCeShi" />
+  </wsdl:message>
+  <wsdl:message name="PatBillWritePISBDCeShiSoapOut">
+    <wsdl:part name="parameters" element="tns:PatBillWritePISBDCeShiResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPISReportInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SetPISReportInfo" />
+  </wsdl:message>
+  <wsdl:message name="SetPISReportInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SetPISReportInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFeeSoapIn">
+    <wsdl:part name="parameters" element="tns:AddFee" />
+  </wsdl:message>
+  <wsdl:message name="AddFeeSoapOut">
+    <wsdl:part name="parameters" element="tns:AddFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelFeeSoapIn">
+    <wsdl:part name="parameters" element="tns:DelFee" />
+  </wsdl:message>
+  <wsdl:message name="DelFeeSoapOut">
+    <wsdl:part name="parameters" element="tns:DelFeeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PisServiceLJSoap">
+    <wsdl:operation name="PatBillWritePIS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">电子申请单信息</wsdl:documentation>
+      <wsdl:input message="tns:PatBillWritePISSoapIn" />
+      <wsdl:output message="tns:PatBillWritePISSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PatBillWritePISCeShi">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">电子申请单信息-测试</wsdl:documentation>
+      <wsdl:input message="tns:PatBillWritePISCeShiSoapIn" />
+      <wsdl:output message="tns:PatBillWritePISCeShiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PatBillWritePISBD">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">冰冻单预约信息</wsdl:documentation>
+      <wsdl:input message="tns:PatBillWritePISBDSoapIn" />
+      <wsdl:output message="tns:PatBillWritePISBDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PatBillWritePISBDCeShi">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">冰冻单预约信息-测试</wsdl:documentation>
+      <wsdl:input message="tns:PatBillWritePISBDCeShiSoapIn" />
+      <wsdl:output message="tns:PatBillWritePISBDCeShiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPISReportInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新HIS状态及报告</wsdl:documentation>
+      <wsdl:input message="tns:SetPISReportInfoSoapIn" />
+      <wsdl:output message="tns:SetPISReportInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">病理单计费</wsdl:documentation>
+      <wsdl:input message="tns:AddFeeSoapIn" />
+      <wsdl:output message="tns:AddFeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelFee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">病理单退费</wsdl:documentation>
+      <wsdl:input message="tns:DelFeeSoapIn" />
+      <wsdl:output message="tns:DelFeeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PisServiceLJSoap" type="tns:PisServiceLJSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PatBillWritePIS">
+      <soap:operation soapAction="http://tempuri.org/PatBillWritePIS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatBillWritePISCeShi">
+      <soap:operation soapAction="http://tempuri.org/PatBillWritePISCeShi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatBillWritePISBD">
+      <soap:operation soapAction="http://tempuri.org/PatBillWritePISBD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatBillWritePISBDCeShi">
+      <soap:operation soapAction="http://tempuri.org/PatBillWritePISBDCeShi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPISReportInfo">
+      <soap:operation soapAction="http://tempuri.org/SetPISReportInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFee">
+      <soap:operation soapAction="http://tempuri.org/AddFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelFee">
+      <soap:operation soapAction="http://tempuri.org/DelFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PisServiceLJSoap12" type="tns:PisServiceLJSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PatBillWritePIS">
+      <soap12:operation soapAction="http://tempuri.org/PatBillWritePIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatBillWritePISCeShi">
+      <soap12:operation soapAction="http://tempuri.org/PatBillWritePISCeShi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatBillWritePISBD">
+      <soap12:operation soapAction="http://tempuri.org/PatBillWritePISBD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatBillWritePISBDCeShi">
+      <soap12:operation soapAction="http://tempuri.org/PatBillWritePISBDCeShi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPISReportInfo">
+      <soap12:operation soapAction="http://tempuri.org/SetPISReportInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFee">
+      <soap12:operation soapAction="http://tempuri.org/AddFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelFee">
+      <soap12:operation soapAction="http://tempuri.org/DelFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PisServiceLJ">
+    <wsdl:port name="PisServiceLJSoap" binding="tns:PisServiceLJSoap">
+      <soap:address location="http://192.168.52.100:8081/PisServiceLJ.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PisServiceLJSoap12" binding="tns:PisServiceLJSoap12">
+      <soap12:address location="http://192.168.52.100:8081/PisServiceLJ.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

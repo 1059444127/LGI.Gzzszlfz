@@ -1,0 +1,117 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LGHISJKZGQ.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PATHGETHISZGQ_webserverAAA_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:4319/WebSite1/Service.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_WebTJ_PathologySysService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.12.68:58080/csp/tongji/Tongji.COMM.SoapService.PathologySysService.cls</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_WebReference_PisServiceLJ" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.48.45.107/ktpis/PisServiceLJ.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_szyyWEB_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.0.100.53:8080/Service.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_nbyzrmyyWeb_PisServiceLJ" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.100.64:8082/PisServiceLJ.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_whxhyyWEB_WebRisService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.60.39:57772/csp/i-risservice/DHC.RIS.BS.WebRisService.cls</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_ahzlyyWeb_XDInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.201.4/dthealth/web//web.ToBLCom.cls</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_nbyz2yWEB_PisServiceLJ" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.52.100:8081/PisServiceLJ.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_cszxyyWEB_NYwclService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.3.15:8080/Services/NYwclService</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_sxzlyyWeb_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://111.111.116.8:8071/LJservice.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_WebXYCX_WSGeneral" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://132.147.254.44:57772/csp/supcon/WebApp.WSGeneral.cls</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_hnsrmyyWeb_TrasenWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.8.100/TrasenWS.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_SXDEYWeb_MatrixService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://168.192.8.10:8080/WebService/services/MatrixService</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_ZSZLWeb_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.95.141:8003/Service.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_fjsfywebwerice1_WSInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.1.71:1506/services/WSInterface.WSInterfaceHttpSoap12Endpoint</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_fjsfyWeb_WSInterface_cdr" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.1.71:1508/services/WSInterface_cdr.WSInterface_cdrHttpSoap11Endpoint</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_fjsfybjyWeb_WSInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://198.100.100.8:1506/services/WSInterface.WSInterfaceHttpSoap12Endpoint</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_shsjdzyyyweb_FGPLService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.158:1405/services/FGPLService.FGPLServiceHttpSoap12Endpoint</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_shsjdqzyyyweb2_FGPublicService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.158:1401/services/FGPublicService.FGPublicServiceHttpSoap12Endpoint</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_xjshz_winning_web_WinningHIIPService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dfg:29000/services/WinningHIIPService.WinningHIIPServiceHttpSoap11Endpoint</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_jssfyweb_PathologyService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.1.71/webapp/pathologyservice.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_sh7yweb_webserviceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://155.165.13.14:8085/ExamResultService/services/ExamResultInput</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_sh7yweb2_healthService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://155.165.13.14:8085/sevenHospitalService/services/healthService.healthServiceHttpSoap11Endpoint/</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_xyfyyyweb1_DHC_Pis_XiangYaOne" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.2.51:57772/csp/dhcens/DHC.Pis.XiangYaOne.BS.Web.cls</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_xmzsyyWeb_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.10.33.84/zsyyWebService/Service.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_aydefyweb_WSInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://223.220.200.45:1506/services/WSInterface.WSInterfaceHttpSoap12Endpoint</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_EHSBMQWeb_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://100.100.42.107/GetEHMQ/EHSBMQService.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_xm1yweb_WSInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.0.19.148:1506/services/WSInterface.WSInterfaceHttpSoap11Endpoint</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_zjgsdyrmyyweb_PlatformCommonSvr" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.101.175:1006/services/PlatformCommonSvr.PlatformCommonSvrHttpSoap11Endpoint</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_ZSZLWeb_ZGQ_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:1266/ZSZL_MQService2010/MQService.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_ZszlHISWEB_ZGQ_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.95.230/BLService/Service.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_gdszyyMzHisWeb_HisForInspectItemService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.9.199.12:8002/HisForInspectItemService.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_xy2yWebService_XYEPACS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.200.119:57772/csp/xyepacs/PACS.BS.Service.cls</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_gdszyyWS_ChasCommonSvc" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://svc.chas.gdhtcm.com:9080/ChasSvc/services/ChasCommonPort</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_gdszyytjWeb_LisService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.9.202.71:8181/IBMLisHisWebservice/LisService.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_BLToFZMQWS_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.168.35.249/BLToMQWebSrv/FZMQService.asmx</Value>
+    </Setting>
+    <Setting Name="PATHGETHISZGQ_GzzszlfzLis_PDAService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.95.189:8081/PDAService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s0="http://tempuri.org" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org">
+      <s:element name="GetExamOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="ExamNo" type="s:string" />
+            <s:element minOccurs="0" name="StatusList" type="s:string" />
+            <s:element minOccurs="0" name="ChargeIndicate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExamOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetExamOrderResult" type="s:string" />
+            <s:element minOccurs="0" name="ExamOrder" type="s0:ExamOrder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExamOrder">
+        <s:sequence>
+          <s:element minOccurs="0" name="PatientID" type="s:string" />
+          <s:element minOccurs="0" name="PatName" type="s:string" />
+          <s:element minOccurs="0" name="PatSex" type="s:string" />
+          <s:element minOccurs="0" name="PatDOB" type="s:string" />
+          <s:element minOccurs="0" name="Identity" type="s:string" />
+          <s:element minOccurs="0" name="ChargeType" type="s:string" />
+          <s:element minOccurs="0" name="InpINo" type="s:string" />
+          <s:element minOccurs="0" name="DeptName" type="s:string" />
+          <s:element minOccurs="0" name="BedNo" type="s:string" />
+          <s:element minOccurs="0" name="BedLabel" type="s:string" />
+          <s:element minOccurs="0" name="WardName" type="s:string" />
+          <s:element minOccurs="0" name="VisitDate" type="s:string" />
+          <s:element minOccurs="0" name="VisitNO" type="s:long" />
+          <s:element minOccurs="0" name="ExamNo" type="s:string" />
+          <s:element minOccurs="0" name="ClinDiag">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="100" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="PhysSign">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="400" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="ClinSymp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="400" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="RelevantLabTest">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="200" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="RelevantDiag">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="400" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="ExamReason">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="200" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="Notice">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="400" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="Status" type="s:string" />
+          <s:element minOccurs="0" name="ChargeIndicator" type="s:string" />
+          <s:element minOccurs="0" name="PatientSource" type="s:string" />
+          <s:element minOccurs="0" name="ExamClass" type="s:string" />
+          <s:element minOccurs="0" name="ExamSubClass" type="s:string" />
+          <s:element minOccurs="0" name="ReqDeptNo" type="s:string" />
+          <s:element minOccurs="0" name="ReqDeptName" type="s:string" />
+          <s:element minOccurs="0" name="ReqPhysicianID" type="s:string" />
+          <s:element minOccurs="0" name="ReqPhysician" type="s:string" />
+          <s:element minOccurs="0" name="ReqDateTime" type="s:string" />
+          <s:element minOccurs="0" name="ReqMemo">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="100" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="Priority" type="s:string" />
+          <s:element minOccurs="0" name="SchDateTime" type="s:string" />
+          <s:element minOccurs="0" name="SchMemo" type="s:string" />
+          <s:element minOccurs="0" name="DicomModality" type="s:string" />
+          <s:element minOccurs="0" name="PatientLocalID" type="s:string" />
+          <s:element minOccurs="0" name="PerformedBy" type="s:string" />
+          <s:element minOccurs="0" name="PerformedByName" type="s:string" />
+          <s:element minOccurs="0" name="Technician" type="s:string" />
+          <s:element minOccurs="0" name="ExamDateTime" type="s:string" />
+          <s:element minOccurs="0" name="ReportDateTime" type="s:string" />
+          <s:element minOccurs="0" name="ReportDocName" type="s:string" />
+          <s:element minOccurs="0" name="VerifierDocName" type="s:string" />
+          <s:element minOccurs="0" name="BabyNo" type="s:string" />
+          <s:element minOccurs="0" name="ExamItems" type="s0:ArrayOfExamOrderItemExamOrderItem" />
+          <s:element minOccurs="0" name="BedIndicate" type="s:string" />
+          <s:element minOccurs="0" name="GreenIndicate" type="s:string" />
+          <s:element minOccurs="0" name="PhoneNo" type="s:string" />
+          <s:element minOccurs="0" name="ChiefComplaint" type="s:string" />
+          <s:element minOccurs="0" name="AssistantExam" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfExamOrderItemExamOrderItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ExamOrderItem" nillable="true" type="s0:ExamOrderItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExamOrderItem">
+        <s:sequence>
+          <s:element minOccurs="0" name="ItemNo" type="s:string" />
+          <s:element minOccurs="0" name="ExamItem">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="200" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="ExamItemCode" type="s:string" />
+          <s:element minOccurs="0" name="ExamSubClass" type="s:string" />
+          <s:element minOccurs="0" name="RefOrderNO" type="s:string" />
+          <s:element minOccurs="0" name="RefOrderSubNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPatientInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="PatientID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GetPatientInfoResult" type="s:string" />
+            <s:element minOccurs="0" name="PatientInfo" type="s0:PatBasicInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PatBasicInfo">
+        <s:sequence>
+          <s:element minOccurs="0" name="PatientID" type="s:string" />
+          <s:element minOccurs="0" name="InpNo" type="s:string" />
+          <s:element minOccurs="0" name="PatName" type="s:string" />
+          <s:element minOccurs="0" name="PatNamePinyin" type="s:string" />
+          <s:element minOccurs="0" name="PatSex" type="s:string" />
+          <s:element minOccurs="0" name="PatDOB" type="s:string" />
+          <s:element minOccurs="0" name="Identity" type="s:string" />
+          <s:element minOccurs="0" name="ChargeType" type="s:string" />
+          <s:element minOccurs="0" name="MaritalStatus" type="s:string" />
+          <s:element minOccurs="0" name="MaritalStatusCode" type="s:string" />
+          <s:element minOccurs="0" name="MailingAddress" type="s:string" />
+          <s:element minOccurs="0" name="ZipCode" type="s:string" />
+          <s:element minOccurs="0" name="BirthPlace" type="s:string" />
+          <s:element minOccurs="0" name="BirthPlaceCode" type="s:string" />
+          <s:element minOccurs="0" name="IDNO" type="s:string" />
+          <s:element minOccurs="0" name="PhoneNumberBusiness" type="s:string" />
+          <s:element minOccurs="0" name="PhoneNumberHome" type="s:string" />
+          <s:element minOccurs="0" name="BirthPlaceName" type="s:string" />
+          <s:element minOccurs="0" name="Nation" type="s:string" />
+          <s:element minOccurs="0" name="NationCode" type="s:string" />
+          <s:element minOccurs="0" name="CityzenShipName" type="s:string" />
+          <s:element minOccurs="0" name="CityzenShipCode" type="s:string" />
+          <s:element minOccurs="0" name="UnitInContrName" type="s:string" />
+          <s:element minOccurs="0" name="JobCode" type="s:string" />
+          <s:element minOccurs="0" name="JobName" type="s:string" />
+          <s:element minOccurs="0" name="NextOfKin" type="s:string" />
+          <s:element minOccurs="0" name="NextOfKinPhone" type="s:string" />
+          <s:element minOccurs="0" name="NextOfKinZipCode" type="s:string" />
+          <s:element minOccurs="0" name="NextOfKinAddr" type="s:string" />
+          <s:element minOccurs="0" name="RelationshipCode" type="s:string" />
+          <s:element minOccurs="0" name="Relationship" type="s:string" />
+          <s:element minOccurs="0" name="HealthCardType" type="s:string" />
+          <s:element minOccurs="0" name="HealthCardNo" type="s:string" />
+          <s:element minOccurs="0" name="HospitalCardType" type="s:string" />
+          <s:element minOccurs="0" name="HospitalCardNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Test">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="TestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetExamOrderSoapIn">
+    <wsdl:part name="parameters" element="s0:GetExamOrder" />
+  </wsdl:message>
+  <wsdl:message name="GetExamOrderSoapOut">
+    <wsdl:part name="parameters" element="s0:GetExamOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoSoapIn">
+    <wsdl:part name="parameters" element="s0:GetPatientInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoSoapOut">
+    <wsdl:part name="parameters" element="s0:GetPatientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="s0:Test" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="s0:TestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSGeneralSoap">
+    <wsdl:operation name="GetExamOrder">
+      <wsdl:input message="s0:GetExamOrderSoapIn" />
+      <wsdl:output message="s0:GetExamOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:input message="s0:GetPatientInfoSoapIn" />
+      <wsdl:output message="s0:GetPatientInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="s0:TestSoapIn" />
+      <wsdl:output message="s0:TestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSGeneralSoap" type="s0:WSGeneralSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetExamOrder">
+      <soap:operation soapAction="http://tempuri.org/WebApp.WSGeneral.GetExamOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <soap:operation soapAction="http://tempuri.org/WebApp.WSGeneral.GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/WebApp.WSGeneral.Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSGeneral">
+    <wsdl:port name="WSGeneralSoap" binding="s0:WSGeneralSoap">
+      <soap:address location="http://132.147.254.44:57772/csp/supcon/WebApp.WSGeneral.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

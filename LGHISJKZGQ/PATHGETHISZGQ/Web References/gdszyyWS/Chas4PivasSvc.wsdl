@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://chas.hit.com/transport/integration/common/intf" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Chas4PivasSvc" targetNamespace="http://chas.hit.com/transport/integration/common/intf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="queryPatientResponse">
+    <wsdl:part name="queryPatientResponse" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="queryDiagnosisResponse">
+    <wsdl:part name="queryDiagnosisResponse" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="queryDiagnosisRequest">
+    <wsdl:part name="queryDiagnosisRequest" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="queryPatientRequest">
+    <wsdl:part name="queryPatientRequest" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="ChasCommonPT">
+    <wsdl:operation name="queryPatient">
+      <wsdl:input message="tns:queryPatientRequest" />
+      <wsdl:output message="tns:queryPatientResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryDiagnosis">
+      <wsdl:input message="tns:queryDiagnosisRequest" />
+      <wsdl:output message="tns:queryDiagnosisResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ChasCommonSOAP" type="tns:ChasCommonPT">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="queryPatient">
+      <soap:operation soapAction="http://chas.hit.com/transport/integration/common/intf/queryPatient" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://chas.hit.com/transport/integration/common/intf" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://chas.hit.com/transport/integration/common/intf" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryDiagnosis">
+      <soap:operation soapAction="http://chas.hit.com/transport/integration/common/intf/queryDiagnosis" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://chas.hit.com/transport/integration/common/intf" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://chas.hit.com/transport/integration/common/intf" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ChasCommonSvc">
+    <wsdl:port name="ChasCommonPort" binding="tns:ChasCommonSOAP">
+      <soap:address location="http://svc.chas.gdhtcm.com:9080/ChasSvc/services/ChasCommonPort" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="file:///C:/Documents and Settings/Administrator/桌面/苏附一取信息接口文档/苏附一取信息接口文档/pathologyservice.xml" filename="pathologyservice.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

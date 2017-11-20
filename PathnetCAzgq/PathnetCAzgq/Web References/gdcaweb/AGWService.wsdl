@@ -1,0 +1,2055 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="http://service.agw" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ax21="http://service.agw/xsd" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.agw" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>AGWService</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.agw/xsd">
+      <xs:complexType name="VeStampReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sealData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tsaCert" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="VeStampResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+          <xs:element minOccurs="0" name="sealStampDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SymmEncReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="symmAlgo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SymmEncResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="encData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SymmDecReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="encDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="symmAlgo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SymmDecResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SeStampReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SeStampResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+          <xs:element minOccurs="0" name="sealData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SeEnvelopeReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="encCert" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SeEnvelopeResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+          <xs:element minOccurs="0" name="sealData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="P7VerifyReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sigCert" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="signedData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="P7VerifyResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="P7SignReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sigCert" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="P7SignResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+          <xs:element minOccurs="0" name="signedData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OpEnvelopeReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sealData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OpEnvelopeResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="P1VerifyBytesReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="sigCert" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="signedData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="P1VerifyResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="P1VerifyBySNReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="sigCertSN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="signedData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="P1VerifyReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sigCert" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="signedData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="P1SignBytesReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="sigCert" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="P1SignResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+          <xs:element minOccurs="0" name="signedData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="P1SignReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sigCert" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="IBEVerifyReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fingerPrint" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="signValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="IBEVerifyResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="IBESignReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fingerPrint" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="userInfo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="IBESignResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+          <xs:element minOccurs="0" name="serialNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="signValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="timeString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HashReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="hashAlgo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HashResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="hashData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UserCertReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="caID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="certID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UserCertResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="encCert" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+          <xs:element minOccurs="0" name="sigCert" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TimeResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateTimeString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CertUniqueIDReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cert" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CertUniqueIDResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+          <xs:element minOccurs="0" name="uniqueID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CertOIDReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cert" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="oid" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CertOIDResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="oidValueB64" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CertResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="encCert" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+          <xs:element minOccurs="0" name="sigCert" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RandReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="randLen" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RandResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="randString" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CkCertReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cert" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CkCertResp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="certID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayIBEVerifyReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="fpItems" nillable="true" type="ax21:FingerprintItem" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="signValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="timeString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="FingerprintItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayIBESignReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="fpItems" nillable="true" type="ax21:FingerprintItem" />
+          <xs:element minOccurs="0" name="isTimeAttached" type="xs:int" />
+          <xs:element minOccurs="0" name="operID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="orgData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="userInfo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax22="http://service.agw/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.agw">
+      <xs:import namespace="http://service.agw/xsd" />
+      <xs:element name="main">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="args" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_VerifyTimeStamp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:VeStampReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_VerifyTimeStampResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:VeStampResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_SymmEncrypt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:SymmEncReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_SymmEncryptResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:SymmEncResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_SymmDecrypt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:SymmDecReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_SymmDecryptResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:SymmDecResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_SealTimeStamp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:SeStampReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_SealTimeStampResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:SeStampResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_SealEnvelope">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:SeEnvelopeReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_SealEnvelopeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:SeEnvelopeResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7VerifyPDF">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:P7VerifyReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7VerifyPDFResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:P7VerifyResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7VerifyCapicom">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:P7VerifyReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7VerifyCapicomResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:P7VerifyResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7Verify">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:P7VerifyReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7VerifyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:P7VerifyResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7SignCapicom">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:P7SignReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7SignCapicomResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:P7SignResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7Sign">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:P7SignReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7SignResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:P7SignResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7SealEnvelopeCapicom">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:SeEnvelopeReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7SealEnvelopeCapicomResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:SeEnvelopeResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7SealEnvelope">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:SeEnvelopeReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7SealEnvelopeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:SeEnvelopeResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7OpenEnvelopeCapicom">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:OpEnvelopeReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7OpenEnvelopeCapicomResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:OpEnvelopeResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7OpenEnvelope">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:OpEnvelopeReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P7OpenEnvelopeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:OpEnvelopeResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P1VerifyBytes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:P1VerifyBytesReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P1VerifyBytesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:P1VerifyResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P1VerifyBySN">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:P1VerifyBySNReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P1VerifyBySNResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:P1VerifyResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P1Verify">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:P1VerifyReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P1VerifyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:P1VerifyResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P1SignBytes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:P1SignBytesReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P1SignBytesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:P1SignResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P1Sign">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:P1SignReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_P1SignResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:P1SignResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_OpenEnvelope">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:OpEnvelopeReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_OpenEnvelopeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:OpEnvelopeResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_IBEVerify">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:IBEVerifyReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_IBEVerifyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:IBEVerifyResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_IBESign">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:IBESignReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_IBESignResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:IBESignResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_HashData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:HashReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_HashDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:HashResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetUserCert">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:UserCertReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetUserCertResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:UserCertResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetTime">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetTimeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:TimeResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetSeriviceInfo">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetSeriviceInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetCertUniqueID">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:CertUniqueIDReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetCertUniqueIDResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:CertUniqueIDResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetCertOIDValue">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:CertOIDReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetCertOIDValueResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:CertOIDResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetCert">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GetCertResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:CertResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GenRand">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:RandReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_GenRandResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:RandResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_CheckCert">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:CkCertReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_CheckCertResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:CkCertResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_ArrayIBEVerify">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:ArrayIBEVerifyReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_ArrayIBEVerifyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:IBEVerifyResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_ArrayIBESign">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="req" nillable="true" type="ax22:ArrayIBESignReq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WS_ArrayIBESignResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax22:IBESignResp" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WS_HashDataRequest">
+    <wsdl:part name="parameters" element="ns:WS_HashData" />
+  </wsdl:message>
+  <wsdl:message name="WS_HashDataResponse">
+    <wsdl:part name="parameters" element="ns:WS_HashDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7VerifyCapicomRequest">
+    <wsdl:part name="parameters" element="ns:WS_P7VerifyCapicom" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7VerifyCapicomResponse">
+    <wsdl:part name="parameters" element="ns:WS_P7VerifyCapicomResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P1SignRequest">
+    <wsdl:part name="parameters" element="ns:WS_P1Sign" />
+  </wsdl:message>
+  <wsdl:message name="WS_P1SignResponse">
+    <wsdl:part name="parameters" element="ns:WS_P1SignResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ArrayIBEVerifyRequest">
+    <wsdl:part name="parameters" element="ns:WS_ArrayIBEVerify" />
+  </wsdl:message>
+  <wsdl:message name="WS_ArrayIBEVerifyResponse">
+    <wsdl:part name="parameters" element="ns:WS_ArrayIBEVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetTimeRequest">
+    <wsdl:part name="parameters" element="ns:WS_GetTime" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetTimeResponse">
+    <wsdl:part name="parameters" element="ns:WS_GetTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_ArrayIBESignRequest">
+    <wsdl:part name="parameters" element="ns:WS_ArrayIBESign" />
+  </wsdl:message>
+  <wsdl:message name="WS_ArrayIBESignResponse">
+    <wsdl:part name="parameters" element="ns:WS_ArrayIBESignResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetCertRequest">
+    <wsdl:part name="parameters" element="ns:WS_GetCert" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetCertResponse">
+    <wsdl:part name="parameters" element="ns:WS_GetCertResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7OpenEnvelopeCapicomRequest">
+    <wsdl:part name="parameters" element="ns:WS_P7OpenEnvelopeCapicom" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7OpenEnvelopeCapicomResponse">
+    <wsdl:part name="parameters" element="ns:WS_P7OpenEnvelopeCapicomResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7SealEnvelopeRequest">
+    <wsdl:part name="parameters" element="ns:WS_P7SealEnvelope" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7SealEnvelopeResponse">
+    <wsdl:part name="parameters" element="ns:WS_P7SealEnvelopeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P1VerifyBytesRequest">
+    <wsdl:part name="parameters" element="ns:WS_P1VerifyBytes" />
+  </wsdl:message>
+  <wsdl:message name="WS_P1VerifyBytesResponse">
+    <wsdl:part name="parameters" element="ns:WS_P1VerifyBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_SealEnvelopeRequest">
+    <wsdl:part name="parameters" element="ns:WS_SealEnvelope" />
+  </wsdl:message>
+  <wsdl:message name="WS_SealEnvelopeResponse">
+    <wsdl:part name="parameters" element="ns:WS_SealEnvelopeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetCertOIDValueRequest">
+    <wsdl:part name="parameters" element="ns:WS_GetCertOIDValue" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetCertOIDValueResponse">
+    <wsdl:part name="parameters" element="ns:WS_GetCertOIDValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_VerifyTimeStampRequest">
+    <wsdl:part name="parameters" element="ns:WS_VerifyTimeStamp" />
+  </wsdl:message>
+  <wsdl:message name="WS_VerifyTimeStampResponse">
+    <wsdl:part name="parameters" element="ns:WS_VerifyTimeStampResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7VerifyRequest">
+    <wsdl:part name="parameters" element="ns:WS_P7Verify" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7VerifyResponse">
+    <wsdl:part name="parameters" element="ns:WS_P7VerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_SymmDecryptRequest">
+    <wsdl:part name="parameters" element="ns:WS_SymmDecrypt" />
+  </wsdl:message>
+  <wsdl:message name="WS_SymmDecryptResponse">
+    <wsdl:part name="parameters" element="ns:WS_SymmDecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7SignRequest">
+    <wsdl:part name="parameters" element="ns:WS_P7Sign" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7SignResponse">
+    <wsdl:part name="parameters" element="ns:WS_P7SignResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_IBEVerifyRequest">
+    <wsdl:part name="parameters" element="ns:WS_IBEVerify" />
+  </wsdl:message>
+  <wsdl:message name="WS_IBEVerifyResponse">
+    <wsdl:part name="parameters" element="ns:WS_IBEVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P1SignBytesRequest">
+    <wsdl:part name="parameters" element="ns:WS_P1SignBytes" />
+  </wsdl:message>
+  <wsdl:message name="WS_P1SignBytesResponse">
+    <wsdl:part name="parameters" element="ns:WS_P1SignBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_CheckCertRequest">
+    <wsdl:part name="parameters" element="ns:WS_CheckCert" />
+  </wsdl:message>
+  <wsdl:message name="WS_CheckCertResponse">
+    <wsdl:part name="parameters" element="ns:WS_CheckCertResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetUserCertRequest">
+    <wsdl:part name="parameters" element="ns:WS_GetUserCert" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetUserCertResponse">
+    <wsdl:part name="parameters" element="ns:WS_GetUserCertResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_SymmEncryptRequest">
+    <wsdl:part name="parameters" element="ns:WS_SymmEncrypt" />
+  </wsdl:message>
+  <wsdl:message name="WS_SymmEncryptResponse">
+    <wsdl:part name="parameters" element="ns:WS_SymmEncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P1VerifyBySNRequest">
+    <wsdl:part name="parameters" element="ns:WS_P1VerifyBySN" />
+  </wsdl:message>
+  <wsdl:message name="WS_P1VerifyBySNResponse">
+    <wsdl:part name="parameters" element="ns:WS_P1VerifyBySNResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7VerifyPDFRequest">
+    <wsdl:part name="parameters" element="ns:WS_P7VerifyPDF" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7VerifyPDFResponse">
+    <wsdl:part name="parameters" element="ns:WS_P7VerifyPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7SignCapicomRequest">
+    <wsdl:part name="parameters" element="ns:WS_P7SignCapicom" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7SignCapicomResponse">
+    <wsdl:part name="parameters" element="ns:WS_P7SignCapicomResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_IBESignRequest">
+    <wsdl:part name="parameters" element="ns:WS_IBESign" />
+  </wsdl:message>
+  <wsdl:message name="WS_IBESignResponse">
+    <wsdl:part name="parameters" element="ns:WS_IBESignResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_SealTimeStampRequest">
+    <wsdl:part name="parameters" element="ns:WS_SealTimeStamp" />
+  </wsdl:message>
+  <wsdl:message name="WS_SealTimeStampResponse">
+    <wsdl:part name="parameters" element="ns:WS_SealTimeStampResponse" />
+  </wsdl:message>
+  <wsdl:message name="mainRequest">
+    <wsdl:part name="parameters" element="ns:main" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetCertUniqueIDRequest">
+    <wsdl:part name="parameters" element="ns:WS_GetCertUniqueID" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetCertUniqueIDResponse">
+    <wsdl:part name="parameters" element="ns:WS_GetCertUniqueIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_GenRandRequest">
+    <wsdl:part name="parameters" element="ns:WS_GenRand" />
+  </wsdl:message>
+  <wsdl:message name="WS_GenRandResponse">
+    <wsdl:part name="parameters" element="ns:WS_GenRandResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7OpenEnvelopeRequest">
+    <wsdl:part name="parameters" element="ns:WS_P7OpenEnvelope" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7OpenEnvelopeResponse">
+    <wsdl:part name="parameters" element="ns:WS_P7OpenEnvelopeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetSeriviceInfoRequest">
+    <wsdl:part name="parameters" element="ns:WS_GetSeriviceInfo" />
+  </wsdl:message>
+  <wsdl:message name="WS_GetSeriviceInfoResponse">
+    <wsdl:part name="parameters" element="ns:WS_GetSeriviceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_OpenEnvelopeRequest">
+    <wsdl:part name="parameters" element="ns:WS_OpenEnvelope" />
+  </wsdl:message>
+  <wsdl:message name="WS_OpenEnvelopeResponse">
+    <wsdl:part name="parameters" element="ns:WS_OpenEnvelopeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7SealEnvelopeCapicomRequest">
+    <wsdl:part name="parameters" element="ns:WS_P7SealEnvelopeCapicom" />
+  </wsdl:message>
+  <wsdl:message name="WS_P7SealEnvelopeCapicomResponse">
+    <wsdl:part name="parameters" element="ns:WS_P7SealEnvelopeCapicomResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_P1VerifyRequest">
+    <wsdl:part name="parameters" element="ns:WS_P1Verify" />
+  </wsdl:message>
+  <wsdl:message name="WS_P1VerifyResponse">
+    <wsdl:part name="parameters" element="ns:WS_P1VerifyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AGWServicePortType">
+    <wsdl:operation name="WS_HashData">
+      <wsdl:input wsaw:Action="urn:WS_HashData" message="ns:WS_HashDataRequest" />
+      <wsdl:output wsaw:Action="urn:WS_HashDataResponse" message="ns:WS_HashDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7VerifyCapicom">
+      <wsdl:input wsaw:Action="urn:WS_P7VerifyCapicom" message="ns:WS_P7VerifyCapicomRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P7VerifyCapicomResponse" message="ns:WS_P7VerifyCapicomResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1Sign">
+      <wsdl:input wsaw:Action="urn:WS_P1Sign" message="ns:WS_P1SignRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P1SignResponse" message="ns:WS_P1SignResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ArrayIBEVerify">
+      <wsdl:input wsaw:Action="urn:WS_ArrayIBEVerify" message="ns:WS_ArrayIBEVerifyRequest" />
+      <wsdl:output wsaw:Action="urn:WS_ArrayIBEVerifyResponse" message="ns:WS_ArrayIBEVerifyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetTime">
+      <wsdl:input wsaw:Action="urn:WS_GetTime" message="ns:WS_GetTimeRequest" />
+      <wsdl:output wsaw:Action="urn:WS_GetTimeResponse" message="ns:WS_GetTimeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_ArrayIBESign">
+      <wsdl:input wsaw:Action="urn:WS_ArrayIBESign" message="ns:WS_ArrayIBESignRequest" />
+      <wsdl:output wsaw:Action="urn:WS_ArrayIBESignResponse" message="ns:WS_ArrayIBESignResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCert">
+      <wsdl:input wsaw:Action="urn:WS_GetCert" message="ns:WS_GetCertRequest" />
+      <wsdl:output wsaw:Action="urn:WS_GetCertResponse" message="ns:WS_GetCertResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7OpenEnvelopeCapicom">
+      <wsdl:input wsaw:Action="urn:WS_P7OpenEnvelopeCapicom" message="ns:WS_P7OpenEnvelopeCapicomRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P7OpenEnvelopeCapicomResponse" message="ns:WS_P7OpenEnvelopeCapicomResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SealEnvelope">
+      <wsdl:input wsaw:Action="urn:WS_P7SealEnvelope" message="ns:WS_P7SealEnvelopeRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P7SealEnvelopeResponse" message="ns:WS_P7SealEnvelopeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1VerifyBytes">
+      <wsdl:input wsaw:Action="urn:WS_P1VerifyBytes" message="ns:WS_P1VerifyBytesRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P1VerifyBytesResponse" message="ns:WS_P1VerifyBytesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_SealEnvelope">
+      <wsdl:input wsaw:Action="urn:WS_SealEnvelope" message="ns:WS_SealEnvelopeRequest" />
+      <wsdl:output wsaw:Action="urn:WS_SealEnvelopeResponse" message="ns:WS_SealEnvelopeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCertOIDValue">
+      <wsdl:input wsaw:Action="urn:WS_GetCertOIDValue" message="ns:WS_GetCertOIDValueRequest" />
+      <wsdl:output wsaw:Action="urn:WS_GetCertOIDValueResponse" message="ns:WS_GetCertOIDValueResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_VerifyTimeStamp">
+      <wsdl:input wsaw:Action="urn:WS_VerifyTimeStamp" message="ns:WS_VerifyTimeStampRequest" />
+      <wsdl:output wsaw:Action="urn:WS_VerifyTimeStampResponse" message="ns:WS_VerifyTimeStampResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7Verify">
+      <wsdl:input wsaw:Action="urn:WS_P7Verify" message="ns:WS_P7VerifyRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P7VerifyResponse" message="ns:WS_P7VerifyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_SymmDecrypt">
+      <wsdl:input wsaw:Action="urn:WS_SymmDecrypt" message="ns:WS_SymmDecryptRequest" />
+      <wsdl:output wsaw:Action="urn:WS_SymmDecryptResponse" message="ns:WS_SymmDecryptResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7Sign">
+      <wsdl:input wsaw:Action="urn:WS_P7Sign" message="ns:WS_P7SignRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P7SignResponse" message="ns:WS_P7SignResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_IBEVerify">
+      <wsdl:input wsaw:Action="urn:WS_IBEVerify" message="ns:WS_IBEVerifyRequest" />
+      <wsdl:output wsaw:Action="urn:WS_IBEVerifyResponse" message="ns:WS_IBEVerifyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1SignBytes">
+      <wsdl:input wsaw:Action="urn:WS_P1SignBytes" message="ns:WS_P1SignBytesRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P1SignBytesResponse" message="ns:WS_P1SignBytesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_CheckCert">
+      <wsdl:input wsaw:Action="urn:WS_CheckCert" message="ns:WS_CheckCertRequest" />
+      <wsdl:output wsaw:Action="urn:WS_CheckCertResponse" message="ns:WS_CheckCertResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetUserCert">
+      <wsdl:input wsaw:Action="urn:WS_GetUserCert" message="ns:WS_GetUserCertRequest" />
+      <wsdl:output wsaw:Action="urn:WS_GetUserCertResponse" message="ns:WS_GetUserCertResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_SymmEncrypt">
+      <wsdl:input wsaw:Action="urn:WS_SymmEncrypt" message="ns:WS_SymmEncryptRequest" />
+      <wsdl:output wsaw:Action="urn:WS_SymmEncryptResponse" message="ns:WS_SymmEncryptResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1VerifyBySN">
+      <wsdl:input wsaw:Action="urn:WS_P1VerifyBySN" message="ns:WS_P1VerifyBySNRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P1VerifyBySNResponse" message="ns:WS_P1VerifyBySNResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7VerifyPDF">
+      <wsdl:input wsaw:Action="urn:WS_P7VerifyPDF" message="ns:WS_P7VerifyPDFRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P7VerifyPDFResponse" message="ns:WS_P7VerifyPDFResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SignCapicom">
+      <wsdl:input wsaw:Action="urn:WS_P7SignCapicom" message="ns:WS_P7SignCapicomRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P7SignCapicomResponse" message="ns:WS_P7SignCapicomResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_IBESign">
+      <wsdl:input wsaw:Action="urn:WS_IBESign" message="ns:WS_IBESignRequest" />
+      <wsdl:output wsaw:Action="urn:WS_IBESignResponse" message="ns:WS_IBESignResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_SealTimeStamp">
+      <wsdl:input wsaw:Action="urn:WS_SealTimeStamp" message="ns:WS_SealTimeStampRequest" />
+      <wsdl:output wsaw:Action="urn:WS_SealTimeStampResponse" message="ns:WS_SealTimeStampResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <wsdl:input wsaw:Action="urn:main" message="ns:mainRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCertUniqueID">
+      <wsdl:input wsaw:Action="urn:WS_GetCertUniqueID" message="ns:WS_GetCertUniqueIDRequest" />
+      <wsdl:output wsaw:Action="urn:WS_GetCertUniqueIDResponse" message="ns:WS_GetCertUniqueIDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_GenRand">
+      <wsdl:input wsaw:Action="urn:WS_GenRand" message="ns:WS_GenRandRequest" />
+      <wsdl:output wsaw:Action="urn:WS_GenRandResponse" message="ns:WS_GenRandResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7OpenEnvelope">
+      <wsdl:input wsaw:Action="urn:WS_P7OpenEnvelope" message="ns:WS_P7OpenEnvelopeRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P7OpenEnvelopeResponse" message="ns:WS_P7OpenEnvelopeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetSeriviceInfo">
+      <wsdl:input wsaw:Action="urn:WS_GetSeriviceInfo" message="ns:WS_GetSeriviceInfoRequest" />
+      <wsdl:output wsaw:Action="urn:WS_GetSeriviceInfoResponse" message="ns:WS_GetSeriviceInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_OpenEnvelope">
+      <wsdl:input wsaw:Action="urn:WS_OpenEnvelope" message="ns:WS_OpenEnvelopeRequest" />
+      <wsdl:output wsaw:Action="urn:WS_OpenEnvelopeResponse" message="ns:WS_OpenEnvelopeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SealEnvelopeCapicom">
+      <wsdl:input wsaw:Action="urn:WS_P7SealEnvelopeCapicom" message="ns:WS_P7SealEnvelopeCapicomRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P7SealEnvelopeCapicomResponse" message="ns:WS_P7SealEnvelopeCapicomResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1Verify">
+      <wsdl:input wsaw:Action="urn:WS_P1Verify" message="ns:WS_P1VerifyRequest" />
+      <wsdl:output wsaw:Action="urn:WS_P1VerifyResponse" message="ns:WS_P1VerifyResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AGWServiceSoap11Binding" type="ns:AGWServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WS_P7VerifyCapicom">
+      <soap:operation soapAction="urn:WS_P7VerifyCapicom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_HashData">
+      <soap:operation soapAction="urn:WS_HashData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1Sign">
+      <soap:operation soapAction="urn:WS_P1Sign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetTime">
+      <soap:operation soapAction="urn:WS_GetTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ArrayIBEVerify">
+      <soap:operation soapAction="urn:WS_ArrayIBEVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCert">
+      <soap:operation soapAction="urn:WS_GetCert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ArrayIBESign">
+      <soap:operation soapAction="urn:WS_ArrayIBESign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7OpenEnvelopeCapicom">
+      <soap:operation soapAction="urn:WS_P7OpenEnvelopeCapicom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SealEnvelope">
+      <soap:operation soapAction="urn:WS_P7SealEnvelope" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1VerifyBytes">
+      <soap:operation soapAction="urn:WS_P1VerifyBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SealEnvelope">
+      <soap:operation soapAction="urn:WS_SealEnvelope" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_VerifyTimeStamp">
+      <soap:operation soapAction="urn:WS_VerifyTimeStamp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCertOIDValue">
+      <soap:operation soapAction="urn:WS_GetCertOIDValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SymmDecrypt">
+      <soap:operation soapAction="urn:WS_SymmDecrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7Verify">
+      <soap:operation soapAction="urn:WS_P7Verify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7Sign">
+      <soap:operation soapAction="urn:WS_P7Sign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1SignBytes">
+      <soap:operation soapAction="urn:WS_P1SignBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_IBEVerify">
+      <soap:operation soapAction="urn:WS_IBEVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_CheckCert">
+      <soap:operation soapAction="urn:WS_CheckCert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SymmEncrypt">
+      <soap:operation soapAction="urn:WS_SymmEncrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetUserCert">
+      <soap:operation soapAction="urn:WS_GetUserCert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1VerifyBySN">
+      <soap:operation soapAction="urn:WS_P1VerifyBySN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7VerifyPDF">
+      <soap:operation soapAction="urn:WS_P7VerifyPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SignCapicom">
+      <soap:operation soapAction="urn:WS_P7SignCapicom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SealTimeStamp">
+      <soap:operation soapAction="urn:WS_SealTimeStamp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_IBESign">
+      <soap:operation soapAction="urn:WS_IBESign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <soap:operation soapAction="urn:main" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCertUniqueID">
+      <soap:operation soapAction="urn:WS_GetCertUniqueID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GenRand">
+      <soap:operation soapAction="urn:WS_GenRand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7OpenEnvelope">
+      <soap:operation soapAction="urn:WS_P7OpenEnvelope" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_OpenEnvelope">
+      <soap:operation soapAction="urn:WS_OpenEnvelope" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetSeriviceInfo">
+      <soap:operation soapAction="urn:WS_GetSeriviceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1Verify">
+      <soap:operation soapAction="urn:WS_P1Verify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SealEnvelopeCapicom">
+      <soap:operation soapAction="urn:WS_P7SealEnvelopeCapicom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AGWServiceSoap12Binding" type="ns:AGWServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WS_P7VerifyCapicom">
+      <soap12:operation soapAction="urn:WS_P7VerifyCapicom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_HashData">
+      <soap12:operation soapAction="urn:WS_HashData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1Sign">
+      <soap12:operation soapAction="urn:WS_P1Sign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetTime">
+      <soap12:operation soapAction="urn:WS_GetTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ArrayIBEVerify">
+      <soap12:operation soapAction="urn:WS_ArrayIBEVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCert">
+      <soap12:operation soapAction="urn:WS_GetCert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ArrayIBESign">
+      <soap12:operation soapAction="urn:WS_ArrayIBESign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7OpenEnvelopeCapicom">
+      <soap12:operation soapAction="urn:WS_P7OpenEnvelopeCapicom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SealEnvelope">
+      <soap12:operation soapAction="urn:WS_P7SealEnvelope" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1VerifyBytes">
+      <soap12:operation soapAction="urn:WS_P1VerifyBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SealEnvelope">
+      <soap12:operation soapAction="urn:WS_SealEnvelope" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_VerifyTimeStamp">
+      <soap12:operation soapAction="urn:WS_VerifyTimeStamp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCertOIDValue">
+      <soap12:operation soapAction="urn:WS_GetCertOIDValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SymmDecrypt">
+      <soap12:operation soapAction="urn:WS_SymmDecrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7Verify">
+      <soap12:operation soapAction="urn:WS_P7Verify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7Sign">
+      <soap12:operation soapAction="urn:WS_P7Sign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1SignBytes">
+      <soap12:operation soapAction="urn:WS_P1SignBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_IBEVerify">
+      <soap12:operation soapAction="urn:WS_IBEVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_CheckCert">
+      <soap12:operation soapAction="urn:WS_CheckCert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SymmEncrypt">
+      <soap12:operation soapAction="urn:WS_SymmEncrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetUserCert">
+      <soap12:operation soapAction="urn:WS_GetUserCert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1VerifyBySN">
+      <soap12:operation soapAction="urn:WS_P1VerifyBySN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7VerifyPDF">
+      <soap12:operation soapAction="urn:WS_P7VerifyPDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SignCapicom">
+      <soap12:operation soapAction="urn:WS_P7SignCapicom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SealTimeStamp">
+      <soap12:operation soapAction="urn:WS_SealTimeStamp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_IBESign">
+      <soap12:operation soapAction="urn:WS_IBESign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <soap12:operation soapAction="urn:main" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCertUniqueID">
+      <soap12:operation soapAction="urn:WS_GetCertUniqueID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GenRand">
+      <soap12:operation soapAction="urn:WS_GenRand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7OpenEnvelope">
+      <soap12:operation soapAction="urn:WS_P7OpenEnvelope" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_OpenEnvelope">
+      <soap12:operation soapAction="urn:WS_OpenEnvelope" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetSeriviceInfo">
+      <soap12:operation soapAction="urn:WS_GetSeriviceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1Verify">
+      <soap12:operation soapAction="urn:WS_P1Verify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SealEnvelopeCapicom">
+      <soap12:operation soapAction="urn:WS_P7SealEnvelopeCapicom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AGWServiceHttpBinding" type="ns:AGWServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="WS_P7VerifyCapicom">
+      <http:operation location="WS_P7VerifyCapicom" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_HashData">
+      <http:operation location="WS_HashData" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1Sign">
+      <http:operation location="WS_P1Sign" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetTime">
+      <http:operation location="WS_GetTime" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ArrayIBEVerify">
+      <http:operation location="WS_ArrayIBEVerify" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCert">
+      <http:operation location="WS_GetCert" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_ArrayIBESign">
+      <http:operation location="WS_ArrayIBESign" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7OpenEnvelopeCapicom">
+      <http:operation location="WS_P7OpenEnvelopeCapicom" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SealEnvelope">
+      <http:operation location="WS_P7SealEnvelope" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1VerifyBytes">
+      <http:operation location="WS_P1VerifyBytes" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SealEnvelope">
+      <http:operation location="WS_SealEnvelope" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_VerifyTimeStamp">
+      <http:operation location="WS_VerifyTimeStamp" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCertOIDValue">
+      <http:operation location="WS_GetCertOIDValue" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SymmDecrypt">
+      <http:operation location="WS_SymmDecrypt" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7Verify">
+      <http:operation location="WS_P7Verify" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7Sign">
+      <http:operation location="WS_P7Sign" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1SignBytes">
+      <http:operation location="WS_P1SignBytes" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_IBEVerify">
+      <http:operation location="WS_IBEVerify" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_CheckCert">
+      <http:operation location="WS_CheckCert" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SymmEncrypt">
+      <http:operation location="WS_SymmEncrypt" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetUserCert">
+      <http:operation location="WS_GetUserCert" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1VerifyBySN">
+      <http:operation location="WS_P1VerifyBySN" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7VerifyPDF">
+      <http:operation location="WS_P7VerifyPDF" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SignCapicom">
+      <http:operation location="WS_P7SignCapicom" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_SealTimeStamp">
+      <http:operation location="WS_SealTimeStamp" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_IBESign">
+      <http:operation location="WS_IBESign" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <http:operation location="main" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetCertUniqueID">
+      <http:operation location="WS_GetCertUniqueID" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GenRand">
+      <http:operation location="WS_GenRand" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7OpenEnvelope">
+      <http:operation location="WS_P7OpenEnvelope" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_OpenEnvelope">
+      <http:operation location="WS_OpenEnvelope" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_GetSeriviceInfo">
+      <http:operation location="WS_GetSeriviceInfo" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P1Verify">
+      <http:operation location="WS_P1Verify" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_P7SealEnvelopeCapicom">
+      <http:operation location="WS_P7SealEnvelopeCapicom" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AGWService">
+    <wsdl:port name="AGWServiceHttpSoap11Endpoint" binding="ns:AGWServiceSoap11Binding">
+      <soap:address location="http://bswg.95105813.cn:8080/AGW/services/AGWService.AGWServiceHttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="AGWServiceHttpSoap12Endpoint" binding="ns:AGWServiceSoap12Binding">
+      <soap12:address location="http://bswg.95105813.cn:8080/AGW/services/AGWService.AGWServiceHttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="AGWServiceHttpEndpoint" binding="ns:AGWServiceHttpBinding">
+      <http:address location="http://bswg.95105813.cn:8080/AGW/services/AGWService.AGWServiceHttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

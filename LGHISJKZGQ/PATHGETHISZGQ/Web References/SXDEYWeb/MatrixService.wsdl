@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://server.lshi.com" targetNamespace="http://server.lshi.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+		Please Type your service description here
+	</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema xmlns:ns="http://server.lshi.com" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://server.lshi.com">
+      <xs:element name="cancelExmaineApp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelExmaineAppResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="examineApp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="examineAppResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getClientIpAxisResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getExamOrders">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getExamOrdersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendExamSchedule">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendExamScheduleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendReport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendReportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendReportToMatrix">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendReportToMatrixResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateStudyStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateStudyStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="main">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="args" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getClientIpAxisRequest" />
+  <wsdl:message name="getClientIpAxisResponse">
+    <wsdl:part name="parameters" element="ns0:getClientIpAxisResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendExamScheduleRequest">
+    <wsdl:part name="parameters" element="ns0:sendExamSchedule" />
+  </wsdl:message>
+  <wsdl:message name="sendExamScheduleResponse">
+    <wsdl:part name="parameters" element="ns0:sendExamScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendReportRequest">
+    <wsdl:part name="parameters" element="ns0:sendReport" />
+  </wsdl:message>
+  <wsdl:message name="sendReportResponse">
+    <wsdl:part name="parameters" element="ns0:sendReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendReportToMatrixRequest">
+    <wsdl:part name="parameters" element="ns0:sendReportToMatrix" />
+  </wsdl:message>
+  <wsdl:message name="sendReportToMatrixResponse">
+    <wsdl:part name="parameters" element="ns0:sendReportToMatrixResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateStudyStatusRequest">
+    <wsdl:part name="parameters" element="ns0:updateStudyStatus" />
+  </wsdl:message>
+  <wsdl:message name="updateStudyStatusResponse">
+    <wsdl:part name="parameters" element="ns0:updateStudyStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="examineAppRequest">
+    <wsdl:part name="parameters" element="ns0:examineApp" />
+  </wsdl:message>
+  <wsdl:message name="examineAppResponse">
+    <wsdl:part name="parameters" element="ns0:examineAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="mainRequest">
+    <wsdl:part name="parameters" element="ns0:main" />
+  </wsdl:message>
+  <wsdl:message name="getExamOrdersRequest">
+    <wsdl:part name="parameters" element="ns0:getExamOrders" />
+  </wsdl:message>
+  <wsdl:message name="getExamOrdersResponse">
+    <wsdl:part name="parameters" element="ns0:getExamOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelExmaineAppRequest">
+    <wsdl:part name="parameters" element="ns0:cancelExmaineApp" />
+  </wsdl:message>
+  <wsdl:message name="cancelExmaineAppResponse">
+    <wsdl:part name="parameters" element="ns0:cancelExmaineAppResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MatrixServicePortType">
+    <wsdl:operation name="getClientIpAxis">
+      <wsdl:input wsaw:Action="urn:getClientIpAxis" message="ns0:getClientIpAxisRequest" />
+      <wsdl:output wsaw:Action="urn:getClientIpAxisResponse" message="ns0:getClientIpAxisResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendExamSchedule">
+      <wsdl:input wsaw:Action="urn:sendExamSchedule" message="ns0:sendExamScheduleRequest" />
+      <wsdl:output wsaw:Action="urn:sendExamScheduleResponse" message="ns0:sendExamScheduleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendReport">
+      <wsdl:input wsaw:Action="urn:sendReport" message="ns0:sendReportRequest" />
+      <wsdl:output wsaw:Action="urn:sendReportResponse" message="ns0:sendReportResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendReportToMatrix">
+      <wsdl:input wsaw:Action="urn:sendReportToMatrix" message="ns0:sendReportToMatrixRequest" />
+      <wsdl:output wsaw:Action="urn:sendReportToMatrixResponse" message="ns0:sendReportToMatrixResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateStudyStatus">
+      <wsdl:input wsaw:Action="urn:updateStudyStatus" message="ns0:updateStudyStatusRequest" />
+      <wsdl:output wsaw:Action="urn:updateStudyStatusResponse" message="ns0:updateStudyStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="examineApp">
+      <wsdl:input wsaw:Action="urn:examineApp" message="ns0:examineAppRequest" />
+      <wsdl:output wsaw:Action="urn:examineAppResponse" message="ns0:examineAppResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <wsdl:input wsaw:Action="urn:main" message="ns0:mainRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="getExamOrders">
+      <wsdl:input wsaw:Action="urn:getExamOrders" message="ns0:getExamOrdersRequest" />
+      <wsdl:output wsaw:Action="urn:getExamOrdersResponse" message="ns0:getExamOrdersResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelExmaineApp">
+      <wsdl:input wsaw:Action="urn:cancelExmaineApp" message="ns0:cancelExmaineAppRequest" />
+      <wsdl:output wsaw:Action="urn:cancelExmaineAppResponse" message="ns0:cancelExmaineAppResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MatrixServiceSOAP11Binding" type="ns0:MatrixServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getClientIpAxis">
+      <soap:operation soapAction="urn:getClientIpAxis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendExamSchedule">
+      <soap:operation soapAction="urn:sendExamSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendReport">
+      <soap:operation soapAction="urn:sendReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendReportToMatrix">
+      <soap:operation soapAction="urn:sendReportToMatrix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStudyStatus">
+      <soap:operation soapAction="urn:updateStudyStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="examineApp">
+      <soap:operation soapAction="urn:examineApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <soap:operation soapAction="urn:main" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getExamOrders">
+      <soap:operation soapAction="urn:getExamOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelExmaineApp">
+      <soap:operation soapAction="urn:cancelExmaineApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MatrixServiceSOAP12Binding" type="ns0:MatrixServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getClientIpAxis">
+      <soap12:operation soapAction="urn:getClientIpAxis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendExamSchedule">
+      <soap12:operation soapAction="urn:sendExamSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendReport">
+      <soap12:operation soapAction="urn:sendReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendReportToMatrix">
+      <soap12:operation soapAction="urn:sendReportToMatrix" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStudyStatus">
+      <soap12:operation soapAction="urn:updateStudyStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="examineApp">
+      <soap12:operation soapAction="urn:examineApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <soap12:operation soapAction="urn:main" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getExamOrders">
+      <soap12:operation soapAction="urn:getExamOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelExmaineApp">
+      <soap12:operation soapAction="urn:cancelExmaineApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MatrixServiceHttpBinding" type="ns0:MatrixServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getClientIpAxis">
+      <http:operation location="MatrixService/getClientIpAxis" />
+      <wsdl:input>
+        <mime:content part="getClientIpAxis" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getClientIpAxis" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendExamSchedule">
+      <http:operation location="MatrixService/sendExamSchedule" />
+      <wsdl:input>
+        <mime:content part="sendExamSchedule" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="sendExamSchedule" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendReport">
+      <http:operation location="MatrixService/sendReport" />
+      <wsdl:input>
+        <mime:content part="sendReport" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="sendReport" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendReportToMatrix">
+      <http:operation location="MatrixService/sendReportToMatrix" />
+      <wsdl:input>
+        <mime:content part="sendReportToMatrix" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="sendReportToMatrix" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateStudyStatus">
+      <http:operation location="MatrixService/updateStudyStatus" />
+      <wsdl:input>
+        <mime:content part="updateStudyStatus" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="updateStudyStatus" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="examineApp">
+      <http:operation location="MatrixService/examineApp" />
+      <wsdl:input>
+        <mime:content part="examineApp" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="examineApp" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <http:operation location="MatrixService/main" />
+      <wsdl:input>
+        <mime:content part="main" type="text/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getExamOrders">
+      <http:operation location="MatrixService/getExamOrders" />
+      <wsdl:input>
+        <mime:content part="getExamOrders" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="getExamOrders" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelExmaineApp">
+      <http:operation location="MatrixService/cancelExmaineApp" />
+      <wsdl:input>
+        <mime:content part="cancelExmaineApp" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="cancelExmaineApp" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MatrixService">
+    <wsdl:port name="MatrixServiceSOAP11port_http" binding="ns0:MatrixServiceSOAP11Binding">
+      <soap:address location="http://168.192.8.10:8080/WebService/services/MatrixService" />
+    </wsdl:port>
+    <wsdl:port name="MatrixServiceSOAP12port_http" binding="ns0:MatrixServiceSOAP12Binding">
+      <soap12:address location="http://168.192.8.10:8080/WebService/services/MatrixService" />
+    </wsdl:port>
+    <wsdl:port name="MatrixServiceHttpport" binding="ns0:MatrixServiceHttpBinding">
+      <http:address location="http://168.192.8.10:8080/WebService/services/MatrixService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

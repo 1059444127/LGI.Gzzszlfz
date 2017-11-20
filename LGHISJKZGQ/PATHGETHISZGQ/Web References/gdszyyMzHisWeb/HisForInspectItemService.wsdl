@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="NetTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NetTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NetTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCheckRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCheckRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCheckRecordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteCheckItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteCheckItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteCheckItemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelExecCheckItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelExecCheckItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelExecCheckItemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="NetTestSoapIn">
+    <wsdl:part name="parameters" element="tns:NetTest" />
+  </wsdl:message>
+  <wsdl:message name="NetTestSoapOut">
+    <wsdl:part name="parameters" element="tns:NetTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCheckRecord" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCheckRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteCheckItemSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteCheckItem" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteCheckItemSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteCheckItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelExecCheckItemSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelExecCheckItem" />
+  </wsdl:message>
+  <wsdl:message name="CancelExecCheckItemSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelExecCheckItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="NetTestHttpGetIn">
+    <wsdl:part name="request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NetTestHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpGetIn">
+    <wsdl:part name="Request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckRecordHttpGetIn">
+    <wsdl:part name="Request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckRecordHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteCheckItemHttpGetIn">
+    <wsdl:part name="Request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteCheckItemHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelExecCheckItemHttpGetIn">
+    <wsdl:part name="Request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelExecCheckItemHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NetTestHttpPostIn">
+    <wsdl:part name="request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NetTestHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpPostIn">
+    <wsdl:part name="Request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckRecordHttpPostIn">
+    <wsdl:part name="Request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckRecordHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteCheckItemHttpPostIn">
+    <wsdl:part name="Request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteCheckItemHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelExecCheckItemHttpPostIn">
+    <wsdl:part name="Request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelExecCheckItemHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="HisForInspectItemServiceSoap">
+    <wsdl:operation name="NetTest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检测网络状态</wsdl:documentation>
+      <wsdl:input message="tns:NetTestSoapIn" />
+      <wsdl:output message="tns:NetTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取病人基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoSoapIn" />
+      <wsdl:output message="tns:GetPatientInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取病人检查申请信息</wsdl:documentation>
+      <wsdl:input message="tns:GetCheckRecordSoapIn" />
+      <wsdl:output message="tns:GetCheckRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteCheckItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检查项目同步执行</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteCheckItemSoapIn" />
+      <wsdl:output message="tns:ExecuteCheckItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelExecCheckItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取消检查项目同步执行</wsdl:documentation>
+      <wsdl:input message="tns:CancelExecCheckItemSoapIn" />
+      <wsdl:output message="tns:CancelExecCheckItemSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="HisForInspectItemServiceHttpGet">
+    <wsdl:operation name="NetTest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检测网络状态</wsdl:documentation>
+      <wsdl:input message="tns:NetTestHttpGetIn" />
+      <wsdl:output message="tns:NetTestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取病人基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoHttpGetIn" />
+      <wsdl:output message="tns:GetPatientInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取病人检查申请信息</wsdl:documentation>
+      <wsdl:input message="tns:GetCheckRecordHttpGetIn" />
+      <wsdl:output message="tns:GetCheckRecordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteCheckItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检查项目同步执行</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteCheckItemHttpGetIn" />
+      <wsdl:output message="tns:ExecuteCheckItemHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelExecCheckItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取消检查项目同步执行</wsdl:documentation>
+      <wsdl:input message="tns:CancelExecCheckItemHttpGetIn" />
+      <wsdl:output message="tns:CancelExecCheckItemHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="HisForInspectItemServiceHttpPost">
+    <wsdl:operation name="NetTest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检测网络状态</wsdl:documentation>
+      <wsdl:input message="tns:NetTestHttpPostIn" />
+      <wsdl:output message="tns:NetTestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取病人基本信息</wsdl:documentation>
+      <wsdl:input message="tns:GetPatientInfoHttpPostIn" />
+      <wsdl:output message="tns:GetPatientInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取病人检查申请信息</wsdl:documentation>
+      <wsdl:input message="tns:GetCheckRecordHttpPostIn" />
+      <wsdl:output message="tns:GetCheckRecordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteCheckItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检查项目同步执行</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteCheckItemHttpPostIn" />
+      <wsdl:output message="tns:ExecuteCheckItemHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelExecCheckItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取消检查项目同步执行</wsdl:documentation>
+      <wsdl:input message="tns:CancelExecCheckItemHttpPostIn" />
+      <wsdl:output message="tns:CancelExecCheckItemHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HisForInspectItemServiceSoap" type="tns:HisForInspectItemServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NetTest">
+      <soap:operation soapAction="http://tempuri.org/NetTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckRecord">
+      <soap:operation soapAction="http://tempuri.org/GetCheckRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteCheckItem">
+      <soap:operation soapAction="http://tempuri.org/ExecuteCheckItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelExecCheckItem">
+      <soap:operation soapAction="http://tempuri.org/CancelExecCheckItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HisForInspectItemServiceSoap12" type="tns:HisForInspectItemServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NetTest">
+      <soap12:operation soapAction="http://tempuri.org/NetTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckRecord">
+      <soap12:operation soapAction="http://tempuri.org/GetCheckRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteCheckItem">
+      <soap12:operation soapAction="http://tempuri.org/ExecuteCheckItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelExecCheckItem">
+      <soap12:operation soapAction="http://tempuri.org/CancelExecCheckItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HisForInspectItemServiceHttpGet" type="tns:HisForInspectItemServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="NetTest">
+      <http:operation location="/NetTest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <http:operation location="/GetPatientInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckRecord">
+      <http:operation location="/GetCheckRecord" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteCheckItem">
+      <http:operation location="/ExecuteCheckItem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelExecCheckItem">
+      <http:operation location="/CancelExecCheckItem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HisForInspectItemServiceHttpPost" type="tns:HisForInspectItemServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="NetTest">
+      <http:operation location="/NetTest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <http:operation location="/GetPatientInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckRecord">
+      <http:operation location="/GetCheckRecord" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteCheckItem">
+      <http:operation location="/ExecuteCheckItem" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelExecCheckItem">
+      <http:operation location="/CancelExecCheckItem" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HisForInspectItemService">
+    <wsdl:port name="HisForInspectItemServiceSoap" binding="tns:HisForInspectItemServiceSoap">
+      <soap:address location="http://192.9.199.12:8002/HisForInspectItemService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HisForInspectItemServiceSoap12" binding="tns:HisForInspectItemServiceSoap12">
+      <soap12:address location="http://192.9.199.12:8002/HisForInspectItemService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HisForInspectItemServiceHttpGet" binding="tns:HisForInspectItemServiceHttpGet">
+      <http:address location="http://192.9.199.12:8002/HisForInspectItemService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HisForInspectItemServiceHttpPost" binding="tns:HisForInspectItemServiceHttpPost">
+      <http:address location="http://192.9.199.12:8002/HisForInspectItemService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
