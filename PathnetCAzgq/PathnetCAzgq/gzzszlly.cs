@@ -262,7 +262,7 @@ namespace PathnetCAzgq
                             MessageBox.Show("验签失败");
                         return "0";
                     }
-
+                     
                     #endregion
 
 //                    #region   验证证书

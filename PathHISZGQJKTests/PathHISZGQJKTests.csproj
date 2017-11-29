@@ -36,8 +36,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="dbbase, Version=1.6.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PathHISZGQJK\bin\Debug\dbbase.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -54,6 +60,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestItemSelectorTests.cs" />
+    <Compile Include="Zllyjgh\StructReportTests.cs" />
+    <Compile Include="Zllyjgh\T_TBS_BGTests.cs" />
     <Compile Include="zsdxzlyyfzPTTests.cs" />
   </ItemGroup>
   <ItemGroup>

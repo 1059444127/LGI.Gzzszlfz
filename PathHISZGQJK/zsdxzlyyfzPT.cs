@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Drawing.Imaging;
 using System.IO;
 using Lg.Pdf2Jpg;
+using PathHISZGQJK.Zllyjgh;
 using ZgqClassPub;
 using ZgqClassPub.DBData;
 
@@ -999,27 +1000,9 @@ select [F_BLH]
                 ////	<!--结果更新标志；0-PACS新增，1-电子病历读取，2-PACS修改-->
                 rtnxml = rtnxml + "<updateFlag></updateFlag>";
 
-                rtnxml += $@"   	<!-- 非数值型 -->
-	                                <UNStruct>
-	                                <!-- 如有多条项目则多个Item -->
-	                                <Item>
-		                                <!-- 项目编码 -->
-		                                <itemCode/>
-		                                <!-- 项目名称 -->
-		                                <itemName>{dt_jcxx.Rows[0]["f_yzxm"]}</itemName>
-		                                <!-- 监测结果 请用<![CDATA[]]>包括  -->
-		                                <result><![CDATA[{dt_jcxx.Rows[0]["f_blzd"]}]]></result>
-		                                <!-- 监测结果单位 请用<![CDATA[]]>包括  -->
-		                                <resultUnit><![CDATA[]]></resultUnit>
-		                                <!-- 参考值 请用<![CDATA[]]>包括 如为范围请用英文半角字符 / 隔开 如>100或<200或100/200 -->
-                                        <reference ><![CDATA[]]></reference>
-                                        <!--参考值单位 请用 <![CDATA[]]> 包括-->
-                                        <referenceUnit><![CDATA[]]></referenceUnit>
-                                        <!--其他-->
-                                        <remark />
-                                     </Item >
-                                     </UNStruct> 
-                                     ";
+                //结构化数据
+                rtnxml = rtnxml + GetStructResult(dt_jcxx.Rows[0]["F_blh"].ToString(), dt_jcxx.Rows[0]["F_bggs"].ToString());
+
                 ////	<!-- 报告PDA文档二进制串 BASE64 -->
                 rtnxml = rtnxml + "<body>";
                 rtnxml = rtnxml + "<text mediaType=\"application/pdf\" representation=\"base64\">" + pdfToBase64String +
@@ -1037,6 +1020,29 @@ select [F_BLH]
                 log.WriteMyLog(blbh + ",报告生成XML异常：" + e2.Message);
                 return "";
             }
+        }
+
+        /// <summary>
+        /// 获取结构化数据
+        /// </summary>
+        /// <param name="toString"></param>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        private string GetStructResult(string blh, string bggs)
+        {
+            var dtTbsReport = aa.GetDataTable($" select * from t_tbs_bg t where t.f_blh='{blh}' ", "table1");
+            if (dtTbsReport == null || dtTbsReport.Rows.Count == 0)
+            {
+                log.WriteMyLog("no tbs report found,blh="+blh);
+                return "";
+            }
+
+
+            var tbs = T_TBS_BG.DataRowToModel(dtTbsReport.Rows[0]);
+            var r = new StructReport();
+
+            var xml = r.GetXml(tbs, bggs);
+            return xml;
         }
 
         public string ZtMsg(DataTable dt_jcxx, DataTable dt_sqd, string sqxh, string blh, string bglx, string bgxh,
@@ -1816,6 +1822,9 @@ select [F_BLH]
                 rtnxml = rtnxml + "<other3></other3>";
                 ////	<!--结果更新标志；0-PACS新增，1-电子病历读取，2-PACS修改-->
                 rtnxml = rtnxml + "<updateFlag></updateFlag>";
+
+                //结构化数据
+                rtnxml = rtnxml + GetStructResult(dt_jcxx.Rows[0]["F_blh"].ToString(), dt_jcxx.Rows[0]["F_bggs"].ToString());
 
                 ////	<!-- 报告PDA文档二进制串 BASE64 -->
                 rtnxml = rtnxml + "<body>";
