@@ -11,8 +11,8 @@ namespace PathHISZGQJK.Zllyjgh.Tests
         public void GetXmlTest()
         {
             var aa = new odbcdb("DSN=pathnet;UID=pathnet;PWD=4s3c2a1p", "", "");
-            var bggs = "PCR-MSI";
-            var blh = "1711109007-3";
+            var bggs = "测序";
+            var blh = "1709187413-2";
 
             var dtTbsReport = aa.GetDataTable($" select * from t_tbs_bg t where t.f_blh='{blh}' ", "table1");
             if (dtTbsReport == null || dtTbsReport.Rows.Count == 0)

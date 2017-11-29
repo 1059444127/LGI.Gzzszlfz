@@ -10,7 +10,7 @@
             if (!string.IsNullOrEmpty(tbs.F_TBS_XBXM1.Trim()))
                 structReport.StructItems.Add(new StructItem
                 {
-                    ItemName = "EBV-DNA定量检测",
+                    ItemName = tbs.F_FZ_JCXM,
                     Result = tbs.F_TBS_XBXM1.Replace("IU/mL","").Trim(),
                     ResultUnit = "IU/mL",
                     Reference = tbs.F_TBS_XBXM2.Replace("IU/mL", "").Trim(),

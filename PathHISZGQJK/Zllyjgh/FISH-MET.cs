@@ -6,22 +6,11 @@
         {
             StructHelper.FillCommonResult(tbs, structReport);
 
-
-            //滤光片组：DAPI,TRITC,FITC
-            if (!string.IsNullOrEmpty(tbs.F_TBS_XBXM1.Trim()))
+            if (!string.IsNullOrEmpty(tbs.F_TBS_WSW1.Trim()))
                 structReport.UnStructItems.Add(new UNStructItem
                 {
-                    ItemName = "滤光片组",
-                    Result = tbs.F_TBS_XBXM1
-                });
-
-            //MET基因扩增阴性
-            if (!string.IsNullOrEmpty(tbs.F_TBS_WSW1.Trim()))
-                structReport.StructItems.Add(new StructItem
-                {
                     ItemName = "MET基因扩增",
-                    Result = tbs.F_TBS_WSW1,
-                    ResultUnit = "个"
+                    Result = tbs.F_TBS_WSW1
                 });
             //平均MET基因拷贝数/细胞=3.52
             if (!string.IsNullOrEmpty(tbs.F_TBS_WSW3.Trim()))

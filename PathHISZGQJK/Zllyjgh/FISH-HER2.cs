@@ -12,20 +12,6 @@
                     ItemName = "HER2基因扩增",
                     Result = tbs.F_TBS_WSW1
                 });
-            //滤光片组：DAPI,TRITC,FITC
-            if (!string.IsNullOrEmpty(tbs.F_TBS_XBXM1.Trim()))
-                structReport.UnStructItems.Add(new UNStructItem
-                {
-                    ItemName = "滤光片组",
-                    Result = tbs.F_TBS_XBXM1
-                });
-            //探针类型：HER2基因特异位点探针（red）/chr17着丝粒探针（green）
-            if (!string.IsNullOrEmpty(tbs.F_TBS_XBXM2.Trim()))
-                structReport.UnStructItems.Add(new UNStructItem
-                {
-                    ItemName = "探针类型",
-                    Result = tbs.F_TBS_XBXM2
-                });
             //连续计数浸润性癌 30 个肿瘤细胞
             if (!string.IsNullOrEmpty(tbs.F_TBS_WSW2.Trim()))
                 structReport.StructItems.Add(new StructItem
