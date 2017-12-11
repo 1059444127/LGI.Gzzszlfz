@@ -6,12 +6,12 @@
         {
             StructHelper.FillCommonResult(tbs, structReport);
 
-            if (!string.IsNullOrEmpty(tbs.F_TBS_WSW1.Trim()))
-                structReport.UnStructItems.Add(new UNStructItem
-                {
-                    ItemName = "MET基因扩增",
-                    Result = tbs.F_TBS_WSW1
-                });
+//            if (!string.IsNullOrEmpty(tbs.F_TBS_WSW1.Trim()))
+//                structReport.UnStructItems.Add(new UNStructItem
+//                {
+//                    ItemName = "MET基因扩增",
+//                    Result = tbs.F_TBS_WSW1
+//                });
             //平均MET基因拷贝数/细胞=3.52
             if (!string.IsNullOrEmpty(tbs.F_TBS_WSW3.Trim()))
                 structReport.StructItems.Add(new StructItem

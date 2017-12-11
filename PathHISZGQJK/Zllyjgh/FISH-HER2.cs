@@ -6,12 +6,12 @@
         {
             StructHelper.FillCommonResult(tbs, structReport);
 
-            if (!string.IsNullOrEmpty(tbs.F_TBS_WSW1.Trim()))
-                structReport.UnStructItems.Add(new UNStructItem
-                {
-                    ItemName = "HER2基因扩增",
-                    Result = tbs.F_TBS_WSW1
-                });
+//            if (!string.IsNullOrEmpty(tbs.F_TBS_WSW1.Trim()))
+//                structReport.UnStructItems.Add(new UNStructItem
+//                {
+//                    ItemName = "HER2基因扩增",
+//                    Result = tbs.F_TBS_WSW1
+//                });
             //连续计数浸润性癌 30 个肿瘤细胞
             if (!string.IsNullOrEmpty(tbs.F_TBS_WSW2.Trim()))
                 structReport.StructItems.Add(new StructItem
